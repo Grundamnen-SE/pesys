@@ -7,6 +7,7 @@ if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grund�
     <meta charset="utf-8">
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
+    <meta name="google-site-verification" content="ZQatb-QOSPgfvycKK0gwfbvv9de19wTu_qM5iaI9IAg" />
     <title>Grundämnen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet/less" type="text/css" href="/css/global.less" />
