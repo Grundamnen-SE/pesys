@@ -6,6 +6,7 @@
     <meta name="description" content="Grundämnen">
     <meta name="robots" content="index,follow">
     <title>Om - Grundämnen.se</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet/less" type="text/css" href="css/om.less" />
     <link rel="stylesheet/less" type="text/css" href="css/global.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
