@@ -1,0 +1,8 @@
+/etc/apache2/sites-available/pesys.conf
+<VirtualHost *:80>
+  ServerName local.beta.xn--grundmnen-z2a.se
+  DocumentRoot /var/www/pesys/
+</VirtualHost>
+
+/etc/hosts
+127.0.0.1	local.beta.xn--grundmnen-z2a.se
