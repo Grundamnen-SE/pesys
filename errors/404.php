@@ -14,7 +14,9 @@
       <h1>
         404 - Sidan Hittades Inte!
       </h1>
+      <br>
       <span>Grundämnen.se<?= $_SERVER['REQUEST_URI'] ?></span>
+      <br>
       <p>Sidan du letade efter hittades inte! Om du letar efter något grundämnen, kolla <a href="/">startsidan!</a></p>
 
     </div>
