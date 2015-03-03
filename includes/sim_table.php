@@ -45,7 +45,7 @@
     <td class="td-fast hme"><span class="atomic_number ">32</span><br><br>Ge</td>
     <td class="td-fast hme"><span class="atomic_number ">33</span><br><br>As</td>
     <td class="td-fast ick"><span class="atomic_number ">34</span><br><br>Se</td>
-    <td class="td-fast hao"><span class="atomic_number ">35</span><br><br>Br</td>
+    <td class="td-flow hao"><span class="atomic_number ">35</span><br><br>Br</td>
     <td class="td-gas gas"><span class="atomic_number ">36</span><br><br>Kr</td>
   </tr>
   <tr>
@@ -204,7 +204,7 @@
     <td class="td-fast hme"><span class="atomic_number ">32</span><br><br>Ge</td>
     <td class="td-fast hme"><span class="atomic_number ">33</span><br><br>As</td>
     <td class="td-fast ick"><span class="atomic_number ">34</span><br><br>Se</td>
-    <td class="td-fast hao"><span class="atomic_number ">35</span><br><br>Br</td>
+    <td class="td-flow hao"><span class="atomic_number ">35</span><br><br>Br</td>
     <td class="td-gas gas"><span class="atomic_number ">36</span><br><br>Kr</td>
   </tr>
   <tr>
