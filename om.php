@@ -131,6 +131,8 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
           Har du synpunkter, frågor eller funderingar? Har du hittat en bugg? Då
           får du jättegärna mejla oss! Adressen är:
           <img src="/img/grundamnen-kontakt.png"></img>
+          <br>
+          Vi finns även på: <a href="https://www.youtube.com/channel/UCE-ih5dTUWnlhlcvb5SbFrg">Youtube</a> <a href="https://twitter.com/grundamnen">Twitter</a> <a href="https://github.com/Grundamnen-SE">Github</a>
         </p>
       </div>
     </div>
