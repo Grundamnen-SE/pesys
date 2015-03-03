@@ -2,9 +2,8 @@
 <html lang="sv">
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="JWiki">
     <meta name="description" content="Grundämnen">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="index,nofollow">
     <title>Om - Grundämnen.se</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet/less" type="text/css" href="/css/om.less" />
@@ -21,8 +20,7 @@
       <div class="about-us">
         <h2>Joar</h2>
         <p>
-          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Min uppgift är backend-programmering, databas hantering och server hantering. Jag går på Södertörns friskola som har haft flera bra bidrag med åren  ,bland annat med hemsidorna ungasysadmins.se och skolboka.s$
-          Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som$
+          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Min uppgift med grundämnen.se är att programmera backend och att se till att servrarna fungerar. Jag går på Södertörns friskola som har haft flera bra bidrag med åren ,bland annat med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för många. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv.
         </p>
         <h2>Gustav</h2>
         <p>
