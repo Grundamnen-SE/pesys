@@ -160,10 +160,10 @@
     <td class="td-gas ick"><span class="atomic_number">1</span><br><br>H</td>
     <td></td>
     <td rowspan="3" colspan="10" class="td-header">
-      <a id="header" href="">Grundämnen.se</a>
+      <a id="header" href="/">Grundämnen.se</a>
     </td>
     <td colspan="5" class="td-about">
-      <a id="about-link" href="om.php">Om</a>
+      <a id="about-link" href="/om">Om</a>
     </td>
     <td class="td-gas gas"><span class="atomic_number">2</span><br><br>He</td>
   </tr>
