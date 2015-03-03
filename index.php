@@ -16,6 +16,7 @@ if (file_exists("logs/".$ip)) {
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
     <title>Grundämnen</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet/less" type="text/css" href="css/global.less" />
     <link rel="stylesheet/less" type="text/css" href="css/index.less" />
     <link rel="stylesheet/less" type="text/css" href="css/wiki.less" />
