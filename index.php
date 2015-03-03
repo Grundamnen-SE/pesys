@@ -1,13 +1,6 @@
 <?php
 if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grundämnen.se/');
 if(!empty($_SERVER['HTTP_CLIENT_IP'])){$ip = $_SERVER['HTTP_CLIENT_IP'];}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){$ip=$_SERVER['HTTP_X_FORWARDED_FOR'];}else{$ip=$_SERVER['REMOTE_ADDR'];}
-if (file_exists("logs/".$ip)) {
-  $data = file_get_contents("logs/".$ip);
-  $data = $data+1;
-  file_put_contents("logs/".$ip, $data);
-} else {
-  file_put_contents("logs/".$ip, "1");
-}
 ?>
 <!DOCTYPE html>
 <html>
