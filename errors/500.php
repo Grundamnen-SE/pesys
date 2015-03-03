@@ -14,7 +14,6 @@
       <h1>
         500 - Internt Server Problem!
       </h1>
-      <span>Grundämnen.se<?= $_SERVER['REQUEST_URI'] ?></span>
       <p>Något gick fel! Vänligen kontakta oss via mail eller annat sätt. Tryck här för att gå till <a href="/">startsidan!</a></p>
       <img src="../img/grundamnen-kontakt.png">
     </div>
