@@ -21,7 +21,7 @@
       <div class="about-us">
         <h2>Joar</h2>
         <p>
-          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag med åren  ,bland annat med hemsidorna ungasysadmins.se och skolboka.s$
+          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Min uppgift är backend-programmering, databas hantering och server hantering. Jag går på Södertörns friskola som har haft flera bra bidrag med åren  ,bland annat med hemsidorna ungasysadmins.se och skolboka.s$
           Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som$
         </p>
         <h2>Gustav</h2>
@@ -30,6 +30,10 @@
           intressen är datorer och trummor. Det var 2011 som jag gick med i datorklubben och
           började programmera. Därigenom har jag också varit med i Webbstjärnan två gånger, med egna
           bidrag. Andra gången var det med skoljakt.se, och då kom jag trea i kategorin årskurs 6-9.
+        </p>
+        <h2>Alicia</h2>
+        <p>
+          Text kommer snart
         </p>
       </div>
       <div class="line"></div>
