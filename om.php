@@ -6,13 +6,13 @@
     <meta name="description" content="Grundämnen">
     <meta name="robots" content="index,follow">
     <title>Om - Grundämnen.se</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="css/om.less" />
-    <link rel="stylesheet/less" type="text/css" href="css/global.less" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet/less" type="text/css" href="/css/om.less" />
+    <link rel="stylesheet/less" type="text/css" href="/css/global.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
-    <a href="."><h2 id="back">&lt;-- Tillbaka</h2></a>
+    <a href="/"><h2 id="back">&lt;-- Tillbaka</h2></a>
     <div id="body">
       <div class="webbstj">
       </div>
@@ -116,12 +116,19 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Grundämnen</span> av <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.grundämnen.se" property="cc:attributionName" rel="cc:attributionURL">Alicia, Joar och Gustav</a> är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Erkännande-IckeKommersiell-DelaLika 4.0 Internationell licens</a>.
       </div>
       <div class="line"></div>
+      <div class="source">
+        <p>
+          Vill du ha källkoden? Vi har laddat upp den på <a href="https://github.com/Grundamnen-SE/pesys">Github</a>!
+          Där kan du se all kod vi ha skrivit för att få denna sidan att vara fungerande!
+        </p>
+      </div>
+      <div class="line"></div>
       <div class="contact">
         <h1>Kontakt</h1>
         <p>
           Har du synpunkter, frågor eller funderingar? Har du hittat en bugg? Då
           får du jättegärna mejla oss! Adressen är:
-          <img src="img/grundamnen-kontakt.png"></img>
+          <img src="/img/grundamnen-kontakt.png"></img>
         </p>
       </div>
     </div>

@@ -5,10 +5,10 @@
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
     <title>403 - Permission Denied - Grundämnen.se</title>
-    <link rel="stylesheet/less" type="text/css" href="../css/errors.less" />
+    <link rel="stylesheet/less" type="text/css" href="/css/errors.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
     <div>
