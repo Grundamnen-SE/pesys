@@ -1,0 +1,212 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+body, html {
+  margin: 0;
+  background-color:#363636;
+}
+.webbstj {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.license {
+  margin-right: 15px;
+  float: right;
+}
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+/*  margin-bottom:30px;*/
+}
+.sim_table.tab2 {
+  top: 0px;
+  position: absolute;
+}
+td {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  background-color:transparent;
+  visibility: hidden;
+  height:5%;
+  border:0;
+  cursor:pointer;
+  box-shadow: 0px 0px 1px 2px black;
+  position: relative;
+}
+#header {
+  visibility: visible;
+  color: white;
+  font-size: 70px;
+}
+a[href] {
+  text-decoration: none;
+}
+#about-link {
+  color:#5bb7ff;
+  margin-right:20px;
+  margin-left:20px;
+  font-size: 30px;
+}
+.td-header, .td-about {
+  box-shadow: none !important;
+  visibility: visible !important;
+}
+.td-header:hover, .td-about:hover {
+  background-color:transparent !important;
+  cursor:default;
+}
+.tab1 td:hover {
+  background-color:#c9c9c9;
+}
+.td-none {
+  z-index: 0 !important;
+  background-color: #363636 !important;
+  visibility: visible !important;
+  cursor:default;
+  box-shadow: none !important;
+}
+.td-gas {
+  color:red !important;
+  visibility: visible;
+}
+.td-flow {
+  color:green !important;
+  visibility: visible;
+}
+.tr-fast td{
+  color:black;
+  visibility: visible;
+}
+.td-fast {
+  color:blue;
+  visibility: visible;
+}
+.td-extend {
+  background-color: rgba(177,236,255, 0.3);
+  color: black !important;
+  text-align: center;
+  visibility: visible;
+  cursor: default;
+}
+.tr-space td {
+  height: 10px;
+}
+.atomic_number {
+  position: absolute;
+  font-size: 12px;
+  top: 3px;
+  left: 3px;
+}
+
+@s: 70%;
+@v: 70%;
+
+.tab1 .alk {
+  z-index: 3;
+  background-color: hsl(0, @s, @v);
+}
+.tab1 .jor {
+  z-index: 5;
+  background-color: hsl(33, @s, @v);
+}
+.tab1 .lan {
+  z-index: 3;
+  background-color: hsl(66, @s, @v);
+}
+.tab1 .akt {
+  z-index: 3;
+  background-color: hsl(99, @s, @v);
+}
+.tab1 .ove {
+  z-index: 13;
+  background-color: hsl(133, @s, @v);
+}
+.tab1 .ovr {
+  z-index: 11;
+  background-color: hsl(166, @s, @v);
+}
+.tab1 .hme {
+  z-index: 9;
+  background-color: hsl(199, @s, @v);
+}
+.tab1 .ick {
+  z-index: 7;
+  background-color: hsl(233, @s, @v);
+}
+.tab1 .hao {
+  z-index: 5;
+  background-color: hsl(266, @s, @v);
+}
+.tab1 .gas {
+  z-index: 3;
+  background-color: hsl(299, @s, @v);
+}
+.tab1 .eju {
+  z-index: 15;
+  background-color: hsl(333, @s, @v);
+}
+.tab1 .metal {
+  color:gray;
+}
+.tab1 .halfmetal {
+  color:yellow;
+}
+.tab1 .nonmetal {
+  color:white;
+}
+.tab1 .unkmetal {
+  color:orange;
+}
+
+@shadow: black;
+@shadow1: 20px;
+@shadow2: 8px;
+
+.tab2 .alk {
+  z-index: 2;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .jor {
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  z-index: 4;
+}
+.tab2 .lan {
+  z-index: 2;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .akt {
+  z-index: 2;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .ove {
+  z-index: 12;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .ovr {
+  z-index: 10;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .hme {
+  z-index: 8;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .ick {
+  z-index: 6;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .hao {
+  z-index: 4;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .gas {
+  z-index: 2;
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
+.tab2 .eju {
+  z-index: 14;
+  background-color: hsl(333, @s, @v);
+  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+}
