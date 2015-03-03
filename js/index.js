@@ -15,9 +15,10 @@ $("td").on("click", function() {
       url: "wiki/template.php",
       data: {"file": last + ".full.php"},
       success: function(data) {
+        $("#newHTML").append(data);
         $("body").css({"overflow":"hidden"});
         $("#newHTML").show("scale", 300, function () {
-          $("#newHTML").append(data);
+
         });
       },
       dataType: "html"
