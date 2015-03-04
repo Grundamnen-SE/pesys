@@ -2,7 +2,7 @@
 
  // Updaterad!
 $("td").on("click", function() {
-  if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") ) {
+  if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
     if (string[string.length - 2] == ">") {
       last = string.substr(string.length - 1);
