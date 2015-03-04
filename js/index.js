@@ -1,4 +1,4 @@
- s// Gör så att när man klickar på ett grundämne öppnas rutan:
+ // Gör så att när man klickar på ett grundämne öppnas rutan:
 $("td").on("click", function() {
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") ) {
     string = $(this).html();
