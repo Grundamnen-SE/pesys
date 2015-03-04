@@ -11,9 +11,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
-    <a href="/"><h2 id="back">&lt;-- Tillbaka</h2></a>
+    <div id="back">
+      <div>
+        <a href="/"><h2>&lArr;</h2></a>
+      </div>
+      <div>
+        <a href="/"><h2>Tillbaka</h2></a>
+      </div>
+    </div>
     <div id="body">
-      <img src="/img/oss.JPG">
       <div class="line"></div>
       <h1>Om oss:</h1>
       <div class="about-us">
@@ -135,15 +141,31 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
         </p>
       </div>
     </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-59839592-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-59839592-1', 'auto');
+    ga('send', 'pageview');
 
-</script>
+    back = true;
+    $(window).scroll(function() {
+       if(back && $(window).scrollTop() > 0) {
+           $("#back div:nth-child(2)").hide("drop");
+           $("#back").animate({marginLeft: "-10px"});
+           back = false;
+       }
+       if(!back && $(window).scrollTop() === 0) {
+           $("#back div:nth-child(2)").show("drop");
+           $("#back").animate({marginLeft: "0px"});
+           back = true;
+       }
+    });
+
+  </script>
   </body>
 </html>
