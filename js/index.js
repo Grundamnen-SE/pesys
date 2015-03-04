@@ -59,5 +59,5 @@ $("#advmode").on('change', function() {
 });
 
 $( document ).ready(function() {
-  $("td").css("height", $('td').width());
+  $("td").css("height", $('td').width()-5);
 });
