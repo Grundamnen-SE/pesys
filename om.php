@@ -13,7 +13,7 @@
   <body>
     <a href="/"><h2 id="back">&lt;-- Tillbaka</h2></a>
     <div id="body">
-      <img src="/img/oss.JPG">
+      <img src="/img/oss.jpg">
       <div class="line"></div>
       <h1>Om oss:</h1>
       <div class="about-us">
