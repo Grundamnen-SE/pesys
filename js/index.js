@@ -57,3 +57,10 @@ $("#advmode").on('change', function() {
     $('#adv_table').show();
   }
 }); */
+
+// Kanske har någon betydelse...
+$( document ).ready(function() {
+  var width = $('td').width();
+  var height = width - 10;
+  $("td").css("height", height);
+});
