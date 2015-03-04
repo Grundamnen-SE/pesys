@@ -36,7 +36,7 @@ function exit() {
 }
 
 // Byter till avancerat/enkelt läge beroende på om #advmode är 1 eller inte:
-if (location.hash == "#advmode=1") {
+/*if (location.hash == "#advmode=1") {
   $("#advmode").attr('checked',true);
   $('#sim_table').hide();
   $('#adv_table').show();
@@ -56,7 +56,7 @@ $("#advmode").on('change', function() {
     $('#sim_table').hide();
     $('#adv_table').show();
   }
-});
+}); */
 
 $( document ).ready(function() {
   var width = $('td').width();
