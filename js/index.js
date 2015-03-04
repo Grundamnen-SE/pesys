@@ -1,4 +1,4 @@
-// Gör så att när man klickar på ett grundämne öppnas rutan:
+ s// Gör så att när man klickar på ett grundämne öppnas rutan:
 $("td").on("click", function() {
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") ) {
     string = $(this).html();
@@ -13,7 +13,7 @@ $("td").on("click", function() {
     $.ajax({
       type: "POST",
       url: "wiki/template.php",
-      data: {"file": last + ".full.php"},
+      data: {"file": last},
       success: function(data) {
         $("#newHTML").append(data);
         $("body").css({"overflow":"hidden"});
