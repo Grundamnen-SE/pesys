@@ -109,7 +109,7 @@
     <td class="td-gas gas"><span class="atomic_number ">118</span>Uuo</td>
   </tr>
   <tr class="tr-space">
-    <td colspan="18"></td>
+    <td colspan="18" class="td-logo"></td>
   </tr>
   <tr>
     <td class="td-extend">&gt;</td>

@@ -57,11 +57,3 @@ $("#advmode").on('change', function() {
     $('#adv_table').show();
   }
 }); */
-
-
-// Funkar ändå inte...
-/*$( document ).ready(function() {
-  var width = $('td').width();
-  var height = width - 5;
-  $("td").css("height", height);
-});*/
