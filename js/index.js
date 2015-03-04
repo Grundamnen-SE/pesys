@@ -59,5 +59,7 @@ $("#advmode").on('change', function() {
 });
 
 $( document ).ready(function() {
-  $("td").css("height", $('td').width()-5);
+  var width = $('td').width();
+  var height = width - 5;
+  $("td").css("height", height);
 });
