@@ -58,8 +58,10 @@ $("#advmode").on('change', function() {
   }
 }); */
 
-$( document ).ready(function() {
+
+// Funkar ändå inte...
+/*$( document ).ready(function() {
   var width = $('td').width();
   var height = width - 5;
   $("td").css("height", height);
-});
+});*/
