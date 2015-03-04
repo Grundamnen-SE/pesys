@@ -55,3 +55,7 @@ $("#advmode").on('change', function() {
     $('#adv_table').show();
   }
 });
+
+$( document ).ready(function() {
+  $("td").css("height", $('td').width());
+});

@@ -20,6 +20,7 @@
       </div>
     </div>
     <div id="body">
+      <img src="/img/oss.jpg">
       <div class="line"></div>
       <h1>Om oss:</h1>
       <div class="about-us">
