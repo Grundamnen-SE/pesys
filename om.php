@@ -20,7 +20,7 @@
       </div>
     </div>
     <div id="body">
-      <img src="/img/oss.jpg">
+      <img class="us" src="/img/oss.jpg">
       <div class="line"></div>
       <h1>Om oss:</h1>
       <div class="about-us">
@@ -40,6 +40,7 @@
           Text kommer snart
         </p>
       </div>
+      <br style="clear: both;">
       <div class="line"></div>
       <div class="syfte">
       </div>
@@ -157,12 +158,10 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
     $(window).scroll(function() {
        if(back && $(window).scrollTop() > 0) {
            $("#back div:nth-child(2)").hide("drop");
-           $("#back").animate({marginLeft: "-10px"});
            back = false;
        }
        if(!back && $(window).scrollTop() === 0) {
            $("#back div:nth-child(2)").show("drop");
-           $("#back").animate({marginLeft: "0px"});
            back = true;
        }
     });
