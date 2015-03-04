@@ -273,7 +273,7 @@
         <img title="Webbstjärnan" src="http://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
       </a>
     </td>
-    <td colspan="3" class="td-logo">
+    <td colspan="3" class="td-logo e">
       <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
         <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
       </a>
