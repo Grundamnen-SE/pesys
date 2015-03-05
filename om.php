@@ -38,7 +38,7 @@
         </p>
         <h2>Joar</h2>
         <p>
-          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag med åren ,bland annat med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för många. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv.
+          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag i webbstjärnan under åren. Jag har varit med två gånger tidigare med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för många. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv.
         </p>
       </div>
       <br style="clear: both;">
