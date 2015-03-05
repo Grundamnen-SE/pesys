@@ -3,10 +3,8 @@
     <td class="td-gas ick"><span class="atomic_number">1</span>H</td>
     <td></td>
     <td rowspan="3" colspan="10" class="td-header">
-      <a id="header" href="/">Grundämnen.se</a>
     </td>
     <td colspan="5" class="td-about">
-      <a id="about-link" href="/om">Om</a>
     </td>
     <td class="td-gas gas"><span class="atomic_number">2</span>He</td>
   </tr>
@@ -17,14 +15,14 @@
     <td class="td-fast ick"><span class="atomic_number">6</span>C</td>
     <td class="td-gas ick"><span class="atomic_number">7</span>N</td>
     <td class="td-gas ick"><span class="atomic_number">8</span>O</td>
-    <td class="td-gas hao"><span class="atomic_number">9</span>F</td>
+    <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>F</td>
     <td class="td-gas gas"><span class="atomic_number">10</span>Ne</td>
   </tr>
   <tr>
     <td class="td-fast alk"><span class="atomic_number">11</span>Na</td>
     <td class="td-fast jor"><span class="atomic_number">12</span>Ng</td>
     <td class="td-fast ovr"><span class="atomic_number">13</span>Al</td>
-    <td class="td-fast hme"><span class="atomic_number">14</span>Si</td>
+    <td class="td-fast hme"><span class="atomic_number">14</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Si</td>
     <td class="td-fast ick"><span class="atomic_number ">15</span>P</td>
     <td class="td-fast ick"><span class="atomic_number ">16</span>S</td>
     <td class="td-gas hao"><span class="atomic_number ">17</span>Cl</td>
@@ -33,7 +31,7 @@
   <tr>
     <td class="td-fast alk"><span class="atomic_number ">19</span>K</td>
     <td class="td-fast jor"><span class="atomic_number ">20</span>Ca</td>
-    <td class="td-fast ove"><span class="atomic_number ">21</span>Sc</td>
+    <td class="td-fast ove"><span class="atomic_number ">21</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Sc</td>
     <td class="td-fast ove"><span class="atomic_number ">22</span>Ti</td>
     <td class="td-fast ove"><span class="atomic_number ">23</span>V</td>
     <td class="td-fast ove"><span class="atomic_number ">24</span>Cr</td>
@@ -53,7 +51,7 @@
   <tr>
     <td class="td-fast alk"><span class="atomic_number ">37</span>Rb</td>
     <td class="td-fast jor"><span class="atomic_number ">38</span>Sr</td>
-    <td class="td-fast ove"><span class="atomic_number ">39</span>Y</td>
+    <td class="td-fast ove"><span class="atomic_number ">39</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Y</td>
     <td class="td-fast ove"><span class="atomic_number ">40</span>Zr</td>
     <td class="td-fast ove"><span class="atomic_number ">41</span>Nb</td>
     <td class="td-fast ove"><span class="atomic_number ">42</span>Mo</td>
@@ -111,16 +109,7 @@
     <td class="td-gas gas"><span class="atomic_number ">118</span>Uuo</td>
   </tr>
   <tr class="tr-space">
-    <td colspan="15" class="td-logo">
-      <a class="webbstj" href="http://webbstjarnan.se" target="_blank">
-        <img title="Webbstjärnan" src="http://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
-      </a>
-    </td>
-    <td colspan="3" class="td-logo e">
-      <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
-        <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-      </a>
-    </td>
+    <td colspan="18" class="td-logo"></td>
   </tr>
   <tr>
     <td class="td-extend">&gt;</td>
@@ -132,12 +121,12 @@
     <td class="td-fast lan"><span class="atomic_number ">62</span>Sm</td>
     <td class="td-fast lan"><span class="atomic_number ">63</span>Eu</td>
     <td class="td-fast lan"><span class="atomic_number ">64</span>Gd</td>
-    <td class="td-fast lan"><span class="atomic_number ">65</span>Tb</td>
+    <td class="td-fast lan"><span class="atomic_number ">65</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Tb</td>
     <td class="td-fast lan"><span class="atomic_number ">66</span>Dy</td>
-    <td class="td-fast lan"><span class="atomic_number ">67</span>Ho</td>
-    <td class="td-fast lan"><span class="atomic_number ">68</span>Er</td>
-    <td class="td-fast lan"><span class="atomic_number ">69</span>Tm</td>
-    <td class="td-fast lan"><span class="atomic_number ">70</span>Yb</td>
+    <td class="td-fast lan"><span class="atomic_number ">67</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Ho</td>
+    <td class="td-fast lan"><span class="atomic_number ">68</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Er</td>
+    <td class="td-fast lan"><span class="atomic_number ">69</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Tm</td>
+    <td class="td-fast lan"><span class="atomic_number ">70</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Yb</td>
     <td class="td-fast lan"><span class="atomic_number ">71</span>Lu</td>
     <td class="td-none"></td>
     <td class="td-none"></td>
