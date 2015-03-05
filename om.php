@@ -33,11 +33,12 @@
         </p>
         <h2>Alicia</h2>
         <p>
-          Text kommer snart
+          Jag heter Alicia och går i klass 9Nv på Södertörns friskola i Huddinge. Jag började att intressera mig för datorer och internet när jag var ca 11 år. Jag startade då en blogg. Från början skrev jag bara på den, men efter ett tag tröttnade jag på de teman som redan fanns, så jag började att göra små ändringar i de befintliga stilmallarna. Det slutade med att jag gjorde helt egna teman. Jag sökte mig fram på webben och började sakta men säkert att lära mig grunderna i HTML. Mina klasskompisar som läste bloggen tyckte om designen och bad mig att designa deras bloggar också. När jag sedan började på Södertörns friskola 2011 så började jag i skolans datorklubb, och intresset har fortsatt sen dess.
+          Jag har alltid varit nyfiken på varför saker och ting ser ut eller beter sig som de gör. Detta är nog det som är grunden för mitt nutida intresse för naturvetenskap och till varför jag valde att gå i en  klass med naturprofil.
         </p>
         <h2>Joar</h2>
         <p>
-          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Min uppgift med grundämnen.se är att programmera backend och att se till att servrarna fungerar. Jag går på Södertörns friskola som har haft flera bra bidrag med åren ,bland annat med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för många. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv.
+          Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag med åren ,bland annat med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer och vill använda dem på lektioner så mycket jag kan för jag ogillar att skriva för hand. Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för många. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv.
         </p>
       </div>
       <br style="clear: both;">

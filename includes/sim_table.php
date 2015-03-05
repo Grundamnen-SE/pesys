@@ -41,7 +41,7 @@
     <td class="td-fast ove"><span class="atomic_number ">26</span>Fe</td>
     <td class="td-fast ove"><span class="atomic_number ">27</span>Co</td>
     <td class="td-fast ove"><span class="atomic_number ">28</span>Ni</td>
-    <td class="td-fast ove"><span class="atomic_number ">29</span>Cu</td>
+    <td class="td-fast ove"><span class="atomic_number ">29</span><span class="yt"><img src="http://www.youtube.com/yt/brand/media/image/YouTube-icon-dark.png"></span>Cu</td>
     <td class="td-fast ove"><span class="atomic_number ">30</span>Zn</td>
     <td class="td-fast ovr"><span class="atomic_number ">31</span>Ga</td>
     <td class="td-fast hme"><span class="atomic_number ">32</span>Ge</td>
