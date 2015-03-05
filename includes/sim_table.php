@@ -103,12 +103,12 @@
     <td class="td-fast eju"><span class="atomic_number ">110</span>Ds</td>
     <td class="td-fast eju"><span class="atomic_number ">111</span>Rg</td>
     <td class="td-fast ove"><span class="atomic_number ">112</span>Cn</td>
-    <td class="td-fast ovr"><span class="atomic_number ">113</span>Uut</td>
+    <td class="td-fast ovr tril"><span class="atomic_number ">113</span>Uut</td>
     <td class="td-fast ovr"><span class="atomic_number ">114</span>Fl</td>
-    <td class="td-fast ovr"><span class="atomic_number ">115</span>Uup</td>
+    <td class="td-fast ovr tril"><span class="atomic_number ">115</span>Uup</td>
     <td class="td-fast ovr"><span class="atomic_number ">116</span>Lv</td>
-    <td class="td-fast eju"><span class="atomic_number ">117</span>Uus</td>
-    <td class="td-gas gas"><span class="atomic_number ">118</span>Uuo</td>
+    <td class="td-fast eju tril"><span class="atomic_number ">117</span>Uus</td>
+    <td class="td-gas gas tril"><span class="atomic_number ">118</span>Uuo</td>
   </tr>
   <tr class="tr-space">
     <td colspan="18" class="td-logo"></td>
