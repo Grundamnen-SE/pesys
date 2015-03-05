@@ -3,8 +3,10 @@
     <td class="td-gas ick"><span class="atomic_number">1</span>H</td>
     <td></td>
     <td rowspan="3" colspan="10" class="td-header">
+      <a id="header" href="/">Grundämnen.se</a>
     </td>
     <td colspan="5" class="td-about">
+      <a id="about-link" href="/om">Om</a>
     </td>
     <td class="td-gas gas"><span class="atomic_number">2</span>He</td>
   </tr>
@@ -109,7 +111,16 @@
     <td class="td-gas gas"><span class="atomic_number ">118</span>Uuo</td>
   </tr>
   <tr class="tr-space">
-    <td colspan="18" class="td-logo"></td>
+    <td colspan="15" class="td-logo">
+      <a class="webbstj" href="http://webbstjarnan.se" target="_blank">
+        <img title="Webbstjärnan" src="http://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
+      </a>
+    </td>
+    <td colspan="3" class="td-logo e">
+      <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
+        <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+      </a>
+    </td>
   </tr>
   <tr>
     <td class="td-extend">&gt;</td>
