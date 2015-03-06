@@ -17,7 +17,7 @@
     <td class="td-fast ick"><span class="atomic_number">6</span>C</td>
     <td class="td-gas ick"><span class="atomic_number">7</span>N</td>
     <td class="td-gas ick"><span class="atomic_number">8</span>O</td>
-    <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"></span>F</td>
+    <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"><img src="/img/play.svg"></span>F</td>
     <td class="td-gas gas"><span class="atomic_number">10</span>Ne</td>
   </tr>
   <tr>
