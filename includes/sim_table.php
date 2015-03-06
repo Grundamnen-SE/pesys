@@ -17,14 +17,14 @@
     <td class="td-fast ick"><span class="atomic_number">6</span>C</td>
     <td class="td-gas ick"><span class="atomic_number">7</span>N</td>
     <td class="td-gas ick"><span class="atomic_number">8</span>O</td>
-    <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"></span>F</td>
+    <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"><img src="/img/play.svg"></span>F</td>
     <td class="td-gas gas"><span class="atomic_number">10</span>Ne</td>
   </tr>
   <tr>
     <td class="td-fast alk"><span class="atomic_number">11</span>Na</td>
     <td class="td-fast jor"><span class="atomic_number">12</span>Ng</td>
     <td class="td-fast ovr"><span class="atomic_number">13</span>Al</td>
-    <td class="td-fast hme"><span class="atomic_number">14</span><span class="yt"></span>Si</td>
+    <td class="td-fast hme"><span class="atomic_number">14</span><span class="yt"><img src="/img/play.svg"></span>Si</td>
     <td class="td-fast ick"><span class="atomic_number ">15</span>P</td>
     <td class="td-fast ick"><span class="atomic_number ">16</span>S</td>
     <td class="td-gas hao"><span class="atomic_number ">17</span>Cl</td>
@@ -33,7 +33,7 @@
   <tr>
     <td class="td-fast alk"><span class="atomic_number ">19</span>K</td>
     <td class="td-fast jor"><span class="atomic_number ">20</span>Ca</td>
-    <td class="td-fast ove"><span class="atomic_number ">21</span><span class="yt"></span>Sc</td>
+    <td class="td-fast ove"><span class="atomic_number ">21</span><span class="yt"><img src="/img/play.svg"></span>Sc</td>
     <td class="td-fast ove"><span class="atomic_number ">22</span>Ti</td>
     <td class="td-fast ove"><span class="atomic_number ">23</span>V</td>
     <td class="td-fast ove"><span class="atomic_number ">24</span>Cr</td>
@@ -41,7 +41,7 @@
     <td class="td-fast ove"><span class="atomic_number ">26</span>Fe</td>
     <td class="td-fast ove"><span class="atomic_number ">27</span>Co</td>
     <td class="td-fast ove"><span class="atomic_number ">28</span>Ni</td>
-    <td class="td-fast ove"><span class="atomic_number ">29</span><span class="yt"></span>Cu</td>
+    <td class="td-fast ove"><span class="atomic_number ">29</span><span class="yt"><img src="/img/play.svg"></span>Cu</td>
     <td class="td-fast ove"><span class="atomic_number ">30</span>Zn</td>
     <td class="td-fast ovr"><span class="atomic_number ">31</span>Ga</td>
     <td class="td-fast hme"><span class="atomic_number ">32</span>Ge</td>
@@ -53,7 +53,7 @@
   <tr>
     <td class="td-fast alk"><span class="atomic_number ">37</span>Rb</td>
     <td class="td-fast jor"><span class="atomic_number ">38</span>Sr</td>
-    <td class="td-fast ove"><span class="atomic_number ">39</span><span class="yt"></span>Y</td>
+    <td class="td-fast ove"><span class="atomic_number ">39</span><span class="yt"><img src="/img/play.svg"></span>Y</td>
     <td class="td-fast ove"><span class="atomic_number ">40</span>Zr</td>
     <td class="td-fast ove"><span class="atomic_number ">41</span>Nb</td>
     <td class="td-fast ove"><span class="atomic_number ">42</span>Mo</td>
@@ -132,12 +132,12 @@
     <td class="td-fast lan"><span class="atomic_number ">62</span>Sm</td>
     <td class="td-fast lan"><span class="atomic_number ">63</span>Eu</td>
     <td class="td-fast lan"><span class="atomic_number ">64</span>Gd</td>
-    <td class="td-fast lan"><span class="atomic_number ">65</span><span class="yt"></span>Tb</td>
+    <td class="td-fast lan"><span class="atomic_number ">65</span><span class="yt"><img src="/img/play.svg"></span>Tb</td>
     <td class="td-fast lan"><span class="atomic_number ">66</span>Dy</td>
-    <td class="td-fast lan"><span class="atomic_number ">67</span><span class="yt"></span>Ho</td>
-    <td class="td-fast lan"><span class="atomic_number ">68</span><span class="yt"></span>Er</td>
-    <td class="td-fast lan"><span class="atomic_number ">69</span><span class="yt"></span>Tm</td>
-    <td class="td-fast lan"><span class="atomic_number ">70</span><span class="yt"></span>Yb</td>
+    <td class="td-fast lan"><span class="atomic_number ">67</span><span class="yt"><img src="/img/play.svg"></span>Ho</td>
+    <td class="td-fast lan"><span class="atomic_number ">68</span><span class="yt"><img src="/img/play.svg"></span>Er</td>
+    <td class="td-fast lan"><span class="atomic_number ">69</span><span class="yt"><img src="/img/play.svg"></span>Tm</td>
+    <td class="td-fast lan"><span class="atomic_number ">70</span><span class="yt"><img src="/img/play.svg"></span>Yb</td>
     <td class="td-fast lan"><span class="atomic_number ">71</span>Lu</td>
     <td class="td-none"></td>
     <td class="td-none"></td>
