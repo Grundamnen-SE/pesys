@@ -120,6 +120,7 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
       </div>
       <div class="line"></div>
       <div class="license">
+        <h2>Licens</h2>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
           <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
         </a><br />
