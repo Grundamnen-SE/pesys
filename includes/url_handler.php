@@ -9,7 +9,7 @@ if (file_exists($dir.$link_r[0].".html")) {
 $("body").css({"overflow":"hidden"});
 $.ajax({
   type: "POST",
-  url: "wiki/template.php",
+  url: "/wiki/template.php",
   data: {"file": "<?= $link_r[0] ?>"},
   success: function( data ) {
     $("#newHTML").append(data);
