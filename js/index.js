@@ -18,10 +18,10 @@ $("td").on("click", function() {
         url: "/wiki/template.php",
         data: {"file": last},
         success: function(data) {
+          loading = false;
           $("#newHTML").append(data);
           $("body").css({"overflow":"hidden"});
           $("#newHTML").show("scale", 300, function () {});
-          loading = false;
         },
         dataType: "html"
       });
