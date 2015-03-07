@@ -78,7 +78,7 @@ Denna hemsida är även ett bra sätt för oss "skapare" att relatera de kunskap
         <h1>Hur har vi arbetat?</h1>
         <p>
           Joar och Gustav har varit de som programmerar. Joar tar hand om back-end och Gustav har jobbat på designen. Alicia har varit den som tänkt ut alla idéer och skrivit texter och manus. Vi har alla varit med på filmer om ämnen, alltså varit skådespelare. Vi har programmerat hela sidan helt från grunden, med hjälp av HTML (HyperText Markup Language), CSS (Cascading Style Sheets), JS (JavaScript) och PHP (PHP: Hypertext Preprocessor). HTML markerar vad vi ska ha, CSS lägger till färgen och hur allt ser ut, JavaScript har hand om hur du kan läsa om ämnena och PHP ser till att du kan läsa om ämnena och att det finns text för dig att läsa.
-          <br>
+          <br><br>
           Vi har jobbat i skolan, vi har åkt på lov och lediga dagar till skolan och filmat och även åkt på utflykter för att lära oss mera om grundämnena och för att kunna filma på coola ställen.
           När vi har jobbat i skolan har det antingen varit under Datorklubben, varje onsdag där andra i skolan kan komma och spela eller programmera tillsammans, eller under lov, då vi kommmer och filmer lite med greenscreen tack vare vår Sysadmin på skolan.
           Vi har också åkt iväg till Ytterby gruva under en dag och utforskat den gamla gruvan och området där 9 ämnen har upptäcktes, vilket är flest i hela världen samt att 4 av ämnena är döpta efter platsen. Vi filma videoklipp om alla ämnen som upptäcktes där och det var en intressant dag där.
