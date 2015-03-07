@@ -2,7 +2,7 @@
 $dir = "wiki/pages/";
 $link = $_GET['simple_link'];
 $link_r = explode("/", $link);
-print_r($link_r);
+if ($link_r[0] != "") {
 if (file_exists($dir.$link_r[0].".html")) {
 ?>
 <script>
@@ -27,5 +27,6 @@ $("#newHTML").append('<div onclick="exit();" id="exit">X</div><h1>Detta ämne ha
 $("#newHTML").show("scale", 300, function () {});
 </script>
 <?php
+}
 }
 ?>
