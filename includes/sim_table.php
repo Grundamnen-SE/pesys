@@ -14,16 +14,16 @@
     <td class="td-fast alk"><span class="atomic_number">3</span>Li</td>
     <td class="td-fast jor"><span class="atomic_number">4</span>Be</td>
     <td class="td-fast hme"><span class="atomic_number">5</span>B</td>
-    <td class="td-fast ick"><span class="atomic_number">6</span>C</td>
+    <td class="td-fast ick"><span class="atomic_number">6</span><span class="yt"><img src="/img/play.svg"></span>C</td>
     <td class="td-gas ick"><span class="atomic_number">7</span>N</td>
-    <td class="td-gas ick"><span class="atomic_number">8</span>O</td>
+    <td class="td-gas ick"><span class="atomic_number">8</span><span class="yt"><img src="/img/play.svg"></span>O</td>
     <td class="td-gas hao"><span class="atomic_number">9</span><span class="yt"><img src="/img/play.svg"></span>F</td>
     <td class="td-gas gas"><span class="atomic_number">10</span>Ne</td>
   </tr>
   <tr>
     <td class="td-fast alk"><span class="atomic_number">11</span>Na</td>
     <td class="td-fast jor"><span class="atomic_number">12</span>Ng</td>
-    <td class="td-fast ovr"><span class="atomic_number">13</span>Al</td>
+    <td class="td-fast ovr"><span class="atomic_number">13</span><span class="yt"><img src="/img/play.svg"></span>Al</td>
     <td class="td-fast hme"><span class="atomic_number">14</span><span class="yt"><img src="/img/play.svg"></span>Si</td>
     <td class="td-fast ick"><span class="atomic_number ">15</span>P</td>
     <td class="td-fast ick"><span class="atomic_number ">16</span>S</td>
@@ -61,7 +61,7 @@
     <td class="td-fast ove"><span class="atomic_number ">45</span>Rh</td>
     <td class="td-fast ove"><span class="atomic_number ">44</span>Ru</td>
     <td class="td-fast ove"><span class="atomic_number ">46</span>Pd</td>
-    <td class="td-fast ove"><span class="atomic_number ">47</span>Ag</td>
+    <td class="td-fast ove"><span class="atomic_number ">47</span><span class="yt"><img src="/img/play.svg"></span>Ag</td>
     <td class="td-fast ove"><span class="atomic_number ">48</span>Cd</td>
     <td class="td-fast ovr"><span class="atomic_number ">49</span>In</td>
     <td class="td-fast ovr"><span class="atomic_number ">50</span>Sn</td>
