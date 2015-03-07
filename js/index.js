@@ -11,21 +11,22 @@ $("td").on("click", function() {
     } else {
       last = string.substr(string.length - 3);
     }
-    loading = true;
-    $.ajax({
-      type: "POST",
-      url: "/wiki/template.php",
-      data: {"file": last},
-      success: function(data) {
-        if (loading != true) {
+    if (loading != true) {
+      $.ajax({
+        type: "POST",
+        url: "/wiki/template.php",
+        data: {"file": last},
+        success: function(data) {
           $("#newHTML").append(data);
           $("body").css({"overflow":"hidden"});
           $("#newHTML").show("scale", 300, function () {});
           loading = false;
-        }
-      },
-      dataType: "html"
-    });
+        },
+        dataType: "html"
+      });
+    } else {
+      loaded = true;
+    }
   }
 });
 
