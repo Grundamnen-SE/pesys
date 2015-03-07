@@ -19,9 +19,7 @@ $("td").on("click", function() {
       success: function(data) {
         $("#newHTML").append(data);
         $("body").css({"overflow":"hidden"});
-        $("#newHTML").show("scale", 300, function () {
-
-        });
+        $("#newHTML").show("scale", 300, function () {});
       },
       dataType: "html"
     });
@@ -34,6 +32,12 @@ function exit() {
   $("#newHTML").hide("scale", 200);
   $("body").css({"overflow":"initial"});
 }
+
+$(document).keyup(function(e)
+  if (e.keyCode == 27) {
+      exit();
+  }
+});
 
 // Byter till avancerat/enkelt läge beroende på om #advmode är 1 eller inte:
 /*if (location.hash == "#advmode=1") {
