@@ -51,16 +51,11 @@
         <h1>Varför ska vi vinna tävlingen?</h1>
         <p>
 De periodiska system och allmänt den fakta vi har att tillgå i skolan om grundämnen och atomer kommer ifrån de fysik och kemiböcker vi läser i under lektionerna samt de planscher som sitter uppsatta i klassrummen och i korridorerna. Forskning kring atomfysik, nya material och kemiska reaktioner pågår dagligen runt om i världen och vi får hela tiden ny användbar information. Böckerna vi har i skolan kan man så klart inte trycka om varje läsår både på grund av ekonomiska skäl men också med tanke på miljön. Detta gör dock att det som står i dem inte är den senaste informationen som finns att tillgå. Allt behöver till och med inte vara korrekt.
-
 Internet däremot är en utav de främsta medierna för att distribuera och få ny information på. Därför tycker vi att det är viktigt att internet kan användas som en källa för naturvetenskaplig information och här kommer grundämnen.se perfekt till hands, både för lärare och elever!
-
-
 Vi har tänkt att denna hemsida kan användas som ett hjälpmedel i undervisningen på det sätt att läraren kan hålla i genomgångar om periodiska systemet och atomer på t.ex en projektor eller en smartboard. Att få se bilder och videor istället för att bara läsa text är ett bra sätt att lära in information och fakta på. Att dessutom relatera de kunskaper som man lär sig på lektionen till miljön och samhället vi lever i ökar kunskapen och förståelsen i nutiden, men också för framtida kunskaper i fysik, kemi och biologi. Ju mer man förstår i grunden, desto lättare blir det att förstå andra saker som är byggda på den. I det här fallet t.ex joner, fotosyntesen eller kärnfysik.
-
-
 Denna hemsida är även ett bra sätt för oss "skapare" att relatera de kunskaper vi lär oss under fysiken och kemin och kunna förmedla den till andra, kanske framförallt i vår ålder. På så sätt måste vi kommunicera med besökaren på ett sätt som är intresseväckande samtidigt som det är lärorikt. Vi måste också använda vetenskapliga begrepp samt förklara dessa på ett sätt som man förstår samt anpassa texten till mottagaren.
-
 Vi har även försökt att anpassa fakta på sidan så att det kan passa mellanstadieelever som ser ett periodiskt system för första gången samt för den lite mer erfarne eleven som kommit längre i studierna.
+Vi har försökt använda flera medier: video, text och bilder, för att lära ut andra. Alla lär sig inte bäst av bara text, utan vissa kan behöva bilder och filmer. Vi har försökt anpassa oss så gott det går på det sättet, så att så många som möjligt kan få ha användning av vår hemsida.
         </p>
       </div>
       <div class="line">
@@ -79,6 +74,14 @@ Hemsidan är såklart välkommen att besökas av alla, men den målgrupp vi frä
         <h1>Vad tillför webben i ert skolarbete? </h1>
         <p>
 Denna hemsida är även ett bra sätt för oss "skapare" att relatera de kunskaper vi lär oss under fysiken och kemin och kunna lära ut den till andra i vår ålder. På så sätt måste vi kommunicera med besökaren på ett sätt som intresseväckande samtidigt som det är lärorikt. Vi måste också använda vetenskapliga begrepp samt förklara dessa på ett sätt som man förstår samt anpassa texten till mottagaren samt själva granska vad vi skriver så att det är förståeligt.
+        </p>
+      </div>
+      <div class="line"></div>
+      <div class="work">
+        <h1>Hur har vi arbetat?</h1>
+        <p>
+          Joar och Gustav har varit de som programmerar. Joar tar hand om back-end och Gustav har jobbat på designen. Alicia har varit den som tänkt ut alla idéer och skrivit texter och manus. Vi har alla varit med på filmer om ämnen, alltså varit skådespelare. Vi har programmerat hela sidan helt från grunden, med hjälp av HTML (HyperText Markup Language), CSS (Cascading Style Sheets), JS (JavaScript) och PHP (PHP: Hypertext Preprocessor). HTML markerar vad vi ska ha, CSS lägger till färgen och hur allt ser ut, JavaScript har hand om hur du kan läsa om ämnena och PHP ser till att du kan läsa om ämnena och att det finns text för dig att läsa.
+          Vi har jobbat i skolan, vi har åkt på lov och lediga dagar till skolan och filmat och även åkt på utflykter för att lära oss mera om grundämnena och för att kunna filma på coola ställen.
         </p>
       </div>
       <div class="line"></div>
@@ -127,6 +130,9 @@ Undervisningen i ämnet fysik ska syfta till att eleverna utvecklar kunskaper om
         </a><br />
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Grundämnen</span> av <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.grundämnen.se" property="cc:attributionName" rel="cc:attributionURL">Alicia, Joar och Gustav</a> är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Erkännande-IckeKommersiell-DelaLika 4.0 Internationell licens</a>.
       </div>
+      <p>
+        Allt material på denna sida är gjorda av oss. Alla bilder har antingen varit gjorde av oss eller för oss. Andra får använda/göra om bilderna så länge de använder samma licens och berättar att det var vi som gjorde bilden/materialet. Du får inte använda bilderna/material om du gör det för att tjäna pengar på det.
+      </p>
       <div class="line"></div>
       <div class="source">
         <p>
