@@ -14,7 +14,7 @@ $("td").on("click", function() {
 
     $.ajax({
       type: "POST",
-      url: "wiki/template.php",
+      url: "/wiki/template.php",
       data: {"file": last},
       success: function(data) {
         $("#newHTML").append(data);

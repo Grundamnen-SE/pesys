@@ -22,7 +22,9 @@ $.ajax({
 } else {
 ?>
 <script>
-$( "html" ).html("<?php include("errors/404.php"); ?>");
+$("body").css({"overflow":"hidden"});
+$("#newHTML").append("<h1>Detta ämne har vi inte skrivit om än!</h1><h2>Vill du hjälpa till att skriva en sida? Skicka in din text till oss via <a href=\"mailto:info.grundamnen@gmail.com\">mail</a> så lägger vi till den till ämnet. </h2>");
+$("#newHTML").show("scale", 300, function () {});
 </script>
 <?php
 }
