@@ -13,20 +13,19 @@ $("td").on("click", function() {
       last = string.substr(string.length - 3);
     }
     if (loading != true) {
+      loading = true;
       $.ajax({
         type: "POST",
         url: "/wiki/template.php",
         data: {"file": last},
         success: function(data) {
-          loading = false;
           $("#newHTML").append(data);
           $("body").css({"overflow":"hidden"});
           $("#newHTML").show("scale", 300, function () {});
+          loading = false;
         },
         dataType: "html"
       });
-    } else {
-      loaded = true;
     }
   }
 });
