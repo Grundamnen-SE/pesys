@@ -2,6 +2,7 @@
 $dir = "wiki/pages/";
 $link = $_GET['simple_link'];
 $link_r = explode("/", $link);
+print_r($link_r);
 if (file_exists($dir.$link_r[1].".html")) {
 ?>
 <script>
@@ -21,7 +22,7 @@ $.ajax({
 } else {
 ?>
 <script>
-$( document ).html(<?php include("errors/404.php"); ?>);
+$( "html" ).html("<?php include("errors/404.php"); ?>");
 </script>
 <?php
 }
