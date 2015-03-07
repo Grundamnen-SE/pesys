@@ -11,15 +11,18 @@ $("td").on("click", function() {
     } else {
       last = string.substr(string.length - 3);
     }
-
+    loading = true;
     $.ajax({
       type: "POST",
       url: "/wiki/template.php",
       data: {"file": last},
       success: function(data) {
-        $("#newHTML").append(data);
-        $("body").css({"overflow":"hidden"});
-        $("#newHTML").show("scale", 300, function () {});
+        if (loading != true) {
+          $("#newHTML").append(data);
+          $("body").css({"overflow":"hidden"});
+          $("#newHTML").show("scale", 300, function () {});
+          loading = false;
+        }
       },
       dataType: "html"
     });
