@@ -63,9 +63,7 @@ Vi har försökt använda flera medier: video, text och bilder, för att lära u
         <h1>Syfte och mottagare:</h1>
         <p>
 Periodiska systemet och framför allt grundämnena är grunden till mycket av det vi läser i de naturorienterade ämnena i skolan, men också för hela vår värld. Därför är det något som är extra viktigt att förstå samt att det underlättar väldigt mycket när man väl förstår det. Att läsa en massa sidor i en bok med bokstäver och siffror hit och dit är inte ett effektivt sätt för alla att lära in information på. Därför blir det väldigt lätt att man börjar syssla med annat under lektionstid och ingenting blir gjort. Det kanske inte visar sig för stunden men i vidare studier blir det ett klart hinder.
-
 Syftet med denna hemsida är därför att skapa ett studiehjälpmedel som är uppdaterat, färgglatt och anpassat till dagens tekniska samhälle som kan hjälpa både elever och lärare i undervisningen.
-
 Hemsidan är såklart välkommen att besökas av alla, men den målgrupp vi främst har riktat hemsidan till är elever och lärare.
         </p>
       <div class="line"></div>
@@ -80,7 +78,10 @@ Denna hemsida är även ett bra sätt för oss "skapare" att relatera de kunskap
         <h1>Hur har vi arbetat?</h1>
         <p>
           Joar och Gustav har varit de som programmerar. Joar tar hand om back-end och Gustav har jobbat på designen. Alicia har varit den som tänkt ut alla idéer och skrivit texter och manus. Vi har alla varit med på filmer om ämnen, alltså varit skådespelare. Vi har programmerat hela sidan helt från grunden, med hjälp av HTML (HyperText Markup Language), CSS (Cascading Style Sheets), JS (JavaScript) och PHP (PHP: Hypertext Preprocessor). HTML markerar vad vi ska ha, CSS lägger till färgen och hur allt ser ut, JavaScript har hand om hur du kan läsa om ämnena och PHP ser till att du kan läsa om ämnena och att det finns text för dig att läsa.
+          <br>
           Vi har jobbat i skolan, vi har åkt på lov och lediga dagar till skolan och filmat och även åkt på utflykter för att lära oss mera om grundämnena och för att kunna filma på coola ställen.
+          När vi har jobbat i skolan har det antingen varit under Datorklubben, varje onsdag där andra i skolan kan komma och spela eller programmera tillsammans, eller under lov, då vi kommmer och filmer lite med greenscreen tack vare vår Sysadmin på skolan.
+          Vi har också åkt iväg till Ytterby gruva under en dag och utforskat den gamla gruvan och området där 9 ämnen har upptäcktes, vilket är flest i hela världen samt att 4 av ämnena är döpta efter platsen. Vi filma videoklipp om alla ämnen som upptäcktes där och det var en intressant dag där.
         </p>
       </div>
       <div class="line"></div>
