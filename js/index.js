@@ -5,12 +5,13 @@ loading = false;
 $("td").on("click", function() {
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
-    if (string[string.length - 2] == ">") {
-      last = string.substr(string.length - 1);
-    } else if (string[string.length - 3] == ">") {
-      last = string.substr(string.length - 2);
-    } else {
-      last = string.substr(string.length - 3);
+    var position1 = string.search(/atomic_text">/);
+    if (string.substr(position1 + 14, 1) == "<") {
+      last = string.substr(position1 + 13, 1);
+    } else if (string.substr(position1 + 15, 1) == "<") {
+      last = string.substr(position1 + 13, 2);
+    } else if (string.substr(position1 + 16, 1) == "<") {
+      last = string.substr(position1 + 13, 3);
     }
     if (loading != true) {
       loading = true;
