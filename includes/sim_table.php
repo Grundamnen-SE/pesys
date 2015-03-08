@@ -185,7 +185,7 @@
   </tr>
   <tr>
     <td class="td-fast alk"><div class="box"><span class="atomic_number">11</span><span class="atomic_text">Na</span></div></td>
-    <td class="td-fast jor"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Ng</span></div></td>
+    <td class="td-fast jor"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Mg</span></div></td>
     <td class="td-fast ovr"><div class="box"><span class="atomic_number">13</span><span class="atomic_text">Al</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number">14</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Si</span></div></td>
     <td class="td-fast ick"><div class="box"><span class="atomic_number ">15</span><span class="atomic_text">P</span></div></td>

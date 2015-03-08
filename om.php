@@ -95,6 +95,31 @@
           <li>Källkritisk granskning av information och argument som eleven möter i källor och samhällsdiskussioner med koppling till fysik.</li>
         </ul>
       </p>
+      <h2>Syftet i ämnet Biologi:</h2>
+      <p>
+        Naturvetenskapen har sitt ursprung i människans nyfikenhet och behov av att veta mer om sig själv och sin omvärld. Kunskaper i biologi har stor betydelse för samhällsutvecklingen inom så skilda områden som hälsa, naturbruk och miljö. Med kunskaper om naturen och människan får människor redskap för att påverka sitt eget välbefinnande, men också för att kunna bidra till en hållbar utveckling.
+        <ul>
+          <li>Ekosystems energiflöde och kretslopp av materia. Fotosyntes, förbränning och andra ekosystemtjänster.</li>
+          <li>Aktuella samhällsfrågor som rör biologi.</li>
+          <li>Historiska och nutida upptäckter inom biologiområdet och deras betydelse för samhället, människors levnadsvillkor samt synen på naturen och naturvetenskapen.</li>
+        </ul>
+      </p>
+      <h2>Syfte i ämnet Kemi:</h2>
+      <p>
+        Undervisningen i ämnet kemi ska syfta till att eleverna utvecklar kunskaper om kemiska sammanhang och nyfikenhet på och intresse för att undersöka omvärlden. Genom undervisningen ska eleverna ges möjlighet att ställa frågor om kemiska processer och materiens egenskaper och uppbyggnad utifrån egna upplevelser och aktuella händelser. Vidare ska undervisningen ge eleverna förutsättningar att söka svar på frågor med hjälp av både systematiska undersökningar och olika typer av källor. På så sätt ska undervisningen bidra till att eleverna utvecklar ett kritiskt tänkande kring sina egna resultat, andras argument och olika informationskällor. Genom undervisningen ska eleverna också utveckla förståelse för att påståenden kan prövas och värderas med hjälp av naturvetenskapliga arbetsmetoder.
+        <ul>
+          <li>Partikelmodell för att beskriva och förklara materiens uppbyggnad, kretslopp och oförstörbarhet. Atomer, elektroner och kärnpartiklar.</li>
+          <li>Kemiska föreningar och hur atomer sätts samman till molekyl- och jonföreningar genom kemiska reaktioner.</li>
+          <li>Partikelmodell för att beskriva och förklara fasers egenskaper, fasövergångar och spridningsprocesser för materia i luft, vatten och mark.</li>
+          <li>Fotosyntes och förbränning samt energiomvandlingar i dessa reaktioner.</li>
+          <li>Innehållet i mat och drycker och dess betydelse för hälsan. Kemiska processer i människokroppen, till exempel matspjälkning.</li>
+          <li>Aktuella samhällsfrågor som rör kemi.</li>
+          <li>Historiska och nutida upptäckter inom kemiområdet och deras betydelse för världsbild, teknik, miljö, samhälle och människors levnadsvillkor.</li>
+          <li>De kemiska modellernas och teoriernas användbarhet, begränsningar, giltighet och föränderlighet.</li>
+          <li>Gruppering av atomslag ur ett historiskt perspektiv.</li>
+        </ul>
+      </p>
+      <p>Vi reserverar för eventuella faktafel.</p>
       <h2>Licens</h2>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
         <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
