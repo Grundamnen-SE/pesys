@@ -18,6 +18,7 @@
         <a href="/"><h2>Tillbaka</h2></a>
       </div>
     </div>
+    <div id="body">
     <img class="us" src="/img/oss.jpg">
     <h1>Om oss:</h1>
     <h2>Gustav</h2>
@@ -138,5 +139,6 @@
         }
       });
     </script>
+    </div>
   </body>
 </html>
