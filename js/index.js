@@ -1,6 +1,7 @@
  // Gör så att när man klickar på ett grundämne öppnas rutan:
 
  // Updaterad!
+loading = false;
 $("td").on("click", function() {
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
@@ -11,20 +12,21 @@ $("td").on("click", function() {
     } else {
       last = string.substr(string.length - 3);
     }
-
-    $.ajax({
-      type: "POST",
-      url: "wiki/template.php",
-      data: {"file": last},
-      success: function(data) {
-        $("#newHTML").append(data);
-        $("body").css({"overflow":"hidden"});
-        $("#newHTML").show("scale", 300, function () {
-
-        });
-      },
-      dataType: "html"
-    });
+    if (loading != true) {
+      loading = true;
+      $.ajax({
+        type: "POST",
+        url: "/wiki/template.php",
+        data: {"file": last},
+        success: function(data) {
+          $("#newHTML").append(data);
+          $("body").css({"overflow":"hidden"});
+          $("#newHTML").show("scale", 300, function () {});
+          loading = false;
+        },
+        dataType: "html"
+      });
+    }
   }
 });
 
@@ -34,6 +36,12 @@ function exit() {
   $("#newHTML").hide("scale", 200);
   $("body").css({"overflow":"initial"});
 }
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+      exit();
+  }
+});
 
 // Byter till avancerat/enkelt läge beroende på om #advmode är 1 eller inte:
 /*if (location.hash == "#advmode=1") {
