@@ -18,7 +18,10 @@
       <br>
       <span>Grundämnen.se<?= $_SERVER['REQUEST_URI'] ?></span>
       <br><br>
-      <p>Sidan du letade efter hittades inte! Om du letar efter något grundämnen, kolla <a href="/">startsidan!</a></p>
+      <p>Sidan du letade efter hittades inte! Om du letar efter något grundämne, kolla <a href="/">startsidan!</a></p>
+      <p>
+        Vill du komma direkt till ett grundämne kan du skriva grundämnen.se/l/beteckning
+      </p>
     </div>
   </body>
 </html>

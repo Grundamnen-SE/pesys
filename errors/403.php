@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
-    <title>403 - Permission Denied - Grundämnen.se</title>
+    <title>403 - Åtkomst Nekad - Grundämnen.se</title>
     <link rel="stylesheet/less" type="text/css" href="/css/errors.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
@@ -13,12 +13,12 @@
   <body>
     <div>
       <h1>
-        403 - Permission Denied!
+        403 - Åtkomst Nekad!
       </h1>
       <br>
       <span>Grundämnen.se<?= $_SERVER['REQUEST_URI'] ?></span>
       <br><br>
-      <p>Du får inte gå in på den sidan/mapp! Tryck här för att gå till <a href="/">startsidan!</a></p>
+      <p>Du får inte gå in på den här sidan/mappen! Tryck här för att gå till <a href="/">startsidan!</a></p>
     </div>
   </body>
 </html>
