@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td class="td-fast alk"><span class="atomic_number">11</span>Na</td>
-    <td class="td-fast jor"><span class="atomic_number">12</span>Ng</td>
+    <td class="td-fast jor"><span class="atomic_number">12</span>Mg</td>
     <td class="td-fast ovr"><span class="atomic_number">13</span><span class="yt"><img src="/img/play.svg"></span>Al</td>
     <td class="td-fast hme"><span class="atomic_number">14</span><span class="yt"><img src="/img/play.svg"></span>Si</td>
     <td class="td-fast ick"><span class="atomic_number ">15</span>P</td>
