@@ -9,7 +9,7 @@
 </div>
 <br>
 <p>Vi reserverar för eventuella faktafel.</p>
-<p>Snabblänk: grundämnen.se/l/<?= $_POST['file'] ?></p>
+<p>Snabblänk: <a href="http://grundämnen.se/l/<?= $_POST['file'] ?>">grundämnen.se/l/<?= $_POST['file'] ?></a></p>
 <p>Är något fel? Är det något du vill lägga till? <a href="mailto:info.grundamnen@gmail.com">Maila oss</a> så lägger vi till din ändring!</p>
 
 <?php
