@@ -59,16 +59,3 @@ $("#advmode").on('change', function() {
 }); */
 
 // Kanske har någon betydelse...
-$( document ).ready(function() {
-  var width = $('td').width();
-  var height = width - 20;
-  $("td").css("height", height);
-  $(".td-logo").css("height", "50px");
-});
-
-$( window ).resize(function() {
-    var width = $('td').width();
-    var height = width - 20;
-    $("td").css("height", height);
-    $(".td-logo").css("height", "50px");
-});

@@ -17,16 +17,16 @@ if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grund�
     <meta name="twitter:url" content="http://grund채mnen.se/" />
     <title>Grund채mnen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="/css/global.less" />
-    <link rel="stylesheet/less" type="text/css" href="/css/index.less" />
-    <link rel="stylesheet/less" type="text/css" href="/css/wiki.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/global.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/index.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/wiki.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
     <div id="newHTML"></div> <!-- I denna div visas HTML som laddas via AJAX 채r man klickar p책 ett 채mne -->
     <?php include ("includes/sim_table.php"); ?>
     <br class="clearfix">
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="/js/index.js"></script>
