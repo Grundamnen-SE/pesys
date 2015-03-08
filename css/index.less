@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 * {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -13,52 +14,62 @@ body {
   height: 1px;
 }
 .webbstj {
-  margin-left: 20px;
-  float: left;
+  position: absolute;
+  left: 2vw;
+  top: 0.75vw;
+}
+.webbstj img {
+  width: 15vw;
+  height: 1.8vw;
 }
 .license {
-  margin-right: 20px;
-  float: right;
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+}
+.license img {
+  width: 5vw;
+  height: 1.7vw;
 }
 .td-logo {
   visibility: visible;
   cursor: auto;
-  height: 50px !important;
+  height: 3vw;
   padding: 5px;
   box-shadow: none;
 }
-.td-logo.e {
-  padding-top: 10px;
-  padding-bottom: 0px;
+.td-logo div {
+  height: 3vw;
 }
 table
 {
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
-  table-layout: fixed;
 /*  margin-bottom:30px;*/
 }
-.sim_table.tab2 {
-  top: 0px;
-  position: absolute;
-}
 td {
+  margin: 0;
+  padding: 0;
   position: relative;
-  padding: 10px;
   text-align: center;
   background-color:transparent;
   visibility: hidden;
-  height:5%;
+  height: 4.5vw;
   border:0;
   cursor:pointer;
   box-shadow: 0px 0px 1px 2px black;
   position: relative;
-  font-size: 30px;
+  font-size: 1.7vw;
+}
+.box {
+  overflow: hidden;
+  height: 4.5vw;
 }
 #header {
   visibility: visible;
   color: white;
-  font-size: 70px;
+  font-size: 300%;
 }
 a[href] {
   text-decoration: none;
@@ -70,7 +81,7 @@ a[href] {
   color:#5bb7ff;
   margin-right:20px;
   margin-left:20px;
-  font-size: 30px;
+  font-size: 120%;
 }
 .td-header, .td-about {
   box-shadow: none !important;
@@ -80,8 +91,11 @@ a[href] {
   background-color:transparent !important;
   cursor:default;
 }
-.tab1 td:hover {
-  background-color:#c9c9c9;
+.td-header div {
+  overflow: visible;
+}
+.td-about div {
+  height: 50%;
 }
 .td-none {
   z-index: 0 !important;
@@ -118,55 +132,79 @@ a[href] {
 }
 .atomic_number {
   position: absolute;
-  font-size: 12px;
-  top: 3px;
-  left: 3px;
+  font-size: 0.8vw;
+  top: 5%;
+  left: 8%;
+}
+.atomic_text {
+  position: relative;
+  top: 30%;
+
 }
 .yt {
   position: absolute;
-  font-size: 12px;
-  top: 3px;
-  right: 5px;
+  width: 22%;
+  top: 4%;
+  right: 7%;
 }
-.yt img {
-  width: 20px;
-  height: auto;
+
+.tab2 {
+  top: 0px;
+  position: absolute;
+}
+.tab1 {
+  top: 0px;
+  position: absolute;
+}
+.tab1 td:hover {
+  background-color:#c9c9c9;
 }
 
 @s: 70%;
 @v: 70%;
 
 .tab1 .alk {
+  z-index: 3;
   background-color: hsl(0, @s, @v);
 }
 .tab1 .jor {
+  z-index: 5;
   background-color: hsl(33, @s, @v);
 }
 .tab1 .lan {
+  z-index: 3;
   background-color: hsl(66, @s, @v);
 }
 .tab1 .akt {
+  z-index: 4;
   background-color: hsl(99, @s, @v);
 }
 .tab1 .ove {
+  z-index: 13;
   background-color: hsl(133, @s, @v);
 }
 .tab1 .ovr {
+  z-index: 11;
   background-color: hsl(166, @s, @v);
 }
 .tab1 .hme {
+  z-index: 9;
   background-color: hsl(199, @s, @v);
 }
 .tab1 .ick {
+  z-index: 7;
   background-color: hsl(233, @s, @v);
 }
 .tab1 .hao {
+  z-index: 5;
   background-color: hsl(266, @s, @v);
 }
 .tab1 .gas {
+  z-index: 3;
   background-color: hsl(299, @s, @v);
 }
 .tab1 .eju {
+  z-index: 15;
   background-color: hsl(333, @s, @v);
 }
 .tab1 .metal {
@@ -184,41 +222,51 @@ a[href] {
 
 
 @shadow: black;
-@shadow1: 0px;
-@shadow2: 0px;
+@shadow1: 12px;
+@shadow2: 4.5px;
 
 .tab2 .alk {
+  z-index: 2;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .jor {
+  z-index: 4;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .lan {
+  z-index: 2;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .akt {
+  z-index: 2;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .ove {
+  z-index: 12;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .ovr {
+  z-index: 10;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .hme {
+  z-index: 8;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .ick {
+  z-index: 6;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .hao {
+  z-index: 4;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .gas {
+  z-index: 2;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 .tab2 .eju {
-  background-color: hsl(333, @s, @v);
+  z-index: 14;
   box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
 }
 
@@ -227,12 +275,9 @@ a[href] {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  td {
-    font-size:25px;
-  }
-  .yt img {
-    width: 10px;
-  }
+  //td {
+    //font-size:25px;
+  //}
   .tril {
     font-size: 20px;
   }
@@ -240,12 +285,9 @@ and (max-device-width : 480px) {
 @media only screen
 and (min-device-width : 480px)
 and (max-device-width : 1024px) {
-  .yt img {
-    width: 10px;
-  }
-  td {
-    font-size:25px;
-  }
+  //td {
+    //font-size:25px;
+  //}
   .tril {
     font-size: 22px;
   }

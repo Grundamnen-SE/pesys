@@ -1,30 +1,33 @@
  // Gör så att när man klickar på ett grundämne öppnas rutan:
 
  // Updaterad!
+loading = false;
 $("td").on("click", function() {
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
-    if (string[string.length - 2] == ">") {
-      last = string.substr(string.length - 1);
-    } else if (string[string.length - 3] == ">") {
-      last = string.substr(string.length - 2);
-    } else {
-      last = string.substr(string.length - 3);
+    var position1 = string.search(/atomic_text">/);
+    if (string.substr(position1 + 14, 1) == "<") {
+      last = string.substr(position1 + 13, 1);
+    } else if (string.substr(position1 + 15, 1) == "<") {
+      last = string.substr(position1 + 13, 2);
+    } else if (string.substr(position1 + 16, 1) == "<") {
+      last = string.substr(position1 + 13, 3);
     }
-
-    $.ajax({
-      type: "POST",
-      url: "wiki/template.php",
-      data: {"file": last},
-      success: function(data) {
-        $("#newHTML").append(data);
-        $("body").css({"overflow":"hidden"});
-        $("#newHTML").show("scale", 300, function () {
-
-        });
-      },
-      dataType: "html"
-    });
+    if (loading != true) {
+      loading = true;
+      $.ajax({
+        type: "POST",
+        url: "/wiki/template.php",
+        data: {"file": last},
+        success: function(data) {
+          $("#newHTML").append(data);
+          $("body").css({"overflow":"hidden"});
+          $("#newHTML").show("scale", 300, function () {});
+          loading = false;
+        },
+        dataType: "html"
+      });
+    }
   }
 });
 
@@ -34,6 +37,12 @@ function exit() {
   $("#newHTML").hide("scale", 200);
   $("body").css({"overflow":"initial"});
 }
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+      exit();
+  }
+});
 
 // Byter till avancerat/enkelt läge beroende på om #advmode är 1 eller inte:
 /*if (location.hash == "#advmode=1") {
@@ -59,9 +68,3 @@ $("#advmode").on('change', function() {
 }); */
 
 // Kanske har någon betydelse...
-$( document ).ready(function() {
-  var width = $('td').width();
-  var height = width - 20;
-  $("td").css("height", height);
-  $(".td-logo").css("height", "50px");
-});
