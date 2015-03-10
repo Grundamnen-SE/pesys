@@ -276,7 +276,7 @@
   <tr class="tr-space">
     <td colspan="15" class="td-logo"><div class="box">
       <a class="webbstj" href="http://webbstjarnan.se" target="_blank">
-        <img title="Webbstjärnan" src="http://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
+        <img title="Webbstjärnan" src="https://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
       </a>
     </div></td>
     <td colspan="3" class="td-logo"><div class="box">
