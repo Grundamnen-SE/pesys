@@ -15,11 +15,18 @@ $("td").on("click", function() {
       last = string.substr(position1 + 13, 3);
     }
     if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
-    if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#E87D7D"}); }
-    if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8B87D"}); }
-    if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#7DE894"}); }
-    if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E87DAD"}); }
-    if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#7DE8CF"}); }
+    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#E87D7D"}); }
+    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8B87D"}); }
+    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#7DE894"}); }
+    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E87DAD"}); }
+    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#7DE8CF"}); }
+    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#7DC6E8"}); }
+    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
+    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#AB7DE8"}); }
+    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#E67DE8"}); }
+    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#DDE87D"}); }
+    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#A2E87D"}); }
+    else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail finns på om-sidan.")}
     if (!loading) {
       loading = true;
       $.ajax({
