@@ -1,3 +1,4 @@
+<div id="rst"></div>
 <table class="tab2 sim_table">
   <tr>
     <td class="td-gas ick"><div class="box"></div></td>

@@ -22,7 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
-    <div id="newHTML"></div> <!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
+    <div id="rst"></div>
+    <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
     <?php include ("includes/sim_table.php"); ?>
     <br class="clearfix">
 

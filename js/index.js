@@ -1,8 +1,9 @@
  // Gör så att när man klickar på ett grundämne öppnas rutan:
 
  // Updaterad!
-loading = false;
+var loading = false;
 $("td").on("click", function() {
+  var td = this;
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
     var position1 = string.search(/atomic_text">/);
@@ -13,7 +14,13 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       last = string.substr(position1 + 13, 3);
     }
-    if (loading != true) {
+    if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
+    if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#E87D7D"}); }
+    if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8B87D"}); }
+    if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#7DE894"}); }
+    if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E87DAD"}); }
+    if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#7DE8CF"}); }
+    if (!loading) {
       loading = true;
       $.ajax({
         type: "POST",
@@ -35,6 +42,7 @@ $("td").on("click", function() {
 function exit() {
   $("#newHTML").empty();
   $("#newHTML").hide("scale", 200);
+  $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
 }
 
