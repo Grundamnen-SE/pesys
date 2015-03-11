@@ -5,6 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
     <meta name="keywords" content="grundämnen, atom, atomer, grundämne, webbstjärnan, .se, iis, grundämnen.se, grundamnen.ejn.nu, kunskap, veta, lära, verktyg, information, data, wiki, fakta, hjälpmedel, proton, elektron, neutron, elektronskal, atomkärna, joarc, gustavwiz, github">
