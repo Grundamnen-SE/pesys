@@ -177,16 +177,16 @@
     <td class="td-fast alk"><div class="box"><span class="atomic_number">3</span><span class="atomic_text">Li</span></div></td>
     <td class="td-fast jor"><div class="box"><span class="atomic_number">4</span><span class="atomic_text">Be</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number">5</span><span class="atomic_text">B</span></div></td>
-    <td class="td-fast ick"><div class="box"><span class="atomic_number">6</span><span class="atomic_text">C</span></div></td>
+    <td class="td-fast ick"><div class="box"><span class="atomic_number">6</span><img class="yt" src="/img/play.svg"><span class="atomic_text">C</span></div></td>
     <td class="td-gas ick"><div class="box"><span class="atomic_number">7</span><span class="atomic_text">N</span></div></td>
-    <td class="td-gas ick"><div class="box"><span class="atomic_number">8</span><span class="atomic_text">O</span></div></td>
+    <td class="td-gas ick"><div class="box"><span class="atomic_number">8</span><img class="yt" src="/img/play.svg"><span class="atomic_text">O</span></div></td>
     <td class="td-gas hao"><div class="box"><span class="atomic_number">9</span><img class="yt" src="/img/play.svg"><span class="atomic_text">F</span></div></td>
     <td class="td-gas gas"><div class="box"><span class="atomic_number">10</span><span class="atomic_text">Ne</span></div></td>
   </tr>
   <tr>
     <td class="td-fast alk"><div class="box"><span class="atomic_number">11</span><span class="atomic_text">Na</span></div></td>
     <td class="td-fast jor"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Mg</span></div></td>
-    <td class="td-fast ovr"><div class="box"><span class="atomic_number">13</span><span class="atomic_text">Al</span></div></td>
+    <td class="td-fast ovr"><div class="box"><span class="atomic_number">13</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Al</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number">14</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Si</span></div></td>
     <td class="td-fast ick"><div class="box"><span class="atomic_number ">15</span><span class="atomic_text">P</span></div></td>
     <td class="td-fast ick"><div class="box"><span class="atomic_number ">16</span><span class="atomic_text">S</span></div></td>
@@ -224,7 +224,7 @@
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">45</span><span class="atomic_text">Rh</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">44</span><span class="atomic_text">Ru</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">46</span><span class="atomic_text">Pd</span></div></td>
-    <td class="td-fast ove"><div class="box"><span class="atomic_number ">47</span><span class="atomic_text">Ag</span></div></td>
+    <td class="td-fast ove"><div class="box"><span class="atomic_number ">47</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Ag</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">48</span><span class="atomic_text">Cd</span></div></td>
     <td class="td-fast ovr"><div class="box"><span class="atomic_number ">49</span><span class="atomic_text">In</span></div></td>
     <td class="td-fast ovr"><div class="box"><span class="atomic_number ">50</span><span class="atomic_text">Sn</span></div></td>
