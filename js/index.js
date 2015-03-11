@@ -1,8 +1,9 @@
  // Gör så att när man klickar på ett grundämne öppnas rutan:
 
  // Updaterad!
-loading = false;
+var loading = false;
 $("td").on("click", function() {
+  var td = this;
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
     string = $(this).html();
     var position1 = string.search(/atomic_text">/);
@@ -13,7 +14,20 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       last = string.substr(position1 + 13, 3);
     }
-    if (loading != true) {
+    if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
+    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#E87D7D"}); }
+    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8B87D"}); }
+    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#7DE894"}); }
+    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E87DAD"}); }
+    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#7DE8CF"}); }
+    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#7DC6E8"}); }
+    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
+    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#AB7DE8"}); }
+    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#E67DE8"}); }
+    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#DDE87D"}); }
+    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#A2E87D"}); }
+    else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail finns på om-sidan.")}
+    if (!loading) {
       loading = true;
       $.ajax({
         type: "POST",
@@ -35,6 +49,7 @@ $("td").on("click", function() {
 function exit() {
   $("#newHTML").empty();
   $("#newHTML").hide("scale", 200);
+  $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
 }
 

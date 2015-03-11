@@ -23,7 +23,7 @@
       <h1>Om oss:</h1>
       <h2>Joar <small><a href="https://twitter.com/Joarc99">Twitter</a></small></h2>
       <p>
-        Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag i webbstjärnan genom åren. Jag har varit med två gånger tidigare med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer, det började redan när jag gick i 4:an och spelade minecraft. Jag försökte förstå mig på servrar och när jag började på södertörns friskola i 6:an så exploderade mitt intresse för datorer. På skolan fanns en datorklubb där de som gillade datorer kunde hänga och lära sig mer om datorer. Det året körde våra "datakillar" en kurs i datorer, kallad "Datalogi A" och den gick jag, vilket satte igång mitt intresse. Sedan dess har jag drivit servrar hemma och utforskat det man kan göra med dem. Sedan under 7-8:an så ville jag börja använda datorn på lektioner och då började jag långsamt testa mig fram på hur jag kan göra hemsidor som kan användas i skolan.
+        Jag heter Joar Classon (Joarc / Joar C) och jag är 16 år. Jag går på Södertörns friskola som har haft flera bra bidrag i webbstjärnan genom åren. Jag har varit med två gånger tidigare med hemsidorna ungasysadmins.se och skolboka.se. Detta är tredje året jag är med i webbstjärnan. Jag har alltid gillat datorer, det började redan när jag gick i 4:an och spelade minecraft. Jag försökte förstå mig på servrar och när jag började på södertörns friskola i 6:an så exploderade mitt intresse för datorer. <br><br>På skolan fanns en datorklubb där de som gillade datorer kunde hänga och lära sig mer om datorer. Det året körde våra "datakillar" en kurs i datorer, kallad "Datalogi A" och den gick jag, vilket satte igång mitt intresse. Sedan dess har jag drivit servrar hemma och utforskat det man kan göra med dem. Sedan under 7-8:an så ville jag börja använda datorn på lektioner och då började jag långsamt testa mig fram på hur jag kan göra hemsidor som kan användas i skolan.
         Jag ville jobba med grundämnen.se för det är ett vinnande bidrag, som kan underlätta skolan för mig och många andra. Jag vill hjälpa andra med sånt som jag själv tycker är krångligt, och jag gör det bäst genom hemsidor som gör lite krångligare saker enklare. Mina intressen är att hålla på med datorer och utnyttja dem till det yttersta för att underlätta mitt och kanske andras liv. Med datorn kan man göra mer än att bara spela eller facebooka och sånt. Man kan faktiskt använda den för viktiga grejer som kan ändra livet för andra personer.
       </p>
       <h2>Alicia <small><a href="https://twitter.com/AliciaPalmr">Twitter</a></small></h2>
@@ -48,8 +48,10 @@
       <p>
         De periodiska system och allmänt den fakta vi har att tillgå i skolan om grundämnen och atomer kommer ifrån de fysik och kemiböcker vi läser i under lektionerna samt de planscher som sitter uppsatta i klassrummen och i korridorerna. Forskning kring atomfysik, nya material och kemiska reaktioner pågår dagligen runt om i världen och vi får hela tiden ny användbar information. Böckerna vi har i skolan kan man så klart inte trycka om varje läsår både på grund av ekonomiska skäl men också med tanke på miljön. Detta gör dock att det som står i dem inte är den senaste informationen som finns att tillgå. Allt behöver till och med inte vara korrekt.
         Internet däremot är en utav de främsta medierna för att distribuera och få ny information på. Därför tycker vi att det är viktigt att internet kan användas som en källa för naturvetenskaplig information och här kommer grundämnen.se perfekt till hands, både för lärare och elever!
+        <br><br>
         Vi har tänkt att denna hemsida kan användas som ett hjälpmedel i undervisningen på det sätt att läraren kan hålla i genomgångar om periodiska systemet och atomer på t.ex en projektor eller en smartboard. Att få se bilder och videor istället för att bara läsa text är ett bra sätt att lära in information och fakta på. Att dessutom relatera de kunskaper som man lär sig på lektionen till miljön och samhället vi lever i ökar kunskapen och förståelsen i nutiden, men också för framtida kunskaper i fysik, kemi och biologi. Ju mer man förstår i grunden, desto lättare blir det att förstå andra saker som är byggda på den. I det här fallet t.ex joner, fotosyntesen eller kärnfysik.
         Denna hemsida är även ett bra sätt för oss "skapare" att relatera de kunskaper vi lär oss under fysiken och kemin och kunna förmedla den till andra, kanske framförallt i vår ålder. På så sätt måste vi kommunicera med besökaren på ett sätt som är intresseväckande samtidigt som det är lärorikt. Vi måste också använda vetenskapliga begrepp samt förklara dessa på ett sätt som man förstår samt anpassa texten till mottagaren.
+        <br><br>
         Vi har även försökt att anpassa fakta på sidan så att det kan passa mellanstadieelever som ser ett periodiskt system för första gången samt för den lite mer erfarne eleven som kommit längre i studierna.
         Vi har försökt använda flera medier: video, text och bilder, för att lära ut andra. Alla lär sig inte bäst av bara text, utan vissa kan behöva bilder och filmer. Vi har försökt anpassa oss så gott det går på det sättet, så att så många som möjligt kan få ha användning av vår hemsida.
       </p>
@@ -75,6 +77,22 @@
       <h2>Joar</h2>
       <p>
         Jag har lärt mig ganska mycket faktiskt. Jag har lite problem att lära mig saker utan lär mig bäst när jag är intresserad i det jag lär mig om. Grundämnena kan vara svåra att förstå men under detta projektsgång så har jag lärt mig mer än jag har gjort under skolgången då vi jobbade med detta. Jag har även lärt mig mer om Ytterby, att det stället faktiskt finns, och att det finns fler ämnen runt om dig i vardagen än vad man faktiskt kan tro.
+      </p>
+      <h2>Alicia</h2>
+      <p>
+        Jag har lärt mig mycket under det här projektet måste jag säga. Förutom att jag lärt mig mycket om de olika grundämnena, både genom att ha skrivit om dem samt ha varit på studiebesök och framför allt letat efter grundämnen, men också saker som att dela upp arbete och samarbeta.
+        Jag tror på metoden att själv försöka förmedla det man lär sig till andra. På så sätt måste man granska det man själv gjort på ett annat sätt än om man skriver ned sina kunskaper och lämnar in till läraren. Det tycker jag defenitivt att vi fått göra under det här projektet, och att just jobba med det periodiska systemet tycker jag var ett bra val vad det gäller det, eftersom att allt letande efter grundämnen och skrivande av manus och texter fått mig att söka mycket information. Ju mer fakta jag skrivit ner och sammanställt, ju mer har jag insett att ju mer jag lär mig, desto mer finns det att veta. Detta har verkligen väckt mitt intresse för fysik och kemi. Det är den viljan vi vill få fram med den här hemsidan!
+      </p>
+      <h2>Gustav</h2>
+      <p>
+        För det fösta har jag förnyat mina kunskaper om grundämnen en hel del.
+        Vi har ju jobbat med detta i skolan, men man glömmer lätt bort mycket. Samtidigt lär jag mig också
+        saker som är ännu mer avancerade än det jag har lärt mig i skolan.
+        Jag har också lärt mig mer HTML, CSS, och JavaScript, som vanligt. På den här sidan krävdes
+        det en del av oss för att kunna göra den här tabellen. Reguljära uttryck är en sak som används
+        när man vill hitta i text. Det är väldigt användbart och kraftfullt, och det har jag lärt mig.
+        Senare i projektet gick vi också över till versionshanteringssystemet Git. Det kan vara lite
+        svårt i början, men det har jag lärt mig en hel del om.
       </p>
       <h1>Hur kopplas bidraget till läroplanen?</h1>
       <h2>Syftet i ämnet Svenska:</h2>
@@ -124,6 +142,11 @@
           <li>Gruppering av atomslag ur ett historiskt perspektiv.</li>
         </ul>
       </p>
+      <h1>Hemsidan</h1>
+      <p>
+        All text på denna hemsida är skriven av oss och faktan kommer från Wikipedia eller andra källor på internet samt våra skolböcker.<br>
+        Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi har egentligen ingen anledning att använda det, men vi gör det ändå för att stödja ett säkrare internet.
+      </p>
       <p>Vi reserverar för eventuella faktafel.</p>
       <h2>Licens</h2>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -139,7 +162,7 @@
         Där kan du se all kod vi ha skrivit för att få denna sidan att vara fungerande!
       </p>
       <h1>Kontakt</h1>
-      <p>
+      <p class="om-bottom">
         Har du synpunkter, frågor eller funderingar? Har du hittat en bugg? Då
         får du jättegärna mejla oss! Adressen är:
         <img src="/img/grundamnen-kontakt.png">
