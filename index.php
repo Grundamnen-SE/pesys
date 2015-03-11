@@ -1,6 +1,6 @@
 <?php
   if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grundämnen.se/');
-  if ($_SERVER['HTTPS'] == null) header('Location: https://grundämnen.se/');
+  if ($_SERVER['HTTPS'] == null && $_SERVER['SERVER_NAME'] != "beta.grundämnen.se") header('Location: https://grundämnen.se/');
 ?>
 <!DOCTYPE html>
 <html>
