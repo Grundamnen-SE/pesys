@@ -78,6 +78,22 @@
       <p>
         Jag har lärt mig ganska mycket faktiskt. Jag har lite problem att lära mig saker utan lär mig bäst när jag är intresserad i det jag lär mig om. Grundämnena kan vara svåra att förstå men under detta projektsgång så har jag lärt mig mer än jag har gjort under skolgången då vi jobbade med detta. Jag har även lärt mig mer om Ytterby, att det stället faktiskt finns, och att det finns fler ämnen runt om dig i vardagen än vad man faktiskt kan tro.
       </p>
+      <h2>Alicia</h2>
+      <p>
+        Jag har lärt mig mycket under det här projektet måste jag säga. Förutom att jag lärt mig mycket om de olika grundämnena, både genom att ha skrivit om dem samt ha varit på studiebesök och framför allt letat efter grundämnen, men också saker som att dela upp arbete och samarbeta.
+        Jag tror på metoden att själv försöka förmedla det man lär sig till andra. På så sätt måste man granska det man själv gjort på ett annat sätt än om man skriver ned sina kunskaper och lämnar in till läraren. Det tycker jag defenitivt att vi fått göra under det här projektet, och att just jobba med det periodiska systemet tycker jag var ett bra val vad det gäller det, eftersom att allt letande efter grundämnen och skrivande av manus och texter fått mig att söka mycket information. Ju mer fakta jag skrivit ner och sammanställt, ju mer har jag insett att ju mer jag lär mig, desto mer finns det att veta. Detta har verkligen väckt mitt intresse för fysik och kemi. Det är den viljan vi vill få fram med den här hemsidan!
+      </p>
+      <h2>Gustav</h2>
+      <p>
+        För det fösta har jag förnyat mina kunskaper om grundämnen en hel del.
+        Vi har ju jobbat med detta i skolan, men man glömmer lätt bort mycket. Samtidigt lär jag mig också
+        saker som är ännu mer avancerade än det jag har lärt mig i skolan.
+        Jag har också lärt mig mer HTML, CSS, och JavaScript, som vanligt. På den här sidan krävdes
+        det en del av oss för att kunna göra den här tabellen. Reguljära uttryck är en sak som används
+        när man vill hitta i text. Det är väldigt användbart och kraftfullt, och det har jag lärt mig.
+        Senare i projektet gick vi också över till versionshanteringssystemet Git. Det kan vara lite
+        svårt i början, men det har jag lärt mig en hel del om.
+      </p>
       <h1>Hur kopplas bidraget till läroplanen?</h1>
       <h2>Syftet i ämnet Svenska:</h2>
       <p>
@@ -125,6 +141,11 @@
           <li>De kemiska modellernas och teoriernas användbarhet, begränsningar, giltighet och föränderlighet.</li>
           <li>Gruppering av atomslag ur ett historiskt perspektiv.</li>
         </ul>
+      </p>
+      <h1>Hemsidan</h1>
+      <p>
+        All text på denna hemsida är skriven av oss och faktan kommer från Wikipedia eller andra källor på internet samt våra skolböcker.<br>
+        Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi har egentligen ingen anledning att använda det, men vi gör det ändå för att stödja ett säkrare internet.
       </p>
       <p>Vi reserverar för eventuella faktafel.</p>
       <h2>Licens</h2>
