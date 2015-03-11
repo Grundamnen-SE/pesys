@@ -36,10 +36,6 @@
   font-size: 70px;
   cursor: pointer;
 }
-.info {
-  width: 80%;
-  padding-left: 10%;
-}
 .intro {
 }
 .line {
@@ -78,4 +74,22 @@ p {
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
   text-align: center;
+}
+@media screen and (max-width: 599px) {
+  .info {
+    width: 98%;
+    margin-left: 1%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1400px) {
+  .info {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1401px) {
+  .info {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
