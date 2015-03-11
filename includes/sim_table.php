@@ -163,7 +163,7 @@
 
 <table class="tab1 sim_table">
   <tr>
-    <td class="td-gas ick"><div class="box"><span class="atomic_number">1</span><span class="atomic_text">H</span></div></td>
+    <td class="td-gas ick"><div class="box"><span class="atomic_number">1</span><img class="yt" src="/img/play.svg"><span class="atomic_text">H</span></div></td>
     <td><div class="box"></div></td>
     <td rowspan="3" colspan="10" class="td-header">
       <div class="box"><a id="header" href="/">Grundämnen.se</a></div>
@@ -184,7 +184,7 @@
     <td class="td-gas gas"><div class="box"><span class="atomic_number">10</span><span class="atomic_text">Ne</span></div></td>
   </tr>
   <tr>
-    <td class="td-fast alk"><div class="box"><span class="atomic_number">11</span><span class="atomic_text">Na</span></div></td>
+    <td class="td-fast alk"><div class="box"><span class="atomic_number">11</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Na</span></div></td>
     <td class="td-fast jor"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Mg</span></div></td>
     <td class="td-fast ovr"><div class="box"><span class="atomic_number">13</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Al</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number">14</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Si</span></div></td>
