@@ -147,7 +147,7 @@
         All text på denna hemsida är skriven av oss och faktan kommer från Wikipedia eller andra källor på internet samt våra skolböcker.<br>
         Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi har egentligen ingen anledning att använda det, men vi gör det ändå för att stödja ett säkrare internet.
       </p>
-      <p>Vi reserverar för eventuella faktafel.</p>
+      <p>Vi reserverar oss för eventuella faktafel.</p>
       <h2>Licens</h2>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
         <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
