@@ -160,6 +160,37 @@ a[href] {
   background-color:#c9c9c9;
 }
 
+.help {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+#help {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 800px;
+  background-color: lightgray;
+}
+#help p {
+  margin-left: 15px;
+  float: left;
+}
+#help div {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+#help div:nth-child(1) { background-color: red; }
+#help div:nth-child(2) { background-color: green; }
+#help div:nth-child(3) { background-color: blue; }
+
 @s: 70%;
 @v: 70%;
 

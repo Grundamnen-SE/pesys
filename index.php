@@ -22,7 +22,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
-    <div id="rst"></div>
+    <div id="help">
+      <div></div><p>Icke-metaller</p><br class="clearfix">
+      <div></div><p>Alkalimetaller</p><br><br class="clearfix">
+      <div></div><p>Alkaliska jordartsmetaller</p><br><br class="clearfix">
+    </div>
     <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
     <?php include ("includes/sim_table.php"); ?>
     <br class="clearfix">
