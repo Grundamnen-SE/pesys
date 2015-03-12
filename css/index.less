@@ -161,35 +161,42 @@ a[href] {
 }
 
 .help {
-  width: 30px;
-  height: 30px;
+  width: 45%;
+  height: 45%;
   position: absolute;
   top: 0;
   left: 0;
   cursor: pointer;
 }
+#help p {
+  margin-left: 45px;
+}
 #help {
   display: none;
-  position: absolute;
   z-index: 100;
-  left: 0;
+  position: absolute;
+  padding: 20px;
+  padding-top: 10px;
   top: 0;
-  width: 400px;
-  height: 800px;
-  background-color: lightgray;
+  background-color: #EDEDED;
+  border-left: 3px solid #272727;
+  border-right: 3px solid #272727;
+  border-bottom: 3px solid #272727;
 }
-#help p {
-  margin-left: 15px;
-  float: left;
+#help > div {
+  height: 45px;
+  display: flex;
+  margin-top: 10px;
 }
-#help div {
-  float: left;
-  width: 50px;
-  height: 50px;
+#help > div > div {
+  width: 45px;
+  height: 45px;
+  margin: 0;
 }
-#help div:nth-child(1) { background-color: red; }
-#help div:nth-child(2) { background-color: green; }
-#help div:nth-child(3) { background-color: blue; }
+#help > div:nth-of-type(1) > div { background-color: #7D89E8; }
+#help > div:nth-of-type(2) > div { background-color: #E87D7D; }
+#help > div:nth-of-type(3) > div { background-color: ; }
+#help > div:nth-of-type(4) > div { background-color: ; }
 
 @s: 70%;
 @v: 70%;

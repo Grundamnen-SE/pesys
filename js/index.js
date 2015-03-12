@@ -47,7 +47,10 @@ $("td").on("click", function() {
 
 //Info/Help-rutan (färgförklaring)
 $(".help").on("click", function() {
-  $("#help").toggle("fade", 200);
+  var move = $("#help").width()/2;
+  var width = $(window).width();
+  $("#help").css("left",width / 2 - move);
+  $("#help").toggle("slide", {direction:"up"});
 });
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick

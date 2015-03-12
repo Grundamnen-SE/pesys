@@ -23,9 +23,17 @@
   </head>
   <body>
     <div id="help">
-      <div></div><p>Icke-metaller</p><br class="clearfix">
-      <div></div><p>Alkalimetaller</p><br><br class="clearfix">
-      <div></div><p>Alkaliska jordartsmetaller</p><br><br class="clearfix">
+      <div><div></div><p>Icke-metaller</p></div>
+      <div><div></div><p>Alkalimetaller</p></div>
+      <div><div></div><p><pre>Alkaliska jordartsmetaller<pre></p></div>
+      <div><div></div><p>Övergångsmetaller</p></div>
+      <div><div></div><p>Halvmetaller</p></div>
+      <div><div></div><p>Övriga metaller</p></div>
+      <div><div></div><p>Halogener</p></div>
+      <div><div></div><p>Ädelgaser</p></div>
+      <div><div></div><p>Okända egenskaper</p></div>
+      <div><div></div><p>Lantanoider</p></div>
+      <div><div></div><p>Aktinoider</p></div>
     </div>
     <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
     <?php include ("includes/sim_table.php"); ?>
