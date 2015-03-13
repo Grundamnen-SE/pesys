@@ -1,3 +1,7 @@
+.info {
+  padding: 30px;
+  min-height: calc(100% - 22px);
+}
 .shadow {
   background-color: rgba(168, 234, 182, 0.8);
   position: absolute;
@@ -9,7 +13,6 @@
 }
 #newHTML {
   box-sizing: border-box;
-  padding: 30px;
   width: 100%;
   height: 100%;
   display: none;
@@ -36,9 +39,13 @@
   cursor: pointer;
 }
 .video iframe {
-  float: right;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 .intro {
+  margin-bottom: 50px;
+  font-size: 18px;
 }
 .line {
   border-bottom: 1px solid gray;
@@ -46,26 +53,20 @@
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
 .about {
-  border: 1px solid black;
+  box-shadow: 0 0 10px 5px purple;
   padding: 10px;
-  margin-left: 20px;
+  margin-left: 35px;
   margin-right: 20px;
-  display: inline-block;
-  float: left;
+  float: right;
+  width: 200px;
+  display: table;
 }
-.about ul {
-  list-style: none;
-  padding-left: 10px;
+.wiki-tr {
+  display: table-row;
 }
-.about ul li h2 {
-  font-size:20px;
-  font-weight: bold;
-}
-.about ul li {
-  font-size: 17px;
-  list-style: none;
+.wiki-td {
+  display: table-cell;
 }
 .wiki-header {
   font-size: 40px;
@@ -76,19 +77,18 @@
   text-align: center;
 }
 .extra-info {
-  position: absolute;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 1px dashed #363636;
+  border-right: 1px dashed #363636;
+  border-left: 1px dashed #363636;
   width: 700px;
   margin-top: 50px;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 14px;
+  height: 110px;
 }
 @media screen and (max-width: 599px) {
   .info {
@@ -104,11 +104,8 @@
 }
 @media screen and (min-width: 1401px) {
   .info {
-    width: 80%;
-    margin-left: 10%;
-  }
-  .video iframe {
-    margin-right: 70px
+    width: 70%;
+    margin-left: 15%;
   }
   .extra-info {
     width: 900px;
