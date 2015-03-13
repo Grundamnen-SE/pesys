@@ -6,7 +6,6 @@
   if (file_exists($dir.$link_r[0].".html")) {
   ?>
 <script>
-  if ()
   if ($(".atomic_text").parent("td").hasClass("ick")) { $("#newHTML").css({"background-color":"#7D89E8"}); }
   else if ($(".atomic_text").parent("td").hasClass("alk")) { $("#newHTML").css({"background-color":"#E87D7D"}); }
   else if ($(".atomic_text").parent("td").hasClass("jor")) { $("#newHTML").css({"background-color":"#E8B87D"}); }
