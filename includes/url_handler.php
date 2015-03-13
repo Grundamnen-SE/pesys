@@ -6,6 +6,7 @@ if ($link_r[0] != "") {
 if (file_exists($dir.$link_r[0].".html")) {
 ?>
 <script>
+alert(<?= $link_r[0] ?>);
 $("body").css({"overflow":"hidden"});
 $.ajax({
   type: "POST",
