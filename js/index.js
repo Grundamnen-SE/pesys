@@ -1,5 +1,11 @@
  // Gör så att när man klickar på ett grundämne öppnas rutan:
 
+
+// Add :containsExact
+ $.expr[":"].containsExact = function (obj, index, meta, stack) {
+   return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
+ };
+
  // Updaterad!
 var loading = false;
 $("td").on("click", function() {
