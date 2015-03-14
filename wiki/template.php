@@ -16,7 +16,7 @@
 
 <?php
   } else {
-    echo "<h1>Detta ämne har vi inte skrivit om än!</h1>";
-    echo "<h2>Vill du hjälpa till att skriva en sida? Skicka in din text till oss via <a href=\"mailto:info.grundamnen@gmail.com\">mail</a> så lägger vi till den till ämnet. </h2>";
+    echo '<div class="not-exist"><h1>Detta ämne har vi inte skrivit om än!</h1>';
+    echo '<h2>Vill du hjälpa till att skriva en sida? Skicka in din text till oss via <a href=\"mailto:info.grundamnen@gmail.com\">mail</a> så lägger vi till den till ämnet. </h2></div>';
   }
 ?>
