@@ -29,7 +29,7 @@
     success: function( data ) {
       $("#newHTML").append(data);
       $("body").css({"overflow":"hidden"});
-      $("#newHTML").show("scale", 300, function () {});
+      $("#newHTML").show();
     },
     dataType: "html"
   });
