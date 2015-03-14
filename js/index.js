@@ -22,16 +22,16 @@ $("td").on("click", function() {
     }
     if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
     else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
-    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8DED1"}); }
-    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#D1E8D6"}); }
-    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E8D1DB"}); }
-    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#D1E8E3"}); }
-    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#D1E1E8"}); }
-    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#D1D3E8"}); }
-    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#DBD1E8"}); }
-    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#E8D1E8"}); }
-    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#E6E8D1"}); }
-    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D9E8D1"}); }
+    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
+    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
+    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#FFC2DC"}); }
+    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
+    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
+    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
+    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
+    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
+    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
+    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }
     else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail finns på om-sidan.")}
     if (!loading) {
       loading = true;
