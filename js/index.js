@@ -20,8 +20,8 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       last = string.substr(position1 + 13, 3);
     }
-    if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#D1D4E8"}); }
-    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#E8D1D1"}); }
+    if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#D1D7FF"}); }
+    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFD1D1"}); }
     else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#E8DED1"}); }
     else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#D1E8D6"}); }
     else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#E8D1DB"}); }
