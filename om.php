@@ -144,8 +144,10 @@
       </p>
       <h1>Hemsidan</h1>
       <p>
-        All text på denna hemsida är skriven av oss och faktan kommer från Wikipedia eller andra källor på internet samt våra skolböcker.<br>
-        Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi har egentligen ingen anledning att använda det, men vi gör det ändå för att stödja ett säkrare internet.
+        Vi har byggt denna hemsida själva från grunden. Vi har aktivt valt att använda en ganska stark och “glad” färgskala för att väcka användarens intresse, vilket egentligen är grundtanken med hemsidan, att skapa en modernt periodiskt system som fångar besökarens uppmärksamhet. Vi har av denna anledning valt att göra videor om de ämnen vi hittar istället för att skriva text till exempel. <br>
+        All text på denna hemsida är skriven av oss om inget annat nämns. Detta gäller även bilder och videos. Den fakta vi använder oss av kommer antingen från Wikipedia eller andra liknande källor på internet samt våra läroböcker.<br>
+        Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi gör detta för att stödja ett säkrare internet.<br>
+        Vi har inte fått några produkter som vi använder i videorna skickade till oss utan de är privata.
       </p>
       <p>Vi reserverar oss för eventuella faktafel.</p>
       <h2>Licens</h2>

@@ -324,6 +324,6 @@
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">102</span><span class="atomic_text">No</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">103</span><span class="atomic_text">Lr</span></div></td>
     <td class="td-none"><div class="box"></div></td>
-    <td class="td-none"><div class="box"><img class="help" src="img/info.svg"></img></div></td>
+    <td class="td-none"><div class="box"><img class="help" src="/img/info.svg"></img></div></td>
   </tr>
 </table>
