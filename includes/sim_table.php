@@ -170,7 +170,7 @@
       <div class="box"><a id="header" href="/">Grundämnen.se</a></div>
     </td>
     <td colspan="5" class="td-about">
-      <div class="box"><a id="about-link" href="/om">Om</a></div>
+      <div class="box"><a id="about-link" href="/om">Om</a><a id="about-link" href="/info">Info</a></div>
     </td>
     <td class="td-gas gas"><div class="box"><span class="atomic_number">2</span><span class="atomic_text">He</span></div></td>
   </tr>
@@ -324,6 +324,6 @@
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">102</span><span class="atomic_text">No</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">103</span><span class="atomic_text">Lr</span></div></td>
     <td class="td-none"><div class="box"></div></td>
-    <td class="td-none"><div class="box"><img class="help" src="img/info.svg"></img></div></td>
+    <td class="td-none"><div class="box"><img class="help" src="/img/info.svg"></img></div></td>
   </tr>
 </table>
