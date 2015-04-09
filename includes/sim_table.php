@@ -170,7 +170,7 @@
       <div class="box"><a id="header" href="/">Grundämnen.se</a></div>
     </td>
     <td colspan="5" class="td-about">
-      <div class="box"><a id="about-link" href="/om">Om</a></div>
+      <div class="box"><a id="about-link" href="/om">Om</a><a id="about-link" href="/info">Info</a></div>
     </td>
     <td class="td-gas gas"><div class="box"><span class="atomic_number">2</span><span class="atomic_text">He</span></div></td>
   </tr>
@@ -237,7 +237,7 @@
   <tr>
     <td class="td-fast alk"><div class="box"><span class="atomic_number ">55</span><span class="atomic_text">Cs</span></div></td>
     <td class="td-fast jor"><div class="box"><span class="atomic_number ">56</span><span class="atomic_text">Ba</span></div></td>
-    <td class="td-extend"><div class="box">&gt;</div></td>
+    <td class="td-extend"><div class="box"><span class="extend-text">&gt;</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">72</span><span class="atomic_text">Hf</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">73</span><span class="atomic_text">Ta</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">74</span><span class="atomic_text">W</span></div></td>
@@ -257,7 +257,7 @@
   <tr>
     <td class="td-fast alk"><div class="box"><span class="atomic_number ">87</span><span class="atomic_text">Fr</span></div></td>
     <td class="td-fast jor"><div class="box"><span class="atomic_number ">88</span><span class="atomic_text">Ra</span></div></td>
-    <td class="td-extend"><div class="box">&gt;&gt;</div></td>
+    <td class="td-extend"><div class="box"><span class="extend-text">&gt;&gt;</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">104</span><span class="atomic_text">Rf</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">105</span><span class="atomic_text">Db</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">106</span><span class="atomic_text">Sg</span></div></td>
@@ -287,7 +287,7 @@
     </div></td>
   </tr>
   <tr>
-    <td class="td-extend"><div class="box">&gt;</div></td>
+    <td class="td-extend"><div class="box"><span class="extend-text">&gt;</span></div></td>
     <td class="td-fast lan"><div class="box"><span class="atomic_number ">57</span><span class="atomic_text">La</span></div></td>
     <td class="td-fast lan"><div class="box"><span class="atomic_number ">58</span><span class="atomic_text">Ce</span></div></td>
     <td class="td-fast lan"><div class="box"><span class="atomic_number ">59</span><span class="atomic_text">Pr</span></div></td>
@@ -307,7 +307,7 @@
     <td class="td-none"><div class="box"></div></td>
   </tr>
   <tr>
-    <td class="td-extend"><div class="box">&gt;&gt;</div></td>
+    <td class="td-extend"><div class="box"><span class="extend-text">&gt;&gt;</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">89</span><span class="atomic_text">Ac</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">90</span><span class="atomic_text">Th</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">91</span><span class="atomic_text">Pa</span></div></td>
