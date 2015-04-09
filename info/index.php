@@ -16,6 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
   </head>
   <body>
+    <div id="nav">
+      <a href="/"><p>Tillbaks</p></a>
+      <h2>Grundämnen.se</h2>
+    </div>
     <div id="main">
       <h1 class="header">Välkommen!</h1>
       <h3>Här kan du lära dig om periodiska systemet, grundämnen, och annan kemi och fysik</h3>
