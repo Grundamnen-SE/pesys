@@ -19,6 +19,8 @@
     <div id="main">
       <h1 class="header">Välkommen!</h1>
       <h3>Här kan du lära dig om periodiska systemet, grundämnen, och annan kemi och fysik</h3>
+      <br>
+      <a href="https://www.youtube.com/watch?v=JossJow5TbM&list=PLLE2a7MKdbv9Jz-63t8AMiiv47lEAHVl5"><p>Video 1 - Vad är atomer?</p></a>
     </div>
   </body>
 </html>
