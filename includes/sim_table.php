@@ -222,8 +222,8 @@
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">41</span><span class="atomic_text">Nb</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">42</span><span class="atomic_text">Mo</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">43</span><span class="atomic_text">Tc</span></div></td>
-    <td class="td-fast ove"><div class="box"><span class="atomic_number ">45</span><span class="atomic_text">Rh</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">44</span><span class="atomic_text">Ru</span></div></td>
+    <td class="td-fast ove"><div class="box"><span class="atomic_number ">45</span><span class="atomic_text">Rh</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">46</span><span class="atomic_text">Pd</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">47</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Ag</span></div></td>
     <td class="td-fast ove"><div class="box"><span class="atomic_number ">48</span><span class="atomic_text">Cd</span></div></td>
@@ -231,7 +231,7 @@
     <td class="td-fast ovr"><div class="box"><span class="atomic_number ">50</span><span class="atomic_text">Sn</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number ">51</span><span class="atomic_text">Sb</span></div></td>
     <td class="td-fast hme"><div class="box"><span class="atomic_number ">52</span><span class="atomic_text">Te</span></div></td>
-    <td class="td-gas hao"><div class="box"><span class="atomic_number ">52</span><span class="atomic_text">I</span></div></td>
+    <td class="td-gas hao"><div class="box"><span class="atomic_number ">53</span><span class="atomic_text">I</span></div></td>
     <td class="td-gas gas"><div class="box"><span class="atomic_number ">54</span><span class="atomic_text">Xe</span></div></td>
   </tr>
   <tr>
