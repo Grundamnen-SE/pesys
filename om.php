@@ -144,10 +144,13 @@
       </p>
       <h1>Hemsidan</h1>
       <p>
-        Vi har byggt denna hemsida själva från grunden. Vi har aktivt valt att använda en ganska stark och “glad” färgskala för att väcka användarens intresse, vilket egentligen är grundtanken med hemsidan, att skapa en modernt periodiskt system som fångar besökarens uppmärksamhet. Vi har av denna anledning valt att göra videor om de ämnen vi hittar istället för att skriva text till exempel. <br>
-        All text på denna hemsida är skriven av oss om inget annat nämns. Detta gäller även bilder och videos. Den fakta vi använder oss av kommer antingen från Wikipedia eller andra liknande källor på internet samt våra läroböcker.<br>
-        Vi använder HTTPS (Krypterad) anslutning på grundämnen. Vi gör detta för att stödja ett säkrare internet.<br>
-        Vi har inte fått några produkter som vi använder i videorna skickade till oss utan de är privata.
+        Vi har byggt denna hemsida själva från grunden. Vi har valt att använda en ganska stark
+        och “glad” färgskala för att väcka användarens intresse, vilket egentligen är
+        grundtanken med hemsidan, att skapa en modernt periodiskt system som fångar
+        besökarens uppmärksamhet. Vi har av denna anledning valt att göra videor om de
+        ämnen vi hittar som komplement till text. <br>
+        Den fakta vi använder oss av kommer antingen
+        från Wikipedia eller andra liknande källor på internet samt våra läroböcker.<br>
       </p>
       <p>Vi reserverar oss för eventuella faktafel.</p>
       <h2>Licens</h2>
@@ -157,11 +160,17 @@
       <br />
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Grundämnen</span> av <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.grundämnen.se" property="cc:attributionName" rel="cc:attributionURL">Alicia, Joar och Gustav</a> är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Erkännande-IckeKommersiell-DelaLika 4.0 Internationell licens</a>.
       <p>
-        Allt material på denna sida är gjorda av oss. Alla bilder har antingen varit gjorde av oss eller för oss. Andra får använda/göra om bilderna så länge de använder samma licens och berättar att det var vi som gjorde bilden/materialet. Du får inte använda bilderna/material om du gör det för att tjäna pengar på det.
+        Mycket material på denna sida är gjort av oss, men inte allt. Vad allt material
+        däremot har gemensamt är att det har en fri licens,
+        vilket innebär att andra får använda/göra om material så länge det använder samma
+        licens som dess nuvarande, och att det står vem som gjorde det ursprungligen.
+        Om det, till exempel på en bild, inte står vem som är upphovsmammaen på denna sida,
+        är det vi.
+        Du får inte ta material härifrån om du gör det för att tjäna pengar på det.
       </p>
       <p>
         Vill du se källkoden? Vi har laddat upp den på <a href="https://github.com/Grundamnen-SE/pesys">Github</a>!
-        Där kan du se all kod vi ha skrivit för att få denna sidan att vara fungerande!
+        Där kan du se all kod vi har skrivit för att få denna sida att vara fungerande!
       </p>
       <h1>Kontakt</h1>
       <p class="om-bottom">
@@ -169,7 +178,9 @@
         får du jättegärna mejla oss! Adressen är:
         <img src="/img/grundamnen-kontakt.png">
         <br>
-        Vi finns även på: <a href="https://www.youtube.com/channel/UCE-ih5dTUWnlhlcvb5SbFrg">Youtube</a> <a href="https://twitter.com/grundamnen">Twitter</a> <a href="https://github.com/Grundamnen-SE">Github</a>
+        Vi finns även på:
+        <a style="margin-left: 10px; margin-right: 10px;" href="https://www.youtube.com/channel/UCE-ih5dTUWnlhlcvb5SbFrg">Youtube </a>
+        <a href="https://twitter.com/grundamnen"> Twitter</a>
       </p>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
