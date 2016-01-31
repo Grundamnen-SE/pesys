@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="nav">
-      <a href="/"><p>Tillbaks</p></a>
+      <a href="/"><p>Tillbaka</p></a>
       <h2>Grundämnen.se</h2>
     </div>
     <div id="main">
