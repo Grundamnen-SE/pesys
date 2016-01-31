@@ -102,6 +102,11 @@
           <a href="https://twitter.com/grundamnen"> Twitter</a>
         </p>
 
+        <h1>Beta</h1>
+        <p>En del ändringar lägger vi inte ut direkt, utan ligger på beta-sidan ett tag först.
+        Vill du kolla in denna kan du gå in på <a href="http://beta.grundämnen.se">beta.grundämnen.se</a>.
+        Kom ihåg att saker kan se konstiga ut, vara felaktiga, och ändras eller tas bort när som helst.</p>
+
       </div>
 
       <br style="clear: both;">

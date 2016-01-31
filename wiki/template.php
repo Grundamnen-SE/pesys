@@ -8,7 +8,7 @@
   <?php include ($file); ?>
 </div>
 <div class="extra-info">
-  <p>Snabblänk: <a href="http://grundämnen.se/l/<?= $_POST['file'] ?>">grundämnen.se/l/<?= $_POST['file'] ?></a></p>
+  <p>Snabblänk: <a href="http://<?= $_SERVER['SERVER_NAME'] ?>/l/<?= $_POST['file'] ?>">grundämnen.se/l/<?= $_POST['file'] ?></a></p>
   <p>Vi reserverar oss för eventuella faktafel.</p>
   <p>Är något fel? Är det något du vill lägga till?
   <a href="mailto:info.grundamnen@gmail.com">Maila oss</a> så lägger vi till din ändring!</p>
