@@ -275,16 +275,18 @@
     <td class="td-gas gas tril"><div class="box"><span class="atomic_number ">118</span><span class="atomic_text">Uuo</span></div></td>
   </tr>
   <tr class="tr-space">
-    <td colspan="15" class="td-logo"><div class="box">
-      <a class="webbstj" href="http://webbstjarnan.se" target="_blank">
-        <img title="Webbstjärnan" src="https://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_vit.png" alt="" width="250" />
-      </a>
-    </div></td>
-    <td colspan="3" class="td-logo"><div class="box">
-      <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
-        <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-      </a>
-    </div></td>
+    <td colspan="15" class="td-logo">
+      <div class="box">
+        <!-- Här var webbsjtärnan-loggan. Sparar utrymmet om vi ska ha ngt annat här. -->
+      </div>
+    </td>
+    <td colspan="3" class="td-logo">
+      <div class="box">
+        <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
+          <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+        </a>
+      </div>
+    </td>
   </tr>
   <tr>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;</span></div></td>
@@ -324,6 +326,6 @@
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">102</span><span class="atomic_text">No</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">103</span><span class="atomic_text">Lr</span></div></td>
     <td class="td-none"><div class="box"></div></td>
-    <td class="td-none"><div class="box"><img class="help" src="/img/info.svg"></img></div></td>
+    <td class="td-none"><div class="box"><img class="help" src="/img/question.png"></img></div></td>
   </tr>
 </table>
