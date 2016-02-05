@@ -74,20 +74,18 @@
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
           <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
         </a>
-        <br />
-        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Grundämnen</span> av <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.grundämnen.se" property="cc:attributionName" rel="cc:attributionURL">Alicia, Joar och Gustav</a> är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Erkännande-IckeKommersiell-DelaLika 4.0 Internationell licens</a>.
+        <br>
         <p>
-          Mycket material på denna sida är gjort av oss, men inte allt. Vad allt material
-          däremot har gemensamt är att det har en fri licens,
-          vilket innebär att andra får använda/göra om material så länge det använder samma
-          licens som dess nuvarande, och att det står vem som gjorde det ursprungligen.
-          Om det, till exempel på en bild, inte står vem som är upphovsmammaen på denna sida,
-          är det vi.
-          Du får inte ta material härifrån om du gör det för att tjäna pengar på det.
+          Mycket material på denna sida är gjort av oss, men inte allt. Uppges ingen licens för något material, har det licensen som du kan se ovan, vilket innebär att andra får använda/göra om material så länge det använder samma licens som dess nuvarande, och att det står att materialet kommer härifrån. Du får inte heller ta material härifrån om du gör det för att tjäna pengar på det.<br><br>
+          På en del material, exempelvis många bilder, kan det vara så att vi inte är upphovsmän. Då anges licencen för det enskilda materialet. Vad gäller bilder kan det exempelvis vara så att du behöver hovra med musen över dem.
         </p>
+        <h2>Bidra</h2>
         <p>
           Vill du se källkoden? Vi har laddat upp den på <a href="https://github.com/Grundamnen-SE/pesys">Github</a>!
-          Där kan du se all kod vi har skrivit för att få denna sida att vara fungerande!
+          Där kan du se all kod vi har skrivit för att få denna sida att vara fungerande.
+        </p>
+        <p>
+          Du kan också hjälpa till med att lägga till material och ändra sidan! För att göra det kan du antingen mejla oss texter exempelvis (se mejl nedan), eller använda Github (info om det via länken ovan).
         </p>
 
         <h1>Kontakt</h1>
@@ -102,7 +100,7 @@
           <a href="https://twitter.com/grundamnen"> Twitter</a>
         </p>
 
-        <h1>Beta</h1>
+        <h2>Beta</h2>
         <p>En del ändringar lägger vi inte ut direkt, utan ligger på beta-sidan ett tag först.
         Vill du kolla in denna kan du gå in på <a href="http://beta.grundämnen.se">beta.grundämnen.se</a>.
         Kom ihåg att saker kan se konstiga ut, vara felaktiga, och ändras eller tas bort när som helst.</p>

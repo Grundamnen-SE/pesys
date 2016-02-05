@@ -46,6 +46,22 @@
   font-size: 14px;
   height: 110px;
 }
+
+[data-info] {
+  cursor: help;
+}
+.data-info-div {
+  font-size: 14px;
+  margin-top: 5px;
+  position: absolute;
+  display: inline-block;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
 @media screen and (max-width: 599px) {
   .info {
     width: 98%;
@@ -72,6 +88,9 @@
 /*  Innehåll:  */
 /* ----------- */
 
+img {
+  margin: 20px;
+}
 .wiki-header {
   font-size: 40px;
   font-weight: bold;
@@ -116,4 +135,13 @@
 }
 .wiki-td {
   display: table-cell;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.break {
+  clear: both;
 }

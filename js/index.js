@@ -1,6 +1,3 @@
- // Gör så att när man klickar på ett grundämne öppnas rutan:
-
-
 // Add :containsExact
  $.expr[":"].containsExact = function (obj, index, meta, stack) {
    return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
@@ -95,5 +92,3 @@ $("#advmode").on('change', function() {
     $('#adv_table').show();
   }
 }); */
-
-// Kanske har någon betydelse...
