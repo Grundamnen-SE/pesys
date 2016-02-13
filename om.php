@@ -6,8 +6,7 @@
     <meta name="robots" content="index,nofollow">
     <title>Om - Grundämnen.se</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="/css/om.less" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/om.css" />
   </head>
   <body>
 
@@ -78,7 +77,7 @@
         <p>
           Mycket material på denna sida är gjort av oss, men inte allt. Uppges ingen licens för något material, har det licensen som du kan se ovan, vilket innebär att andra får använda/göra om material så länge det använder samma licens som dess nuvarande, och att det står att materialet kommer härifrån. Du får inte heller ta material härifrån om du gör det för att tjäna pengar på det.<br><br>
           På en del material, exempelvis många bilder, kan det vara så att vi inte är upphovsmän. Då anges licencen för det enskilda materialet. Vad gäller bilder kan det exempelvis vara så att du kan klicka på bilden för att se licensen.<br><br>
-          
+
         </p>
         <h2>Bidra</h2>
         <p>

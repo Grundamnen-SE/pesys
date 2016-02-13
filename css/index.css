@@ -206,6 +206,9 @@ a[href] {
   margin: 0;
   border: 2px solid black;
 }
+.ui-dialog {
+  box-shadow: 0 0 10px 5px gray;
+}
 
 #help > div:nth-of-type(1) > div { background-color: #7D89E8; }
 #help > div:nth-of-type(2) > div { background-color: #E87D7D; }
@@ -219,52 +222,49 @@ a[href] {
 #help > div:nth-of-type(10) > div { background-color: #DDE87D; }
 #help > div:nth-of-type(11) > div { background-color: #A2E87D; }
 
-@s: 70%;
-@v: 70%;
-
 .tab1 .alk {
   z-index: 3;
-  background-color: hsl(0, @s, @v);
+  background-color: hsl(0, 70%, 70%);
 }
 .tab1 .jor {
   z-index: 5;
-  background-color: hsl(33, @s, @v);
+  background-color: hsl(33, 70%, 70%);
 }
 .tab1 .lan {
   z-index: 3;
-  background-color: hsl(66, @s, @v);
+  background-color: hsl(66, 70%, 70%);
 }
 .tab1 .akt {
   z-index: 4;
-  background-color: hsl(99, @s, @v);
+  background-color: hsl(99, 70%, 70%);
 }
 .tab1 .ove {
   z-index: 13;
-  background-color: hsl(133, @s, @v);
+  background-color: hsl(133, 70%, 70%);
 }
 .tab1 .ovr {
   z-index: 11;
-  background-color: hsl(166, @s, @v);
+  background-color: hsl(166, 70%, 70%);
 }
 .tab1 .hme {
   z-index: 9;
-  background-color: hsl(199, @s, @v);
+  background-color: hsl(199, 70%, 70%);
 }
 .tab1 .ick {
   z-index: 7;
-  background-color: hsl(233, @s, @v);
+  background-color: hsl(233, 70%, 70%);
 }
 .tab1 .hao {
   z-index: 5;
-  background-color: hsl(266, @s, @v);
+  background-color: hsl(266, 70%, 70%);
 }
 .tab1 .gas {
   z-index: 3;
-  background-color: hsl(299, @s, @v);
+  background-color: hsl(299, 70%, 70%);
 }
 .tab1 .eju {
   z-index: 15;
-  background-color: hsl(333, @s, @v);
+  background-color: hsl(333, 70%, 70%);
 }
 .tab1 .metal {
   color:gray;
@@ -279,54 +279,49 @@ a[href] {
   color:orange;
 }
 
-
-@shadow: black;
-@shadow1: 12px;
-@shadow2: 4.5px;
-
 .tab2 .alk {
   z-index: 2;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .jor {
   z-index: 4;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .lan {
   z-index: 2;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .akt {
   z-index: 2;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .ove {
   z-index: 12;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .ovr {
   z-index: 10;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .hme {
   z-index: 8;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .ick {
   z-index: 6;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .hao {
   z-index: 4;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .gas {
   z-index: 2;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .eju {
   z-index: 14;
-  box-shadow: 0px 0px @shadow1 @shadow2 @shadow;
+  box-shadow: 0px 0px 12px 4.5px black;
 }
 
 

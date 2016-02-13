@@ -52,14 +52,14 @@ html, body {
 #main {
   width: 800px !important;
   margin-top: 40px;
+}
 
-  .intro {
-    font-weight: normal;
-  }
+#main .intro {
+  font-weight: normal;
+}
 
-  .header {
-    margin-bottom: 5px;
-  }
+#main .header {
+  margin-bottom: 5px;
 }
 
 #text, #video {

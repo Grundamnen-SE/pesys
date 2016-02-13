@@ -12,8 +12,7 @@
     <meta name="twitter:url" content="http://grundämnen.se/" />
     <title>Grundämnen - Info</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="/css/info.less" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/info.css" />
   </head>
   <body>
     <div id="nav">

@@ -70,30 +70,30 @@ a:hover {
   width: 650px;
   float: left;
   padding-top: 0px;
+}
 
-  #tillbaka {
-    margin-top: 5px;
-    font-size: 20px;
+#left #tillbaka {
+  margin-top: 5px;
+  font-size: 20px;
+}
 
-    span {
-      font-weight: 900;
-      font-size: 30px;
-      position: relative;
-      top: 3px;
-    }
-  }
+#left #tillbaka span {
+  font-weight: 900;
+  font-size: 30px;
+  position: relative;
+  top: 3px;
 }
 
 #right {
   width: 380px;
   float: right;
+}
 
-  #about-us {
-    margin-top: 0;
-  }
-  #us {
-    width: 100%;
-  }
+#right #about-us {
+  margin-top: 0;
+}
+#right #us {
+  width: 100%;
 }
 
 @media screen and (max-width: 1400px) {

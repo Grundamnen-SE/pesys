@@ -19,9 +19,8 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.min.css">
-    <link rel="stylesheet/less" type="text/css" href="/css/index.less">
-    <link rel="stylesheet/less" type="text/css" href="/css/wiki.less">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.0/less.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/wiki.css">
   </head>
   <body>
     <div id="help">
@@ -37,7 +36,7 @@
       <div><div></div><p>Lantanoider</p></div>
       <div><div></div><p>Aktinoider</p></div>
     </div>
-    <div id="settings">
+    <div id="settings" style="display: none;">
       <label for="settings-easing">Stäng av animationer: </label><input type="checkbox" id="settings-easing"></input>
       <br>
       <div class="ui-widget">
