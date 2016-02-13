@@ -8,18 +8,20 @@
     <meta name="author" content="Joar Classon, Gustav Ekner och Alicia Palmér">
     <meta name="description" content="Här kan du se och läsa om alla grundämnen på ett nytt och spännande sätt.">
     <meta name="keywords" content="grundämnen, atom, atomer, grundämne, webbstjärnan, .se, iis, grundämnen.se, grundamnen.ejn.nu, kunskap, veta, lära, verktyg, information, data, wiki, fakta, hjälpmedel, proton, elektron, neutron, elektronskal, atomkärna, joarc, gustavwiz, github">
-    <meta name="google-site-verification" content="ZQatb-QOSPgfvycKK0gwfbvv9de19wTu_qM5iaI9IAg" />
-    <meta name="google" content="notranslate" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@grundamnen" />
-    <meta name="twitter:title" content="Grundämnen.se" />
-    <meta name="twitter:description" content="Lär dig allt om Grundämnena!" />
-    <meta name="twitter:url" content="http://grundämnen.se/" />
+    <meta name="google-site-verification" content="ZQatb-QOSPgfvycKK0gwfbvv9de19wTu_qM5iaI9IAg">
+    <meta name="google" content="notranslate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@grundamnen">
+    <meta name="twitter:title" content="Grundämnen.se">
+    <meta name="twitter:description" content="Lär dig allt om Grundämnena!">
+    <meta name="twitter:url" content="http://grundämnen.se/">
     <title>Grundämnen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="/css/index.less" />
-    <link rel="stylesheet/less" type="text/css" href="/css/wiki.less" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet/less" type="text/css" href="/css/index.less">
+    <link rel="stylesheet/less" type="text/css" href="/css/wiki.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.0/less.min.js"></script>
   </head>
   <body>
     <div id="help">
@@ -34,6 +36,16 @@
       <div><div></div><p>Okända egenskaper</p></div>
       <div><div></div><p>Lantanoider</p></div>
       <div><div></div><p>Aktinoider</p></div>
+    </div>
+    <div id="settings">
+      <label for="settings-easing">Stäng av animationer: </label><input type="checkbox" id="settings-easing"></input>
+      <br>
+      <div class="ui-widget">
+      	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+      		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+      		<p>Dessa inställningar kommer att sparas i form av en <a style="color: blue" href="https://sv.wikipedia.org/wiki/Webbkaka">cookie</a> på din dator.</p>
+      	</div>
+      </div>
     </div>
     <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
     <?php include ("includes/sim_table.php"); ?>

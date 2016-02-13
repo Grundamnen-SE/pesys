@@ -306,7 +306,7 @@
     <td class="td-fast lan"><div class="box"><span class="atomic_number ">70</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Yb</span></div></td>
     <td class="td-fast lan"><div class="box"><span class="atomic_number ">71</span><span class="atomic_text">Lu</span></div></td>
     <td class="td-none"><div class="box"></div></td>
-    <td class="td-none"><div class="box"></div></td>
+    <td class="td-none"><div class="box"><img class="help" src="/img/question.png"></img></div></td>
   </tr>
   <tr>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;&gt;</span></div></td>
@@ -326,6 +326,6 @@
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">102</span><span class="atomic_text">No</span></div></td>
     <td class="td-fast akt"><div class="box"><span class="atomic_number ">103</span><span class="atomic_text">Lr</span></div></td>
     <td class="td-none"><div class="box"></div></td>
-    <td class="td-none"><div class="box"><img class="help" src="/img/question.png"></img></div></td>
+    <td class="td-none"><div class="box"><img id="settings-button" src="/img/cog.png"></img></div></td>
   </tr>
 </table>
