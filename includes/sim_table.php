@@ -277,14 +277,12 @@
   <tr class="tr-space">
     <td colspan="15" class="td-logo">
       <div class="box">
-        <!-- Här var webbsjtärnan-loggan. Sparar utrymmet om vi ska ha ngt annat här. -->
+        <!-- Här var webbsjtärnan-loggan. Sparar utrymmet om vi ska ha något annat här. -->
       </div>
     </td>
     <td colspan="3" class="td-logo">
       <div class="box">
-        <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" targe="_blank">
-          <img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-        </a>
+        <!-- Här var licens-informationen. Sparar utrymmet om vi ska ha något annat här. -->
       </div>
     </td>
   </tr>
