@@ -11,44 +11,6 @@ body {
   background-color:#363636;
 }
 
-a {
-  color: #5BB7FF;
-  /* color:#005599; */
-  text-decoration: none;
-}
-a:hover {
-  color: #006cc1;
-  text-decoration: none;
-}
-
-#back, #back * {
-  box-sizing: content-box;
-}
-#back {
-  height: 35px;
-  font-size: 15px;
-  margin-top: 8px;
-  top: 1px;
-  left: 10px;
-  color: #5BB7FF;
-  position: fixed;
-}
-#back h2 {
-  margin: 5px;
-}
-#back div:nth-child(1) {
-  float: left;
-  border: 2px solid black;
-  height: 100%;
-}
-#back div:nth-child(2) {
-  float: left;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  height: 100%;
-}
-
 #main {
   padding-top: 0px;
   width: 1100px;
@@ -59,7 +21,7 @@ a:hover {
 }
 
 #left, #right {
-  box-shadow: 0 0 10px 10px rgb(230, 230, 230);
+  box-shadow: 0 0 1px 10px rgb(230, 230, 230);
   background: rgb(230, 230, 230);
   color: black;
   padding: 20px;
@@ -75,6 +37,8 @@ a:hover {
 #left #tillbaka {
   margin-top: 5px;
   font-size: 20px;
+  color: #5BB7FF;
+  text-decoration: none;
 }
 
 #left #tillbaka span {

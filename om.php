@@ -28,21 +28,13 @@
         </p>
         <h2>Gustav <small><a href="https://twitter.com/Gustavwiz">Twitter</a></small></h2>
         <p>
-          Jag heter Gustav Ekner, är femton år och går på Södertörns friskola i Huddinge. Mina största
-          intressen är datorer och trummor. Jag är väldigt tekniskt intresserad
-          och också väldigt nyfiken. Det var 2011 som jag gick med i datorklubben och
-          började programmera. Därigenom har jag också varit med i Webbstjärnan två gånger, med egna
-          bidrag. Andra gången var det med skoljakt.se, och då kom jag trea i kategorin årskurs 6-9.
-          Jag har också gjort en hel del andra webbsidor och programmeringsprojekt.
-          Jag vill göra grundämnen.se för att kunna göra det möjligt för andra att se och läsa om
-          periodiska systemet på ett nytt sätt. Detta kan man göra enklare och roligare för användaren
-          med nya, moderna tekniker på webben.
+          Jag heter Gustav Ekner, är sexton år och går på <a href="http://www.malardalenstekniska.se/">Mälardalens Tekniska Gymnasium</a> i Södertälje. Mina största intressen är datorer och trummor. Jag är väldigt tekniskt intresserad och också väldigt nyfiken. Det var 2011 som jag gick med i datorklubben på <a href="http://friskola.nu">Södertörns friskola</a> och började programmera. Därigenom har jag också varit med i <a href="http://webbstjarnan.se">Webbstjärnan</a> tre gånger, två gånger med egna bidrag. Första gången med xzy.se, då jag kom till final. Andra gången var det med skoljakt.se, och då kom jag trea i kategorin årskurs 6-9. Tredje gången var det med denna webbsida, och då vann vi i kategorin Tema.</p>
         </p>
       </div>
 
       <div id="left">
 
-        <a href="/"><p id="tillbaka"><span>←</span> Tillbaka</p></a>
+        <a id="tillbaka" href="/"><p><span>←</span> Tillbaka</p></a>
 
         <h1>Syfte och mottagare:</h1>
         <p>
