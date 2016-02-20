@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 * {
   font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
 }
 body, html {
   margin: 0;
@@ -218,7 +219,7 @@ a[href] {
 #help > div:nth-of-type(6) > div { background-color: #7DE8CF; }
 #help > div:nth-of-type(7) > div { background-color: #AB7DE8; }
 #help > div:nth-of-type(8) > div { background-color: #E67DE8; }
-#help > div:nth-of-type(9) > div { background-color: #E87DAD; }
+#help > div:nth-of-type(9) > div { background-color: #DFDFDF; }
 #help > div:nth-of-type(10) > div { background-color: #DDE87D; }
 #help > div:nth-of-type(11) > div { background-color: #A2E87D; }
 
