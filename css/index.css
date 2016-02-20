@@ -185,20 +185,10 @@ a[href] {
   margin-left: 45px;
 }
 #help {
-  display: none;
-  z-index: 100;
-  position: absolute;
-  padding: 20px;
-  padding-top: 10px;
-  top: 0;
-  background-color: #EDEDED;
-  border-left: 3px solid #272727;
-  border-right: 3px solid #272727;
-  border-bottom: 3px solid #272727;
+
 }
 #help > div {
   height: 45px;
-  display: flex;
   margin-top: 10px;
 }
 #help > div > div {
@@ -206,11 +196,12 @@ a[href] {
   height: 40px;
   margin: 0;
   border: 2px solid black;
+  float: left;
+  margin-right: 10px;
 }
-.ui-dialog {
-  box-shadow: 0 0 10px 5px gray;
+#help > div > p {
+  padding-top: 12px;
 }
-
 #help > div:nth-of-type(1) > div { background-color: #7D89E8; }
 #help > div:nth-of-type(2) > div { background-color: #E87D7D; }
 #help > div:nth-of-type(3) > div { background-color: #E8B87D; }
@@ -222,6 +213,10 @@ a[href] {
 #help > div:nth-of-type(9) > div { background-color: #DFDFDF; }
 #help > div:nth-of-type(10) > div { background-color: #DDE87D; }
 #help > div:nth-of-type(11) > div { background-color: #A2E87D; }
+
+.ui-dialog {
+  box-shadow: 0 0 10px 5px gray;
+}
 
 /* Alkalimetaller */
 .tab1 .alk {

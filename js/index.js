@@ -73,11 +73,12 @@ $("td").on("click", function() {
 });
 
 //Info/Help-rutan (färgförklaring)
-$(".help").on("click", function() {
-  var move = $("#help").width()/2;
-  var width = $(window).width();
-  $("#help").css("left",width / 2 - move);
-  $("#help").toggle("slide", {direction:"up"});
+$( "#help" ).dialog({
+  autoOpen: false,
+  title: "Färgförklaring"
+});
+$( ".help" ).click(function() {
+  $( "#help" ).dialog( "open" );
 });
 
 // Settings-rutan:

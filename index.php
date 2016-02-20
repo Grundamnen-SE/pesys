@@ -23,10 +23,10 @@
     <link rel="stylesheet" type="text/css" href="/css/wiki.css">
   </head>
   <body>
-    <div id="help">
+    <div style="display: none;" id="help">
       <div><div></div><p>Polyatomiska icke-metaller</p></div>
       <div><div></div><p>Alkalimetaller</p></div>
-      <div><div></div><p><pre>Alkaliska jordartsmetaller<pre></p></div>
+      <div><div></div><p>Alkaliska jordartsmetaller</p></div>
       <div><div></div><p>Övergångsmetaller</p></div>
       <div><div></div><p>Halvmetaller</p></div>
       <div><div></div><p>Övriga metaller</p></div>
