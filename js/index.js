@@ -37,15 +37,15 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       last = string.substr(position1 + 13, 3);
     }
-    if      ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
+    if      ($(td).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
     else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
     else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
     else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
-    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#FFC2DC"}); }
+    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#DFDFDF"}); }
     else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
     else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
     else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
-    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
+    else if ($(td).hasClass("dia")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
     else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
     else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
     else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }

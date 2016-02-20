@@ -222,50 +222,63 @@ a[href] {
 #help > div:nth-of-type(10) > div { background-color: #DDE87D; }
 #help > div:nth-of-type(11) > div { background-color: #A2E87D; }
 
+/* Alkalimetaller */
 .tab1 .alk {
   z-index: 3;
   background-color: hsl(0, 70%, 70%);
 }
+/* Alkaliska jordartsmetaller */
 .tab1 .jor {
   z-index: 5;
   background-color: hsl(33, 70%, 70%);
 }
+/* Lantanoider */
 .tab1 .lan {
   z-index: 3;
   background-color: hsl(66, 70%, 70%);
 }
+/* Aktinoider */
 .tab1 .akt {
   z-index: 4;
   background-color: hsl(99, 70%, 70%);
 }
+/* Övergångsmetall */
 .tab1 .ove {
   z-index: 13;
   background-color: hsl(133, 70%, 70%);
 }
+/* Övriga metaller */
 .tab1 .ovr {
   z-index: 11;
   background-color: hsl(166, 70%, 70%);
 }
+/* Halvmetaller */
 .tab1 .hme {
   z-index: 9;
   background-color: hsl(199, 70%, 70%);
 }
-.tab1 .ick {
+/* Polyatomisk icke-metall */
+.tab1 .pol {
   z-index: 7;
   background-color: hsl(233, 70%, 70%);
 }
-.tab1 .hao {
+/* Diatomisk icke-metall */
+.tab1 .dia {
   z-index: 5;
   background-color: hsl(266, 70%, 70%);
 }
+/* Ädelgaser */
 .tab1 .gas {
   z-index: 3;
   background-color: hsl(299, 70%, 70%);
 }
+/* Okända egenskaper */
 .tab1 .eju {
-  z-index: 15;
-  background-color: hsl(333, 70%, 70%);
+  z-index: 1;
+  /* background-color: hsl(333, 70%, 70%); */
+  background-color: #DFDFDF;
 }
+
 .tab1 .metal {
   color:gray;
 }
@@ -307,11 +320,11 @@ a[href] {
   z-index: 8;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .ick {
+.tab2 .pol {
   z-index: 6;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .hao {
+.tab2 .dia {
   z-index: 4;
   box-shadow: 0px 0px 12px 4.5px black;
 }
@@ -320,7 +333,7 @@ a[href] {
   box-shadow: 0px 0px 12px 4.5px black;
 }
 .tab2 .eju {
-  z-index: 14;
+  z-index: 0;
   box-shadow: 0px 0px 12px 4.5px black;
 }
 
