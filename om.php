@@ -36,16 +36,11 @@
 
         <a id="tillbaka" href="/"><p><span>←</span> Tillbaka</p></a>
 
-        <h1>Syfte och mottagare:</h1>
+        <h1>Vad är grundämnen.se?</h1>
         <p>
           Periodiska systemet och framför allt grundämnena är grunden till mycket av det vi läser i de naturorienterade ämnena i skolan, men också för hela vår värld. Därför är det något som är extra viktigt att förstå samt att det underlättar väldigt mycket när man väl förstår det. Att läsa en massa sidor i en bok med bokstäver och siffror hit och dit är inte ett effektivt sätt för alla att lära in information på. Därför blir det väldigt lätt att man börjar syssla med annat under lektionstid och ingenting blir gjort. Det kanske inte visar sig för stunden men i vidare studier blir det ett klart hinder.
           Syftet med denna hemsida är därför att skapa ett studiehjälpmedel som är uppdaterat, färgglatt och anpassat till dagens tekniska samhälle som kan hjälpa både elever och lärare i undervisningen.
           Hemsidan är såklart välkommen att besökas av alla, men den målgrupp vi främst har riktat hemsidan till är elever och lärare.
-        </p>
-        <h1>Vad tillför webben i ert skolarbete? </h1>
-        <p>
-          --Todo--<br><br>
-          (Här vill vi nu skriva hur hemsidan kan användas i undervisningen. Alicia kanske vill skriva detta?)
         </p>
 
         <h1>Hemsidan</h1>

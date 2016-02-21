@@ -1,7 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(font.css);
 * {
   box-sizing: border-box;
+  font-family:'Ubuntu-L', sans-sarif;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family:'Ubuntu', sans-sarif;
+}
+
+p {
+  line-height: 20px;
+  letter-spacing: 0.5px;
 }
 
 body {
@@ -60,8 +69,8 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 1400px) {
-  #body {
-    width: 85%;
+@media screen and (max-width: 1230px) {
+  #main {
+    width: 1070px;
   }
 }
