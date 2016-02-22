@@ -1,10 +1,12 @@
 <?php
 
   $dir = "wiki/pages/";
-  $link = $_GET['simple_link'];
-  $link_r = explode("/", $link);
+  if (isset($_GET['simple_link'])) {
+    $link = $_GET['simple_link'];
+    $link_r = explode("/", $link);
+  }
 
-  if ($link_r[0] != "") {
+  if (isset($link_r) && $link_r[0] != "" && $link_r != null && $link != null) {
 
     if (file_exists($dir.$link_r[0].".html")) {
 
