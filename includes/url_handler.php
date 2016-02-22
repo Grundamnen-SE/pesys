@@ -6,7 +6,7 @@
     $link_r = explode("/", $link);
   }
 
-  if ($link_r[0] != "" && $link_r != null && $link != null) {
+  if (isset($link_r) && $link_r[0] != "" && $link_r != null && $link != null) {
 
     if (file_exists($dir.$link_r[0].".html")) {
 
