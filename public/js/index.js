@@ -18,16 +18,23 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-
 // Add :containsExact
  $.expr[":"].containsExact = function (obj, index, meta, stack) {
    return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
  };
 
 var loading = false;
+
 $("td").on("click", function() {
+
   var td = this;
-  if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
+
+  if (!$(this).hasClass("td-extend") &&
+      !$(this).hasClass("td-header") &&
+      !$(this).hasClass("td-none") &&
+      !$(this).hasClass("td-about") &&
+      !$(this).hasClass("td-logo")) {
+
     string = $(this).html();
     var position1 = string.search(/atomic_text">/);
     if (string.substr(position1 + 14, 1) == "<") {
@@ -53,8 +60,8 @@ $("td").on("click", function() {
     if (!loading) {
       loading = true;
       $.ajax({
-        type: "POST",
-        url: "/wiki/template.php",
+        type: "GET",
+        url: "/get-wiki-page/",
         data: {"file": last},
         success: function(data) {
           $("#newHTML").append(data);
@@ -126,3 +133,5 @@ $(document).keyup(function(e) {
     exit();
   }
 });
+
+// Event-handlers:

@@ -1,4 +1,5 @@
 // Jquery och JqueryUI redan inkluderat i index
+// Denna fil innehåller skript som måste köras varje gång ett nytt element laddas, därför kan den ej ligga i index.js
 
 // Gör så när man klickar på en img med attributet "data-info", kommer värdet att visas i en ruta. (Licens-info, upphovsman, länk mm):
 $("img[data-info]").each(function(index) {
