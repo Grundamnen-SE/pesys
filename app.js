@@ -8,8 +8,8 @@
 var express = require('express');
 var compression = require('compression');
 var logger = require('morgan');
-var favicon = require("serve-favicon");
 var forcedomain = require("forcedomain");
+var helmet = require("helmet");
 
 // Own
 var replaceAll = require('./functions.js').replaceAll;
@@ -19,8 +19,24 @@ var fs = require('fs');
 
 // Init Express
 var app = express();
-app.use(compression());
 app.use(logger("dev"));
+app.use(compression());
+app.use(helmet());
+app.use(helmet.contentSecurityPolicy({
+  defaultSrc: ["'self'"],
+  scriptSrc: ['*.google-analytics.com'],
+  styleSrc: ["'unsafe-inline'"],
+  imgSrc: ['*.google-analytics.com'],
+  connectSrc: ["'none'"],
+  fontSrc: [],
+  objectSrc: [],
+  mediaSrc: [],
+  frameSrc: []
+}));
+app.use(forcedomain({
+  hostname: "grundämnen.se",
+  protocol: "https"
+}));
 
 // Express render engine
 app.engine('html', function (fp, options, callback) {
@@ -29,15 +45,14 @@ app.engine('html', function (fp, options, callback) {
     if (err) return callback(new Error(err));
 
     var rendered = content.toString();
-// Example variable: 
+// Example variable:
 //  rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
     rendered = replaceAll(rendered, "%text%", "text");
 
-    console.log(options);
     if (options.element != null) {
       content = replaceAll(content, "%element%", options.params.elm);
     }
-    
+
     return callback(null, rendered);
   });
 });
