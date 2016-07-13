@@ -7,6 +7,7 @@
 // Express related
 var express = require('express');
 var compression = require('compression');
+var logger = require('morgan');
 
 // Own
 var replaceAll = require('./functions.js').replaceAll;
@@ -17,6 +18,7 @@ var fs = require('fs');
 // Init Express
 var app = express();
 app.use(compression());
+app.use(logger("dev"));
 
 // Express render engine
 app.engine('html', function (fp, options, callback) {
@@ -27,9 +29,10 @@ app.engine('html', function (fp, options, callback) {
     var rendered = content.toString();
 // Example variable: 
 //  rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
-    rendered = replaceAll(rendered, "%text%", text);
+    rendered = replaceAll(rendered, "%text%", "text");
 
-    if (options.params.elm != null) {
+    console.log(options);
+    if (options.element != null) {
       content = replaceAll(content, "%element%", options.params.elm);
     }
     
@@ -50,7 +53,9 @@ app.get('/', function(req, res) {
 
 app.get('/:elm', function(req, res) {
   // req.params.elm = /vadsomstårhär
-  res.render('show_element', {params: req.params});
+  res.render('show_element', {element: req.params.elm});
 });
 
-app.listen(3000);
+app.listen(3000, function(){
+  console.log("Express on port 3000");
+});
