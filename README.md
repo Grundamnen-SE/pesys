@@ -1,4 +1,4 @@
-# pesys
+# pesys [![Build Status](https://travis-ci.org/Grundamnen-SE/pesys.svg?branch=master)](https://travis-ci.org/Grundamnen-SE/pesys)
 Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grundämnen.
 
 ## "Brancher":
