@@ -8,6 +8,8 @@
 var express = require('express');
 var compression = require('compression');
 var logger = require('morgan');
+var favicon = require("serve-favicon");
+var forcedomain = require("forcedomain");
 
 // Own
 var replaceAll = require('./functions.js').replaceAll;
