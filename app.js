@@ -66,6 +66,9 @@ db.open(function(e, d){
   }
 });
 
+// Variables
+var elements = ["H", "Dy", "Uuo", "B", "C", "N", "O", "F", "Li", "Be", "He"];
+
 // Express render engine
 app.engine('html', rengine);
 
@@ -82,19 +85,33 @@ app.get('/', function(req, res){
 
 app.get('/:elm', function(req, res, next){
   // get element and send render page
-  console.log("RENDER Request", req.headers);
+  console.log("RENDER Request");
   if (req.params.elm == "om") res.render("om");
   else if (req.params.elm == "info") res.render("info");
   else if (isInArray(req.params.elm, elements)) next();
+  else res.render("show_element_not_found", {element: req.params.elm});
 }, function(req, res){
-  // check if element is not incomplete
-  if (false) res.render('show_element', {element: req.params.elm});
-  else res.render('show_element_incomplete');
+  // Check if element is published
+  db.collection("pesys").find({element: req.params.elm}, {fields: {published: 1}}, function(err, data){
+    if (err) console.log(err);
+    if (data.published) res.render('show_element', {element: req.params.elm});
+    else res.render('show_element_incomplete');
+  });
 });
 
-app.get('/:elm/json', function(req, res){
+
+// TODO
+// API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.
+// Vi bör lägga till system för att verifiera vem som frågar efter information och kanske lägga till rate-limiting.
+// Kolla in https://github.com/Grundamnen-SE/pesys/issues/9
+app.get('/api/:elm/json', function(req, res){
   // get element info and send it
-  console.log("JSON Request", req.headers);
+  console.log("JSON Request");
+  res.send({"error": "incomplete function"});
+});
+
+app.get('/api/contributors', function(req, res){
+  // Denna funktion ska returnera alla som har hjälpt till att skapa innehåll till sidan, i JSON format. Innehåll som ska returneras behöver diskuteras.
   res.send({"error": "incomplete function"});
 });
 

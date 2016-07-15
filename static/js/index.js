@@ -1,23 +1,3 @@
-/* Cookie-hantering: */
-
-function getCookie(cname, defaultVal) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return defaultVal;
-}
-
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
 // Add :containsExact
  $.expr[":"].containsExact = function (obj, index, meta, stack) {
    return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
@@ -25,44 +5,34 @@ function setCookie(cname, cvalue, exdays) {
 
 var loading = false;
 
-$("td").on("click", function() {
-
-  var td = this;
-
+$("td").on("click", function(e) {
   if (!$(this).hasClass("td-extend") &&
       !$(this).hasClass("td-header") &&
       !$(this).hasClass("td-none") &&
       !$(this).hasClass("td-about") &&
       !$(this).hasClass("td-logo")) {
 
-    string = $(this).html();
-    var position1 = string.search(/atomic_text">/);
-    if (string.substr(position1 + 14, 1) == "<") {
-      last = string.substr(position1 + 13, 1);
-    } else if (string.substr(position1 + 15, 1) == "<") {
-      last = string.substr(position1 + 13, 2);
-    } else if (string.substr(position1 + 16, 1) == "<") {
-      last = string.substr(position1 + 13, 3);
-    }
-    if      ($(td).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
-    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
-    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
-    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
-    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#DFDFDF"}); }
-    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
-    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
-    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
-    else if ($(td).hasClass("dia")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
-    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
-    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
-    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }
-    else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail finns på om-sidan.")}
+    var atomic_number = $(this).find(".atomic_number").text();
+    var atomic_text = $(this).find(".atomic_text").text();
+    if      ($(this).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
+    else if ($(this).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
+    else if ($(this).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
+    else if ($(this).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
+    else if ($(this).hasClass("eju")) { $("#newHTML").css({"background-color":"#DFDFDF"}); }
+    else if ($(this).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
+    else if ($(this).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
+    else if ($(this).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
+    else if ($(this).hasClass("dia")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
+    else if ($(this).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
+    else if ($(this).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
+    else if ($(this).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }
+    else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail: info.grundamnen@gmail.com")}
     if (!loading) {
       loading = true;
       $.ajax({
         type: "GET",
-        url: "/get-wiki-page/",
-        data: {"file": last},
+        url: "/"+atomic_text,
+        dataType: "html",
         success: function(data) {
           $("#newHTML").append(data);
           $("body").css({"overflow":"hidden"});
@@ -72,8 +42,7 @@ $("td").on("click", function() {
             $("#newHTML").show("scale", 300);
           }
           loading = false;
-        },
-        dataType: "html"
+        }
       });
     }
   }
