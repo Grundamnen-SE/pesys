@@ -21,7 +21,6 @@ var MongoServer = require('mongodb').Server;
 // Own
 var replaceAll = require('./functions.js').replaceAll;
 var isInArray = require('./functions.js').isInArray;
-var rengine = require('./rengine.js').rengine;
 
 // Misc
 var fs = require('fs');
@@ -56,6 +55,7 @@ app.use(session({
   cookie: {httpOnly: true}
 }));
 
+
 // Open DB Connection
 var db = new Mongo("pesys", new MongoServer("localhost", 27017, {auto_reconnect: true}), {w: 1});
 db.open(function(e, d){
@@ -63,14 +63,43 @@ db.open(function(e, d){
     console.log(e);
   } else {
     console.log("MongoDB: Connected to database pesys");
+    db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}).toArray(function(err, data){
+      if (err) console.log(err);
+      playbtn = JSON.stringify(data);
+      console.log(data, "playbtn data");
+    });
+    setInterval(function(){
+      db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}, function(err, data){
+        if (err) console.log(err);
+        playbtn = data;
+        console.log(data, "playbtn data");
+      });
+    }, 1000*60*60);
   }
 });
 
 // Variables
 var elements = ["H", "Dy", "Uuo", "B", "C", "N", "O", "F", "Li", "Be", "He"];
+var playbtn;
 
 // Express render engine
-app.engine('html', rengine);
+app.engine('html', function (fp, options, callback) {
+  fs.readFile(fp, function (err, content) {
+    if (err) return callback(new Error(err));
+
+    var rendered = content.toString();
+//  Example variable:
+//  rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
+    rendered = replaceAll(rendered, "%text%", "text");
+    rendered = replaceAll(rendered, "%playbtn%", playbtn);
+
+    if (options.element != null) {
+      content = replaceAll(content, "%element%", options.params.elm);
+    }
+
+    return callback(null, rendered);
+  });
+});
 
 // Set Express variables
 app.set('views', './views');
@@ -92,13 +121,12 @@ app.get('/:elm', function(req, res, next){
   else res.render("show_element_not_found", {element: req.params.elm});
 }, function(req, res){
   // Check if element is published
-  db.collection("pesys").find({element: req.params.elm}, {fields: {published: 1}}, function(err, data){
+  db.collection("elements").find({element: req.params.elm}, {fields: {published: 1}}, function(err, data){
     if (err) console.log(err);
     if (data.published) res.render('show_element', {element: req.params.elm});
     else res.render('show_element_incomplete');
   });
 });
-
 
 // TODO
 // API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.

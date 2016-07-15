@@ -12,8 +12,8 @@ $("td").on("click", function(e) {
       !$(this).hasClass("td-about") &&
       !$(this).hasClass("td-logo")) {
 
-    var atomic_number = $(this).find(".atomic_number").text();
-    var atomic_text = $(this).find(".atomic_text").text();
+    var atomic_number = $(this).attr("data-number");
+    var atomic_text = $(this).attr("data-name");
     if      ($(this).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
     else if ($(this).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
     else if ($(this).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
