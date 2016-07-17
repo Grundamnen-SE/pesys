@@ -1,7 +1,7 @@
 .not-exist {
   padding: 20px;
 }
-.info {
+.info, .element-data {
   padding: 30px;
   min-height: calc(100% - 22px);
 }
@@ -66,20 +66,35 @@
 }
 @media screen and (max-width: 599px) {
   .info {
-    width: 98%;
-    margin-left: 1%;
+    width: 86%;
+    margin-left: 2%;
+    float: left;
+  }
+  .element-data {
+    width: 10%;
+    float: left;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1400px) {
   .info {
-    width: 90%;
-    margin-left: 5%;
+    width: 76%;
+    margin-left: 7%;
+    float: left;
+  }
+  .element-data {
+    width: 10%;
+    float: left;
   }
 }
 @media screen and (min-width: 1401px) {
   .info {
-    width: 70%;
-    margin-left: 15%;
+    width: 65%;
+    margin-left: 10%;
+    float: left;
+  }
+  .element-data {
+    width: 15%;
+    float: left;
   }
   .extra-info {
     width: 900px;
@@ -170,4 +185,8 @@ h1.wiki-header {
 }
 .break {
   clear: both;
+}
+.element-data table {
+  color:black;
+  border:1px solid black;
 }

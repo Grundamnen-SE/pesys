@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/wiki.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div style="display: none;" id="help">
@@ -43,7 +44,7 @@
       	</div>
       </div>
     </div>
-    <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX när man klickar på ett ämne -->
+    <div id="newHTML"></div>
     <!-- Periodiska Systemet -->
     <div id="rst"></div>
     <table class="tab2 sim_table">
@@ -375,11 +376,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script>
     var playbtn = %playbtn%;
-    console.log(playbtn, "playbtn");
     </script>
     <script src="/js/cookie.js"></script>
     <script src="/js/playbtn.js"></script>
     <script src="/js/index.js"></script>
+    <!-- Extra JS-->
+    %scripts%
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

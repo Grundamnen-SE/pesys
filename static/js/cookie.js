@@ -17,3 +17,21 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
+
+function settingsGet() {
+  if (getCookie("gr-settings-easing") == "false") {
+    $("#settings-easing").prop("checked", true);
+  }
+}
+
+$("#settings-easing").click(function() {
+  if( $(this).is(":checked") ) {
+    setCookie("gr-settings-easing", "false", "30");
+  } else {
+    setCookie("gr-settings-easing", "true", "30");
+  }
+
+  settingsGet();
+});
+
+settingsGet();
