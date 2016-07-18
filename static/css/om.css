@@ -1,25 +1,13 @@
-@import url(font.css);
-* {
-  box-sizing: border-box;
-  font-family:'Ubuntu-L', sans-sarif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family:'Ubuntu', sans-sarif;
-}
-
 p {
   line-height: 20px;
   letter-spacing: 0.5px;
 }
-
 body {
   margin:0;
   padding: 0;
   color:white;
   background-color:#363636;
 }
-
 #main {
   padding-top: 0px;
   width: 1100px;
@@ -28,7 +16,6 @@ body {
   margin-top: 60px;
   background-color: #363636;
 }
-
 #left, #right {
   box-shadow: 0 0 1px 10px rgb(230, 230, 230);
   background: rgb(230, 230, 230);
@@ -36,39 +23,33 @@ body {
   padding: 20px;
   margin-bottom: 50px;
 }
-
 #left {
   width: 650px;
   float: left;
   padding-top: 0px;
 }
-
 #left #tillbaka {
   margin-top: 5px;
   font-size: 20px;
   color: #5BB7FF;
   text-decoration: none;
 }
-
 #left #tillbaka span {
   font-weight: 900;
   font-size: 30px;
   position: relative;
   top: 3px;
 }
-
 #right {
   width: 380px;
   float: right;
 }
-
 #right #about-us {
   margin-top: 0;
 }
 #right #us {
   width: 100%;
 }
-
 @media screen and (max-width: 1230px) {
   #main {
     width: 1070px;

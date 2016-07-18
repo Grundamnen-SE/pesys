@@ -1,8 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
 html, body {
   margin: 0;
-  font-family: "Ubuntu";
 }
 #nav {
   width: 100%;
@@ -36,11 +33,6 @@ html, body {
   margin-left: 65px;
   font-size: 18px;
 }
-
-#container {
-
-}
-
 .segment {
   padding: 20px;
   padding-top: 5px;
@@ -48,20 +40,16 @@ html, body {
   background: #F5F5F5;
   border-radius: 2px;
 }
-
 #main {
   width: 800px !important;
   margin-top: 40px;
 }
-
 #main .intro {
   font-weight: normal;
 }
-
 #main .header {
   margin-bottom: 5px;
 }
-
 #text, #video {
   margin-top: 30px;
 }
@@ -74,7 +62,6 @@ html, body {
   width: 45%;
   float: right;
 }
-
 @media (min-width: 1500px) {
   #container {
     width: 80%;
@@ -92,10 +79,4 @@ html, body {
     width: 98%;
     margin-left: 1%;
   }
-}
-
-// Allmäna klasser
-
-a {
-//  color: #AAD9FF;
 }

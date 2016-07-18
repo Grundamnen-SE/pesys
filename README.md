@@ -11,6 +11,7 @@ Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grun
 Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara att skicka en pull-request till master. Kan du inte git, kan du mejla oss dina ändringar. Mejlen hittar du på grundämnen.se/om.
 
 ## Data Layout
+### User object
 ```json
 {
   "username": "joarc",
@@ -24,8 +25,36 @@ Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara 
     "WRITE",
     "LOGIN"
   ],
-  "lastlogintime": "2016-01-01 11:22",
-  "lastloginip": "1.2.3.4",
-  "": ""
+  "lastlogintime": "time",
+  "lastloginip": "ipv4",
+  "teacher": "user->id"
+}
+```
+### Element object
+```json
+{
+  "element": "H",
+  "number": 1,
+  "playbtn": true,
+  "published": true,
+  "approved": true,
+  "approvedby": "user->id",
+  "approvedtime": "time",
+  "author": "user->id",
+  "created": "time",
+  "lasteditedby": "user->id",
+  "lasteditedtime": "time",
+  "versions": [{
+    "element": "H",
+    "number": 1,
+    "playbtn": true
+    ...
+  }, {
+    "element": "H",
+    "number": 2,
+    "playbtn": false
+    ...
+  }],
+  "allauthors": ["user->id", "user->id", "..."]
 }
 ```

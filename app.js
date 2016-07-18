@@ -21,6 +21,7 @@ var MongoServer = require('mongodb').Server;
 // Own
 var replaceAll = require('./functions.js').replaceAll;
 var isInArray = require('./functions.js').isInArray;
+var site_data = require("./data.json");
 
 // Misc
 var fs = require('fs');
@@ -95,6 +96,11 @@ app.engine('html', function (fp, options, callback) {
 
     if (options.element != null) {
       rendered = replaceAll(rendered, "%element%", options.params.elm);
+    }
+
+    for (var key in site_data) {
+      if (!site_data.hasOwnProperty(key)) continue;
+      rendered = replaceAll(rendered, "%"+key+"%", site_data[key]);
     }
 
     var scripts = [];

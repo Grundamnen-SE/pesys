@@ -15,18 +15,18 @@ $(document).on("ready", function(e){
         loading = true;
         var atomic_number = $(this).attr("data-number");
         var atomic_text = $(this).attr("data-name");
-        if      ($(this).hasClass("pol")) $("#newHTML").css({"background-color":"#C2CAFF"});
-        else if ($(this).hasClass("alk")) $("#newHTML").css({"background-color":"#FFC2C2"});
-        else if ($(this).hasClass("jor")) $("#newHTML").css({"background-color":"#FFE4C2"});
-        else if ($(this).hasClass("ove")) $("#newHTML").css({"background-color":"#C2FFCF"});
-        else if ($(this).hasClass("eju")) $("#newHTML").css({"background-color":"#DFDFDF"});
-        else if ($(this).hasClass("ovr")) $("#newHTML").css({"background-color":"#C2FFF2"});
-        else if ($(this).hasClass("hme")) $("#newHTML").css({"background-color":"#C2ECFF"});
-        else if ($(this).hasClass("ick")) $("#newHTML").css({"background-color":"#C2C7FF"});
-        else if ($(this).hasClass("dia")) $("#newHTML").css({"background-color":"#DCC2FF"});
-        else if ($(this).hasClass("gas")) $("#newHTML").css({"background-color":"#FFC2FF"});
-        else if ($(this).hasClass("lan")) $("#newHTML").css({"background-color":"#FAFFC2"});
-        else if ($(this).hasClass("akt")) $("#newHTML").css({"background-color":"#D7FFC2"});
+        if      ($(this).hasClass("pol")) $("#overlay").css({"background-color":"#C2CAFF"});
+        else if ($(this).hasClass("alk")) $("#overlay").css({"background-color":"#FFC2C2"});
+        else if ($(this).hasClass("jor")) $("#overlay").css({"background-color":"#FFE4C2"});
+        else if ($(this).hasClass("ove")) $("#overlay").css({"background-color":"#C2FFCF"});
+        else if ($(this).hasClass("eju")) $("#overlay").css({"background-color":"#DFDFDF"});
+        else if ($(this).hasClass("ovr")) $("#overlay").css({"background-color":"#C2FFF2"});
+        else if ($(this).hasClass("hme")) $("#overlay").css({"background-color":"#C2ECFF"});
+        else if ($(this).hasClass("ick")) $("#overlay").css({"background-color":"#C2C7FF"});
+        else if ($(this).hasClass("dia")) $("#overlay").css({"background-color":"#DCC2FF"});
+        else if ($(this).hasClass("gas")) $("#overlay").css({"background-color":"#FFC2FF"});
+        else if ($(this).hasClass("lan")) $("#overlay").css({"background-color":"#FAFFC2"});
+        else if ($(this).hasClass("akt")) $("#overlay").css({"background-color":"#D7FFC2"});
         else alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail: info.grundamnen@gmail.com");
         $.ajax({
           type: "GET",
@@ -35,17 +35,18 @@ $(document).on("ready", function(e){
           success: function(data) {
             console.log(data, "element json");
             if (typeof data === "string") data = JSON.parse(data);
-            $("title").text(data.title+" - Grundämnen.se");
             var output = "";
             if (data.published) {
               output += '<div class="incomplete">Denna sida är inte klar än. Innehållet kan vara oklar eller felaktigt.</div>';
             }
             output += '<div onclick="exit();" id="exit">X</div>';
-            output += '<div class="info">';
+            output += '<div class="element-info">';
             if (data.title != null) {
               output += "<h1>"+data.title+"</h1>";
+              $("title").text(data.title+" - "+title);
             } else {
               output += "<h1>"+data.element+"</h1>";
+              $("title").text(data.element+" - "+title);
             }
             output += "<br>";
             output += "<p>"+data.text+"</p>";
@@ -61,12 +62,12 @@ $(document).on("ready", function(e){
             output += '<p><b>Författare:</b> '+data.author+'</p>';
             output += '<p><b>Senast Ändrad av </b>'+data.lasteditedby+' <b>datum</b> '+data.lastediteddate+'</p>';
             output += '</div>';
-            $("#newHTML").append(output);
+            $("#overlay").append(output);
             $("body").css({"overflow":"hidden"});
             if (getCookie("gr-settings-easing", "true") == "false") {
-              $("#newHTML").show();
+              $("#overlay").show();
             } else {
-              $("#newHTML").show("scale", 300);
+              $("#overlay").show("scale", 300);
             }
             loading = false;
           }
@@ -96,12 +97,12 @@ $( "#settings-button" ).click(function() {
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
-  $("title").text("Grundämnen.se");
-  $("#newHTML").empty();
+  $("title").text(title);
+  $("#overlay").empty();
   if (getCookie("gr-settings-easing", "true") == "false") {
-    $("#newHTML").hide();
+    $("#overlay").hide();
   } else {
-    $("#newHTML").hide("scale", 200);
+    $("#overlay").hide("scale", 200);
   }
   $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
