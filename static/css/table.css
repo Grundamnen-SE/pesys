@@ -129,6 +129,13 @@ td {
   left: -10%;
   cursor: pointer;
 }
+#login {
+  color:#5bb7ff;
+  font-size:20px;
+  position: absolute;
+  bottom: 10px;
+  left:  10px;
+}
 
 /* Alkalimetaller */
 .tab1 .alk {

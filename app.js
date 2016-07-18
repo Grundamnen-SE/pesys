@@ -42,10 +42,10 @@ app.use(helmet.contentSecurityPolicy({
   mediaSrc: [],
   frameSrc: []
 }));
-app.use(forcedomain({
+/*app.use(forcedomain({
   hostname: "grundämnen.se",
   protocol: "https"
-}));
+}));*/
 app.use(session({
   secret: "MSeTEw6mReerergJjBu1",
   name: "sessID",
@@ -67,13 +67,11 @@ db.open(function(e, d){
     db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}).toArray(function(err, data){
       if (err) console.log(err);
       playbtn = JSON.stringify(data);
-      console.log(data, "playbtn data");
     });
     setInterval(function(){
       db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}, function(err, data){
         if (err) console.log(err);
         playbtn = data;
-        console.log(data, "playbtn data");
       });
     }, 1000*60*60);
   }
@@ -145,7 +143,6 @@ app.get('/', function(req, res){
 
 app.get('/:elm', function(req, res, next){
   // get element and send render page
-  console.log("RENDER Request");
   if (req.params.elm == "om") res.render("om");
   else if (req.params.elm == "info") res.render("info");
   else if (isInArray(req.params.elm, elements)) next();
@@ -158,23 +155,19 @@ app.get('/:elm', function(req, res, next){
     else res.render('element/show_element_incomplete');
   });
 });
-/*
-app.use(function(req, res, next){
-  res.status(404).render("404");
-  res.status(500).render("500");
-  next();
-});*/
 
 // TODO
 // API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.
 // Vi bör lägga till system för att verifiera vem som frågar efter information och kanske lägga till rate-limiting.
 // Kolla in https://github.com/Grundamnen-SE/pesys/issues/9
 app.get('/api/:elm/json', function(req, res){
-  console.log("JSON Request");
   db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
     if (err) console.log(err);
-    console.log(data);
-    res.send(data);
+    if (data == null) {
+      res.send({"error": "no data retrieved"});
+    } else {
+      res.send(data);
+    }
   });
 });
 

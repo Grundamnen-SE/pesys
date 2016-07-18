@@ -35,6 +35,12 @@ $(document).on("ready", function(e){
           success: function(data) {
             console.log(data, "element json");
             if (typeof data === "string") data = JSON.parse(data);
+            if (data.error) {
+              alert("Error: "+data.error);
+              loading = false;
+              return;
+            }
+            window.history.pushState("", "", "/"+data.element);
             var output = "";
             if (data.published) {
               output += '<div class="incomplete">Denna sida är inte klar än. Innehållet kan vara oklar eller felaktigt.</div>';
@@ -98,6 +104,7 @@ $( "#settings-button" ).click(function() {
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
   $("title").text(title);
+  window.history.pushState("", "", "/");
   $("#overlay").empty();
   if (getCookie("gr-settings-easing", "true") == "false") {
     $("#overlay").hide();
