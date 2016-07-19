@@ -10,12 +10,26 @@
     <meta name="twitter:title" content="Grundämnen.se">
     <meta name="twitter:description" content="%twitter_description%">
     <meta name="twitter:url" content="https://grundämnen.se/">
-    <meta name="robots" content="%meta_robots%">
-    <title>Om - %title%</title>
+    <meta name="robots" content="noindex,nofollow">
+    <title>Login - %title%</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
   </head>
   <body>
-    <h2>404: Sidan kunde inte hittas</h2>
+    <div id="login-box">
+      <h1>Logga in</h1>
+      <br>
+      <form method="post">
+        <label for="username">Användarnamn</label>
+        <input type="text" name="username" id="username" placeholder="Användarnamn">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Lösenord">
+        <br>
+        <button type="submit">Logga In</button>
+      </form>
+      %login%
+    </div>
   </body>
 </html>

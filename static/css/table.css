@@ -135,6 +135,12 @@ td {
   position: absolute;
   bottom: 10px;
   left:  10px;
+  display:none;
+}
+@media (min-width:1000px) {
+  #login {
+    display:block;
+  }
 }
 
 /* Alkalimetaller */

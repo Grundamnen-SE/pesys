@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Grundamnen-SE/pesys#readme",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "connect-mongo": "^1.2.1",
     "express": "^4.14.0",
@@ -24,6 +26,8 @@
     "forcedomain": "^0.7.0",
     "fs": "0.0.2",
     "helmet": "^2.1.1",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "util": "^0.10.3"
   }
 }
