@@ -11,6 +11,8 @@ var compression = require('compression');
 var logger = require('morgan');
 var forcedomain = require("forcedomain");
 var helmet = require("helmet");
+var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
 
 // MongoDB
 var MongoStore = require('connect-mongo')(session);
@@ -22,6 +24,9 @@ var MongoServer = require('mongodb').Server;
 var replaceAll = require('./functions.js').replaceAll;
 var isInArray = require('./functions.js').isInArray;
 var site_data = require("./data.json");
+var pwman = require('./password.js');
+var util = require('util');
+var path = require('path');
 
 // Misc
 var fs = require('fs');
@@ -55,6 +60,8 @@ app.use(session({
   store: new MongoStore({ url: mongopath }),
   cookie: {httpOnly: true}
 }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 // Open DB Connection
@@ -83,6 +90,7 @@ var playbtn;
 
 // Express render engine
 app.engine('html', function (fp, options, callback) {
+  //console.log(options, "render options");
   fs.readFile(fp, function (err, content) {
     if (err) return callback(new Error(err));
 
@@ -93,7 +101,7 @@ app.engine('html', function (fp, options, callback) {
     rendered = replaceAll(rendered, "%playbtn%", playbtn);
 
     if (options.element != null) {
-      rendered = replaceAll(rendered, "%element%", options.params.elm);
+      rendered = replaceAll(rendered, "%element%", options.element);
     }
 
     for (var key in site_data) {
@@ -101,30 +109,43 @@ app.engine('html', function (fp, options, callback) {
       rendered = replaceAll(rendered, "%"+key+"%", site_data[key]);
     }
 
-    var scripts = [];
+    var login_div = "";
+    if (!options.login) {
+      login_div = '<div class="login-error">Inloggning misslyckades: Felaktigt användarnamn eller lösenord.</div>';
+    }
+    rendered = replaceAll(rendered, "%login%", login_div);
 
-    if (options.logged_in) {
-      if (isInArray("LOGIN", options.permissions)){
-        scripts.push("/js/login.js");
-      }
-      if (isInArray("WRITE", options.permissions)){
+    var scripts_arr = [];
+    if (options.user != null) {
+      if (options.user.logged_in) {
+        if (isInArray("LOGIN", options.user.permissions)){
+          scripts_arr.push("/js/login.js");
+        }
+        if (isInArray("WRITE", options.user.permissions)){
+          scripts_arr.push("/js/edit.js");
+        }
+        if (isInArray("READ", options.user.permissions)){
 
-      }
-      if (isInArray("READ", options.permissions)){
-
-      }
-      if (isInArray("VERIFY", options.permissions)){
-
-      }
-      if (isInArray("USER", options.permissions)){
-
-      }
-      if (isInArray("SUPERADMIN", options.permissions)){
-
+        }
+        if (isInArray("VERIFY", options.user.permissions)){
+          scripts_arr.push("/js/verify.js");
+        }
+        if (isInArray("USER", options.user.permissions)){
+          scripts_arr.push("/js/user.js");
+        }
+        if (isInArray("SUPERADMIN", options.user.permissions)){
+          scripts_arr.push("/js/superadmin.js");
+        }
       }
     }
+    var scripts = "";
+    for (var i = 0; i < scripts_arr.length; i++) {
+      scripts += '<script src="'+scripts_arr[i]+'"></script>';
+    }
+    rendered = replaceAll(rendered, "%scripts%", scripts);
 
-    rendered = replaceAll(rendered, "%scripts%", scripts)
+    if (options.user != null && options.user.logged_in) rendered = replaceAll(rendered, "%login_url%", '<p id="login">Logged in as: '+options.user.logged_in_as+'</p>');
+    else rendered = replaceAll(rendered, "%login_url%", '<a href="/login" id="login">Login</a>');
 
     return callback(null, rendered);
   });
@@ -135,17 +156,114 @@ app.set('views', './views');
 app.set('view engine', 'html');
 app.enable('trust proxy');
 app.disable('x-powered-by');
-app.use(express.static("static"));
+app.use("/css", express.static(__dirname + "/static/css"));
+app.use("/img", express.static(__dirname + "/static/img"));
+app.use(favicon(__dirname + "/static/favicon.ico"));
+
+// START dev urls
+if (process.env.NODE_ENV != "production") {
+  console.log("Not in production, enabling dev urls");
+  app.get('/create_dev_users', function(req, res){
+    db.collection('users').deleteOne({username: "devstudent"});
+    db.collection('users').deleteOne({username: "devadmin"});
+    db.collection('users').insertMany([{
+      "username": "devadmin",
+      "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
+      "id": 1,
+      "permissions": [
+        "SUPERADMIN",
+        "USER",
+        "VERIFY",
+        "READ",
+        "WRITE",
+        "LOGIN"
+      ],
+      "lastlogintime": "",
+      "lastloginip": "",
+      "teacher": 0
+    }, {
+      "username": "devstudent",
+      "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
+      "id": 2,
+      "permissions": [
+        "READ",
+        "WRITE",
+        "LOGIN"
+      ],
+      "lastlogintime": "",
+      "lastloginip": "",
+      "teacher": 1
+    }], function(err, data){
+      res.type("text");
+      var senddata = {};
+      if (err) senddata.error = err;
+      if (data) senddata.data = data;
+      if (data.ops) senddata.ops = data.ops;
+      res.send(util.inspect(senddata));
+    });
+  });
+  app.get('/crpw/:pw', function(req, res){
+    if (req.params.pw != null) {
+      pwman.cryptPassword(req.params.pw, function(err, pwc){
+        res.send({"error": err, "pwc": pwc});
+      });
+    } else {
+      res.send("no pw");
+    }
+  })
+}
+// END dev urls
 
 app.get('/', function(req, res){
-  res.render('index');
+  if (req.session.user != null) {
+    res.render('index', {user: req.session.user});
+  } else {
+    res.render('index');
+  }
 });
 
+app.get('/login', function(req, res){
+  res.render('login');
+});
+app.post('/login', function(req, res){
+  var username = req.body.username;
+  var password = req.body.password;
+  db.collection('users').findOne({username: username}, {_id:0}, function(err, data){
+    if (err) console.log(err);
+    if (data == null) {
+      res.render('login', {"login": false});
+    } else {
+      if (username == data.username) {
+        pwman.comparePassword(password, data.password, function(err, pwsuc){
+          if (err) console.log(err);
+          console.log(pwsuc, "pwsuc");
+          if (pwsuc) {
+            req.session.user = {};
+            req.session.user.logged_in = true;
+            req.session.user.logged_in_as = username;
+            req.session.user.permissions = data.permissions;
+            res.redirect("/");
+          } else {
+            res.render('login', {"login": false});
+          }
+        });
+      } else {
+        res.render('login', {"login": false});
+      }
+    }
+  });
+});
+
+app.get('/om', function(req, res){
+  res.render('om');
+});
+// Temp disabled info due to i dont know what to do with it :/
+/*app.get('/info', function(req, res){
+  res.render('info');
+});*/
+
 app.get('/:elm', function(req, res, next){
-  // get element and send render page
-  if (req.params.elm == "om") res.render("om");
-  else if (req.params.elm == "info") res.render("info");
-  else if (isInArray(req.params.elm, elements)) next();
+  if (isInArray(req.params.elm, elements)) next();
   else res.render("element/show_element_not_found", {element: req.params.elm});
 }, function(req, res){
   // Check if element is published
@@ -156,19 +274,56 @@ app.get('/:elm', function(req, res, next){
   });
 });
 
+app.get('/js/:js', function(req, res){
+  fileExists = false;
+  allowed = false;
+  fs.access(__dirname + "/static/js/"+req.params.js, fs.F_OK, function(err){
+    if (err) {
+      //console.log(__dirname + "/static/js/"+req.params.js, err);
+    } else {
+      fileExists = true;
+    }
+    switch (req.params.js) {
+      case "login.js":      var req_perm = "LOGIN"; break;
+      case "edit.js":       var req_perm = "WRITE"; break;
+      case "verify.js":     var req_perm = "VERIFY"; break;
+      case "user.js":       var req_perm = "USER"; break;
+      case "superadmin.js": var req_perm = "SUPERADMIN"; break;
+      default:              var req_perm = ""; break;
+    }
+    if (req_perm != "") {
+      if (req.session.user != null && req.session.user.logged_in) {
+        for (var i = 0; i < req.session.user.permissions.length; i++) {
+          var perm = req.session.user.permissions[i];
+          if (perm == req_perm) { allowed = true; break; }
+        }
+      }
+    } else {
+      allowed = true;
+    }
+    //console.log(fileExists, allowed, req.params.js, "js request");
+    if (fileExists && allowed) res.sendFile(__dirname + "/static/js/"+req.params.js);
+    else res.sendStatus(404);
+  });
+});
+
 // TODO
 // API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.
 // Vi bör lägga till system för att verifiera vem som frågar efter information och kanske lägga till rate-limiting.
 // Kolla in https://github.com/Grundamnen-SE/pesys/issues/9
 app.get('/api/:elm/json', function(req, res){
-  db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
-    if (err) console.log(err);
-    if (data == null) {
-      res.send({"error": "no data retrieved"});
-    } else {
-      res.send(data);
-    }
-  });
+  if (isInArray(req.params.elm, elements)) {
+    db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
+      if (err) console.log(err);
+      if (data == null) {
+        res.send({"error": "element data not found"});
+      } else {
+        res.send(data);
+      }
+    });
+  } else {
+    res.send({"error": "the value specified as an element is not an element"});
+  }
 });
 
 app.get('/api/contributors', function(req, res){
