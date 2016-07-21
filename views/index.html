@@ -49,10 +49,10 @@
     <div id="overlay"></div>
     <!-- Periodiska Systemet -->
     <div id="rst"></div>
-    <table class="tab2 sim_table">
+    <table class="tab2 sim_table per-table">
       <tr>
         <td class="td-gas dia"><div class="box"></div></td>
-        <td><div class="box"></div></td>
+        <td class="td-none"><div class="box"></div></td>
         <td rowspan="3" colspan="10" class="td-header"><div class="box">
         </div></td>
         <td colspan="5" class="td-about"><div class="box">
@@ -206,15 +206,17 @@
         <td class="td-none"><div class="box"></div></td>
       </tr>
     </table>
-    <table class="tab1 sim_table">
+    <table class="tab1 sim_table per-table">
       <tr>
         <td class="td-gas dia"><div class="box"><span class="atomic_number">1</span><img class="yt" src="/img/play.svg"><span class="atomic_text">H</span></div></td>
-        <td><div class="box"></div></td>
-        <td rowspan="3" colspan="10" class="td-header">
-          <div class="box"><a id="header" href="/">Grundämnen.se</a></div>
-        </td>
+        <td class="td-none"><div class="box"></div></td>
+        <td rowspan="3" colspan="10" class="td-header"><div class="box"><a id="header" href="/">Grundämnen.se</a></div></td>
         <td colspan="5" class="td-about">
-          <div class="box"><a id="about-link" href="/om">Om</a><a id="about-link" href="/info">Info</a></div>
+          <div class="box">
+            <a id="about-link" href="/om">Om</a>
+            <a id="about-link" href="/info">Info</a>
+            %login_url%
+          </div>
         </td>
         <td class="td-gas gas"><div class="box"><span class="atomic_number">2</span><span class="atomic_text">He</span></div></td>
       </tr>
@@ -368,12 +370,10 @@
         <td class="td-fast akt"><div class="box"><span class="atomic_number ">102</span><span class="atomic_text">No</span></div></td>
         <td class="td-fast akt"><div class="box"><span class="atomic_number ">103</span><span class="atomic_text">Lr</span></div></td>
         <td class="td-none"><div class="box"></div></td>
-        <td class="td-none"><div class="box"><img id="settings-button" src="/img/cog.png"></img></div></td>
+        <td class="td-none"><div class="box"><a href="/settings"><img id="settings-button" src="/img/cog.png"></a></div></td>
       </tr>
     </table>
     <br class="clearfix">
-
-    %login_url%
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -381,6 +381,7 @@
     <script>
     var playbtn = %playbtn%;
     var title = "%title%";
+    var element = false;
     </script>
     <script src="/js/cookie.js"></script>
     <script src="/js/playbtn.js"></script>

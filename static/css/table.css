@@ -1,10 +1,10 @@
-table
+table.per-table
 {
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
 }
-td {
+table.per-table > tbody > tr > td {
   margin: 0;
   padding: 0;
   position: relative;
@@ -33,8 +33,8 @@ td {
 }
 #about-link {
   color:#5bb7ff;
-  margin-right:10%;
-  margin-left:10%;
+  margin-right:5%;
+  margin-left:5%;
   font-size: 120%;
 }
 .td-header, .td-about {
@@ -60,25 +60,25 @@ td {
 }
 .td-gas {
   /* color:red !important; */
-  visibility: visible;
+  visibility: visible !important;
 }
 .td-flow {
   /* color:green !important; */
-  visibility: visible;
+  visibility: visible !important;
 }
 .tr-fast td{
   /* color:black; */
-  visibility: visible;
+  visibility: visible !important;
 }
 .td-fast {
   /* color:blue; */
-  visibility: visible;
+  visibility: visible !important;
 }
 .td-extend {
-  background-color: rgba(177,236,255, 0.3);
+  background-color: rgba(177,236,255, 0.3) !important;
   color: black !important;
   text-align: center;
-  visibility: visible;
+  visibility: visible !important;
   cursor: default;
 }
 .extend-text {
@@ -128,19 +128,6 @@ td {
   top: 10%;
   left: -10%;
   cursor: pointer;
-}
-#login {
-  color:#5bb7ff;
-  font-size:20px;
-  position: absolute;
-  bottom: 10px;
-  left:  10px;
-  display:none;
-}
-@media (min-width:1000px) {
-  #login {
-    display:block;
-  }
 }
 
 /* Alkalimetaller */

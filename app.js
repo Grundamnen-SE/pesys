@@ -144,8 +144,12 @@ app.engine('html', function (fp, options, callback) {
     }
     rendered = replaceAll(rendered, "%scripts%", scripts);
 
-    if (options.user != null && options.user.logged_in) rendered = replaceAll(rendered, "%login_url%", '<p id="login">Logged in as: '+options.user.logged_in_as+'</p>');
-    else rendered = replaceAll(rendered, "%login_url%", '<a href="/login" id="login">Login</a>');
+    if (options.user != null && options.user.logged_in) rendered = replaceAll(rendered, "%login_url%", '<a href="/logout" id="about-link">Logout</a>');
+    else rendered = replaceAll(rendered, "%login_url%", '<a href="/login" id="about-link">Login</a>');
+
+    if (options.user != null && options.user.logged_in) {
+      rendered = replaceAll(rendered, "%permissions%", options.user.permissions.toString())
+    }
 
     return callback(null, rendered);
   });
@@ -210,7 +214,40 @@ if (process.env.NODE_ENV != "production") {
     } else {
       res.send("no pw");
     }
-  })
+  });
+  app.get("/pop_H", function(req, res){
+    db.collection("elements").deleteOne({"element": "H"});
+    db.collection("elements").insertOne({
+      "element": "H",
+      "name": "Väte",
+      "number": 1,
+      "text": "Lorem Ipsum novum mekaniks",
+      "playbtn": true,
+      "published": true,
+      "approved": true,
+      "approvedby": 1,
+      "approvedtime": "2016-07-21 14:21",
+      "author": 1,
+      "created": "2014-01-01 12:00",
+      "lasteditedby": 1,
+      "lasteditedtime": "2016-07-21 14:20",
+      "versions": [],
+      "elementdata": {
+        "period": "1",
+        "group": "1",
+        "atomnumber": "1",
+        "atomweight": "1",
+        "protons": "1",
+        "electrons": "1",
+        "neutron": "0",
+        "electronshells": "1",
+        "meltingpoint": "-159",
+        "boilingpoint": "-253"
+      },
+      "allauthors": [1]
+    });
+    res.redirect("/");
+  });
 }
 // END dev urls
 
@@ -223,7 +260,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/login', function(req, res){
-  res.render('login');
+  res.render('login', {"login": true});
+});
+app.get('/logout', function(req, res){
+  req.session.destroy(function(err){if(err)console.log(err)});
+  res.redirect('/');
 });
 app.post('/login', function(req, res){
   var username = req.body.username;
@@ -261,8 +302,17 @@ app.get('/om', function(req, res){
 /*app.get('/info', function(req, res){
   res.render('info');
 });*/
+app.get(['/settings','/settings/:page'], function(req, res){
+  if (req.session.user != null) {
+    res.render("settings", {user: req.session.user});
+  } else {
+    res.redirect("/");
+  }
+});
 
 app.get('/:elm', function(req, res, next){
+  res.redirect("/");
+  return;
   if (isInArray(req.params.elm, elements)) next();
   else res.render("element/show_element_not_found", {element: req.params.elm});
 }, function(req, res){
@@ -285,6 +335,7 @@ app.get('/js/:js', function(req, res){
     }
     switch (req.params.js) {
       case "login.js":      var req_perm = "LOGIN"; break;
+      case "settings":      var req_perm = "LOGIN"; break;
       case "edit.js":       var req_perm = "WRITE"; break;
       case "verify.js":     var req_perm = "VERIFY"; break;
       case "user.js":       var req_perm = "USER"; break;
@@ -318,7 +369,11 @@ app.get('/api/:elm/json', function(req, res){
       if (data == null) {
         res.send({"error": "element data not found"});
       } else {
-        res.send(data);
+        if (req.session.user != null && req.session.user.logged_in) {
+          res.send({logged_in: true, data: data});
+        } else {
+          res.send({data: data});
+        }
       }
     });
   } else {

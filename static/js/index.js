@@ -35,38 +35,43 @@ $(document).on("ready", function(e){
           success: function(data) {
             console.log(data, "element json");
             if (typeof data === "string") data = JSON.parse(data);
+            var elementdata = data.data;
             if (data.error) {
               alert("Error: "+data.error);
               loading = false;
               return;
             }
-            window.history.pushState("", "", "/"+data.element);
+            window.history.pushState("", "", "/"+elementdata.element);
             var output = "";
-            if (data.published) {
+            if (!elementdata.published) {
               output += '<div class="incomplete">Denna sida är inte klar än. Innehållet kan vara oklar eller felaktigt.</div>';
             }
-            output += '<div onclick="exit();" id="exit">X</div>';
+            output += '<div onclick="exit();" id="exit"><i class="material-icons">close</i></div>';
+            if (data.logged_in) {
+              output += '<div onclick="edit();" id="edit"><i class="material-icons">edit</i></div>'
+            }
             output += '<div class="element-info">';
-            if (data.title != null) {
-              output += "<h1>"+data.title+"</h1>";
-              $("title").text(data.title+" - "+title);
+            if (elementdata.title != null) {
+              output += '<h1 id="element-info-title">'+elementdata.title+"</h1>";
+              $("title").text(elementdata.title+" - "+title);
             } else {
-              output += "<h1>"+data.element+"</h1>";
-              $("title").text(data.element+" - "+title);
+              output += '<h1 id="element-info-title">'+elementdata.element+"</h1>";
+              $("title").text(elementdata.element+" - "+title);
             }
             output += "<br>";
-            output += "<p>"+data.text+"</p>";
-            output += '</div>';
+            output += '<div id="element-info-body">'
+            output += "<p>"+elementdata.text+"</p>";
+            output += '</div></div>';
             output += '<div class="element-data">';
             output += '<table>';
-            for (var key in playbtn) {
-              if (!playbtn.hasOwnProperty(key)) continue;
-              var obj = playbtn[key];
-              output += '<tr><td>'+key+'</td><td>'+obj+'</td></tr>';
+            for (var key in elementdata.elementdata) {
+              if (!elementdata.elementdata.hasOwnProperty(key)) continue;
+              var obj = elementdata.elementdata[key];
+              output += '<tr><td clas="key">'+key+'</td><td class="value">'+obj+'</td></tr>';
             }
             output += '</table>';
-            output += '<p><b>Författare:</b> '+data.author+'</p>';
-            output += '<p><b>Senast Ändrad av </b>'+data.lasteditedby+' <b>datum</b> '+data.lastediteddate+'</p>';
+            output += '<p><b>Författare:</b> '+elementdata.author+'</p>';
+            output += '<p><b>Senast Ändrad av </b>'+elementdata.lasteditedby+' <b>datum</b> '+elementdata.lastediteddate+'</p>';
             output += '</div>';
             $("#overlay").append(output);
             $("body").css({"overflow":"hidden"});
@@ -75,6 +80,7 @@ $(document).on("ready", function(e){
             } else {
               $("#overlay").show("scale", 300);
             }
+            element = true;
             loading = false;
           }
         });
@@ -97,9 +103,9 @@ $( "#settings" ).dialog({
   autoOpen: false,
   title: "Inställningar"
 });
-$( "#settings-button" ).click(function() {
+/*$( "#settings-button" ).click(function() {
   $( "#settings" ).dialog( "open" );
-});
+});*/
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
@@ -113,6 +119,7 @@ function exit() {
   }
   $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
+  element = false;
 }
 
 // Om man klickar på Esc ska rutan stängas:

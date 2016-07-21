@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="%meta_author%">
+    <meta name="description" content="%meta_description%">
+    <meta name="keywords" content="%meta_keywords%">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@grundamnen">
+    <meta name="twitter:title" content="Grundämnen.se">
+    <meta name="twitter:description" content="%twitter_description%">
+    <meta name="twitter:url" content="https://grundämnen.se/">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Login - %title%</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/settings.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="panel center">
+      <h1 class="header">Settings <a href="/" class="right">&larr; Tillbaka</a></h1>
+      <br class="clearfix">
+      <table class="nav">
+        <tr>
+          <td class="nav-link"><a href="/settings/profile" data-perm="LOGIN">Profil</a></td>
+          <td class="nav-link"><a href="/settings/approve" data-perm="VERIFY">Godkänn Ändringar</a></td>
+          <td class="nav-link"><a href="/settings/users" data-perm="USER">Användare</a></td>
+          <td class="nav-link"><a href="/settings/superadmin" data-perm="SUPERADMIN">SuperAdmin</a></td>
+        </tr>
+      </table>
+      <br>
+      <div id="content">
+        Loading content...
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    var permissions = "%permissions%".split(",");
+    </script>
+    <script src="/js/settings.js"></script>
+  </body>
+</html>
