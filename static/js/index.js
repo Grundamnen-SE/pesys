@@ -33,8 +33,8 @@ $(document).on("ready", function(e){
           url: "/api/"+atomic_text+"/json",
           dataType: "html",
           success: function(data) {
-            console.log(data, "element json");
             if (typeof data === "string") data = JSON.parse(data);
+            //console.log(data, "element json");
             var elementdata = data.data;
             if (data.error) {
               alert("Error: "+data.error);
@@ -67,11 +67,16 @@ $(document).on("ready", function(e){
             for (var key in elementdata.elementdata) {
               if (!elementdata.elementdata.hasOwnProperty(key)) continue;
               var obj = elementdata.elementdata[key];
-              output += '<tr><td clas="key">'+key+'</td><td class="value">'+obj+'</td></tr>';
+              output += '<tr><td clas="key">'+key+'</td><td class="value">'+obj+'</td></tr><tr><td colspan="2" class="line"></td></tr>';
             }
             output += '</table>';
             output += '<p><b>Författare:</b> '+elementdata.author+'</p>';
-            output += '<p><b>Senast Ändrad av </b>'+elementdata.lasteditedby+' <b>datum</b> '+elementdata.lastediteddate+'</p>';
+            output += '<p><b>Senast Ändrad av </b>'+elementdata.lasteditedby+' <b>datum</b> '+elementdata.lasteditedtime+'</p>';
+            output += '<p><b>Alla som har hjälpt till med denna sida: </b><ul>';
+            for (var i = 0; i < elementdata.alleditors.length; i++) {
+              output += '<li>'+elementdata.alleditors[i]+'</li>';
+            }
+            output += '</ul></p>';
             output += '</div>';
             $("#overlay").append(output);
             $("body").css({"overflow":"hidden"});

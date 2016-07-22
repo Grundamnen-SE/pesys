@@ -1,5 +1,9 @@
-.element-info, .element-data {
+.element-info {
   padding: 30px;
+  min-height: calc(100% - 22px);
+}
+.element-data {
+  padding-top: 30px;
   min-height: calc(100% - 22px);
 }
 #overlay {
@@ -14,15 +18,32 @@
   color: black;
   font-size: 18px;
 }
-#overlay > table {
+#overlay table {
   width:100%;
   padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
   font-size:20px;
   border:0;
   cursor: default;
+  border:1px solid black;
 }
-#overlay > td {
-  font-size:
+#overlay table tr td {
+  padding-top:7px;
+  font-size:20px;
+}
+#overlay table tr:first-of-type td {
+  padding-top:3px;
+}
+#overlay table tr:last-of-type td {
+  border-bottom:0px;
+  padding:0;
+}
+#overlay table tr td.line {
+  border-bottom:1px solid black;
+}
+#overlay .element-data p {
+  width:100%;
 }
 #rst {
   position: absolute;

@@ -17,6 +17,7 @@ Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara 
   "username": "joarc",
   "id": 1,
   "password": "encrypted password",
+  "name": "Joar Classon",
   "permissions":[
     "SUPERADMIN",
     "USER",
@@ -34,27 +35,31 @@ Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara 
 ```json
 {
   "element": "H",
+  "name": "Väte",
   "number": 1,
+  "text": "Lorem Ipsum novum mekaniks",
   "playbtn": true,
   "published": true,
   "approved": true,
-  "approvedby": "user->id",
-  "approvedtime": "time",
-  "author": "user->id",
-  "created": "time",
-  "lasteditedby": "user->id",
-  "lasteditedtime": "time",
-  "versions": [{
-    "element": "H",
-    "number": 1,
-    "playbtn": true
-    ...
-  }, {
-    "element": "H",
-    "number": 2,
-    "playbtn": false
-    ...
-  }],
-  "allauthors": ["user->id", "user->id", "..."]
+  "approvedby": 1,
+  "approvedtime": "2016-07-21 14:21",
+  "author": 1,
+  "created": "2014-01-01 12:00",
+  "lasteditedby": 1,
+  "lasteditedtime": "2016-07-21 14:20",
+  "versions": [],
+  "elementdata": {
+    "period": "1",
+    "group": "1",
+    "atomnumber": "1",
+    "atomweight": "1",
+    "protons": "1",
+    "electrons": "1",
+    "neutron": "0",
+    "electronshells": "1",
+    "meltingpoint": "-159",
+    "boilingpoint": "-253"
+  },
+  "alleditors": [1]
 }
 ```

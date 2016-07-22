@@ -174,6 +174,7 @@ if (process.env.NODE_ENV != "production") {
       "username": "devadmin",
       "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
       "id": 1,
+      "name": "Dev Admin",
       "permissions": [
         "SUPERADMIN",
         "USER",
@@ -189,6 +190,7 @@ if (process.env.NODE_ENV != "production") {
       "username": "devstudent",
       "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
       "id": 2,
+      "name": "Dev Student",
       "permissions": [
         "READ",
         "WRITE",
@@ -244,7 +246,7 @@ if (process.env.NODE_ENV != "production") {
         "meltingpoint": "-159",
         "boilingpoint": "-253"
       },
-      "allauthors": [1]
+      "alleditors": [1, 2]
     });
     res.redirect("/");
   });
@@ -364,16 +366,34 @@ app.get('/js/:js', function(req, res){
 // Kolla in https://github.com/Grundamnen-SE/pesys/issues/9
 app.get('/api/:elm/json', function(req, res){
   if (isInArray(req.params.elm, elements)) {
-    db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
+    db.collection('elements').findOne({element: req.params.elm}, {fields:{_id:0}}, function(err, data){
       if (err) console.log(err);
       if (data == null) {
         res.send({"error": "element data not found"});
       } else {
-        if (req.session.user != null && req.session.user.logged_in) {
-          res.send({logged_in: true, data: data});
-        } else {
-          res.send({data: data});
+        var options = {fields:{password:0, _id: 0}};
+        var users = [db.collection('users').findOne({id: data.author}, options), db.collection('users').findOne({id: data.lasteditedby}, options), db.collection('users').findOne({id: data.approvedby}, options)];
+        for (var i = 0; i < data.alleditors.length; i++) {
+          users.push(db.collection('users').findOne({id: data.alleditors[i]}, options));
         }
+        Promise.all(users).then(function(allData){
+          var author = allData[0];
+          var lasteditedby = allData[1];
+          var approvedby = allData[2];
+          var alleditors = [];
+          for (var i = 3; i < allData.length; i++) {
+            alleditors.push(allData[i]);
+          }
+          data.author = author;
+          data.lasteditedby = lasteditedby;
+          data.approvedby = approvedby;
+          data.alleditors = alleditors;
+          if (req.session.user != null && req.session.user.logged_in) {
+            res.send({logged_in: true, data: data});
+          } else {
+            res.send({data: data});
+          }
+        });
       }
     });
   } else {
