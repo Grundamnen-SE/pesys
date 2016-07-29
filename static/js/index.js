@@ -36,7 +36,6 @@ $(document).on("ready", function(e) {
           dataType: "html",
           success: function(data) {
             if (typeof data === "string") data = JSON.parse(data);
-            //console.log(data, "element json");
             var elementdata = data.data;
             if (data.error) {
               alert("Error: "+data.error);
@@ -44,7 +43,6 @@ $(document).on("ready", function(e) {
               return;
             }
             window.history.pushState("", "", "/"+elementdata.element);
-            console.log(data);
             $("title").text(elementdata.element+" - "+title);
             if (data.logged_in) {
               $("#overlay").prepend('<div onclick="edit();" id="edit"><i class="material-icons">edit</i></div>');
