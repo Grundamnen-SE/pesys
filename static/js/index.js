@@ -113,9 +113,9 @@ $( "#settings" ).dialog({
   autoOpen: false,
   title: "Inställningar"
 });
-/*$( "#settings-button" ).click(function() {
+$( "#settings-button" ).click(function() {
   $( "#settings" ).dialog( "open" );
-});*/
+});
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
