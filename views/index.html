@@ -52,7 +52,7 @@
         <h1 id="element-info-title" data-elm="element"></h1>
         <br>
         <div id="element-info-body">
-          <p data-elm="text"></p>
+          <p data-elm="text" data-elm-attr="markdown"></p>
         </div>
       </div>
       <div class="element-data">
@@ -465,12 +465,14 @@
     <br class="clearfix">
 
     <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
     <script>
     var playbtn = %playbtn%;
     var title = "%title%";
     var element = false;
+    var md = new Remarkable();
     </script>
     <script src="/js/cookie.js"></script>
     <script src="/js/playbtn.js"></script>

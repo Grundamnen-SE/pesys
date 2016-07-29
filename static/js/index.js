@@ -78,6 +78,9 @@ $(document).on("ready", function(e) {
                 }
                 elementLoaded.push(key);
               } else {
+                if ($('[data-elm="'+key+'"]').attr("data-elm-attr") == "markdown") {
+                  obj = md.render(obj.toString());
+                }
                 $('[data-elm="'+key+'"]').append(obj);
                 elementLoaded.push(key);
               }

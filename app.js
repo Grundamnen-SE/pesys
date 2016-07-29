@@ -223,7 +223,7 @@ if (process.env.NODE_ENV != "production") {
       "element": "H",
       "name": "Väte",
       "number": 1,
-      "text": "Lorem Ipsum novum mekaniks",
+      "text": "*Lorem* **Ipsum** [novum](http://www.google.com/) mekaniks",
       "playbtn": true,
       "published": true,
       "approved": true,
