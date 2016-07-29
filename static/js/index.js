@@ -1,10 +1,10 @@
 // Add :containsExact
- $.expr[":"].containsExact = function (obj, index, meta, stack) {
-   return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
- };
+$.expr[":"].containsExact = function (obj, index, meta, stack) {
+  return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
+};
 
 var loading = false;
-$(document).on("ready", function(e){
+$(document).on("ready", function(e) {
   $("td").on("click", function(e) {
   if (!$(this).hasClass("td-extend") &&
       !$(this).hasClass("td-header") &&
@@ -12,25 +12,25 @@ $(document).on("ready", function(e){
       !$(this).hasClass("td-about") &&
       !$(this).hasClass("td-logo")) {
       if (!loading) {
+
         loading = true;
         var atomic_number = $(this).attr("data-number");
         var atomic_text = $(this).attr("data-name");
-        if      ($(this).hasClass("pol")) $("#overlay").css({"background-color":"#C2CAFF"});
-        else if ($(this).hasClass("alk")) $("#overlay").css({"background-color":"#FFC2C2"});
-        else if ($(this).hasClass("jor")) $("#overlay").css({"background-color":"#FFE4C2"});
-        else if ($(this).hasClass("ove")) $("#overlay").css({"background-color":"#C2FFCF"});
-        else if ($(this).hasClass("eju")) $("#overlay").css({"background-color":"#DFDFDF"});
-        else if ($(this).hasClass("ovr")) $("#overlay").css({"background-color":"#C2FFF2"});
-        else if ($(this).hasClass("hme")) $("#overlay").css({"background-color":"#C2ECFF"});
-        else if ($(this).hasClass("ick")) $("#overlay").css({"background-color":"#C2C7FF"});
-        else if ($(this).hasClass("dia")) $("#overlay").css({"background-color":"#DCC2FF"});
-        else if ($(this).hasClass("gas")) $("#overlay").css({"background-color":"#FFC2FF"});
-        else if ($(this).hasClass("lan")) $("#overlay").css({"background-color":"#FAFFC2"});
-        else if ($(this).hasClass("akt")) $("#overlay").css({"background-color":"#D7FFC2"});
-        else alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail: info.grundamnen@gmail.com");
+
+        var colors = {
+          "pol": "#C2CAFF", "alk": "#FFC2C2", "jor": "#FFE4C2", "ove": "#C2FFCF", "eju": "#DFDFDF", "ovr": "#C2FFF2",
+          "hme": "#C2ECFF", "ick": "#C2C7FF", "dia": "#DCC2FF", "gas": "#FFC2FF", "lan": "#FAFFC2", "akt": "#D7FFC2"
+        }
+        for (prop in colors) {
+          if ($(this).hasClass(prop)) {
+            $("#overlay").css({"background-color": colors[prop]});
+            break;
+          }
+        }
+
         $.ajax({
           type: "GET",
-          url: "/api/"+atomic_text+"/json",
+          url: "/api/" + atomic_text + "/json",
           dataType: "html",
           success: function(data) {
             if (typeof data === "string") data = JSON.parse(data);
