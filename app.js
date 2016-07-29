@@ -167,46 +167,13 @@ app.use(favicon(__dirname + "/static/favicon.ico"));
 // START dev urls
 if (process.env.NODE_ENV != "production") {
   console.log("Not in production, enabling dev urls");
-  app.get('/create_dev_users', function(req, res){
-    db.collection('users').deleteOne({username: "devstudent"});
-    db.collection('users').deleteOne({username: "devadmin"});
-    db.collection('users').insertMany([{
-      "username": "devadmin",
-      "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
-      "id": 1,
-      "name": "Dev Admin",
-      "permissions": [
-        "SUPERADMIN",
-        "USER",
-        "VERIFY",
-        "READ",
-        "WRITE",
-        "LOGIN"
-      ],
-      "lastlogintime": "",
-      "lastloginip": "",
-      "teacher": 0
-    }, {
-      "username": "devstudent",
-      "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
-      "id": 2,
-      "name": "Dev Student",
-      "permissions": [
-        "READ",
-        "WRITE",
-        "LOGIN"
-      ],
-      "lastlogintime": "",
-      "lastloginip": "",
-      "teacher": 1
-    }], function(err, data){
-      res.type("text");
-      var senddata = {};
-      if (err) senddata.error = err;
-      if (data) senddata.data = data;
-      if (data.ops) senddata.ops = data.ops;
-      res.send(util.inspect(senddata));
-    });
+  app.get("/dev_env", function(req, res){
+      db.collection("elements").deleteOne({"element": "H"});
+      db.collection("elements").insertOne(require('./H_dev.json'));
+      db.collection('users').deleteOne({username: "devstudent"});
+      db.collection('users').deleteOne({username: "devadmin"});
+      db.collection('users').insertMany(require('./USERS_dev.json'));
+      res.redirect("/");
   });
   app.get('/crpw/:pw', function(req, res){
     if (req.params.pw != null) {
@@ -217,39 +184,7 @@ if (process.env.NODE_ENV != "production") {
       res.send("no pw");
     }
   });
-  app.get("/pop_H", function(req, res){
-    db.collection("elements").deleteOne({"element": "H"});
-    db.collection("elements").insertOne({
-      "element": "H",
-      "name": "Väte",
-      "number": 1,
-      "text": "*Lorem* **Ipsum** [novum](http://www.google.com/) mekaniks",
-      "playbtn": true,
-      "published": true,
-      "approved": true,
-      "approvedby": 1,
-      "approvedtime": "2016-07-21 14:21",
-      "author": 1,
-      "created": "2014-01-01 12:00",
-      "lasteditedby": 1,
-      "lasteditedtime": "2016-07-21 14:20",
-      "versions": [],
-      "elementdata": {
-        "period": "1",
-        "group": "1",
-        "atomnumber": "1",
-        "atomweight": "1",
-        "protons": "1",
-        "electrons": "1",
-        "neutron": "0",
-        "electronshells": "1",
-        "meltingpoint": "-159",
-        "boilingpoint": "-253"
-      },
-      "alleditors": [1, 2]
-    });
-    res.redirect("/");
-  });
+
 }
 // END dev urls
 
