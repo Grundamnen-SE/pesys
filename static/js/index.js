@@ -4,6 +4,7 @@ $.expr[":"].containsExact = function (obj, index, meta, stack) {
 };
 
 var loading = false;
+var elementLoaded = [];
 $(document).on("ready", function(e) {
   $("td").on("click", function(e) {
   if (!$(this).hasClass("td-extend") &&
@@ -21,7 +22,8 @@ $(document).on("ready", function(e) {
           "pol": "#C2CAFF", "alk": "#FFC2C2", "jor": "#FFE4C2", "ove": "#C2FFCF", "eju": "#DFDFDF", "ovr": "#C2FFF2",
           "hme": "#C2ECFF", "ick": "#C2C7FF", "dia": "#DCC2FF", "gas": "#FFC2FF", "lan": "#FAFFC2", "akt": "#D7FFC2"
         }
-        for (prop in colors) {
+        for (var prop in colors) {
+          if (!colors.hasOwnProperty(prop)) continue;
           if ($(this).hasClass(prop)) {
             $("#overlay").css({"background-color": colors[prop]});
             break;
@@ -42,43 +44,46 @@ $(document).on("ready", function(e) {
               return;
             }
             window.history.pushState("", "", "/"+elementdata.element);
-            var output = "";
-            if (!elementdata.published) {
-              output += '<div class="incomplete">Denna sida är inte klar än. Innehållet kan vara oklar eller felaktigt.</div>';
-            }
-            output += '<div onclick="exit();" id="exit"><i class="material-icons">close</i></div>';
+            console.log(data);
+            $("title").text(elementdata.element+" - "+title);
             if (data.logged_in) {
-              output += '<div onclick="edit();" id="edit"><i class="material-icons">edit</i></div>'
+              $("#overlay").prepend('<div onclick="edit();" id="edit"><i class="material-icons">edit</i></div>');
             }
-            output += '<div class="element-info">';
-            if (elementdata.title != null) {
-              output += '<h1 id="element-info-title">'+elementdata.title+"</h1>";
-              $("title").text(elementdata.title+" - "+title);
-            } else {
-              output += '<h1 id="element-info-title">'+elementdata.element+"</h1>";
-              $("title").text(elementdata.element+" - "+title);
+            for (var key in elementdata) {
+              if (!elementdata.hasOwnProperty(key)) continue;
+              var obj = elementdata[key];
+              if (typeof obj === "object" && obj.constructor !== Array) {
+                for (var intkey in obj) {
+                  if (!obj.hasOwnProperty(intkey)) continue;
+                  var intobj = obj[intkey];
+                  if (intobj.constructor === Array) {
+                    for (var i = 0; i < intobj.length; i++) {
+                      $('[data-elm="'+key+"."+intkey+'"]').append("<li>"+intobj[i]+"</li>");
+                    }
+                  } else {
+                    $('[data-elm="'+key+"."+intkey+'"]').append(intobj);
+                  }
+                  elementLoaded.push(key+"."+intkey);
+                }
+              } else if (obj.constructor === Array) {
+                for (var i = 0; i < obj.length; i++) {
+                  if (typeof obj[i] === "object") {
+                    for (var intkey in obj[i]) {
+                      if (!obj[i].hasOwnProperty(intkey)) continue;
+                      var intobj = obj[i][intkey];
+                      $('[data-elm="'+key+"."+intkey+'"]').append("<li>"+intobj+"</li>")
+                      elementLoaded
+                    }
+                  } else {
+                    $('[data-elm="'+key+'"]').append("<li>"+obj[i]+"</li>");
+                  }
+                }
+                elementLoaded.push(key);
+              } else {
+                $('[data-elm="'+key+'"]').append(obj);
+                elementLoaded.push(key);
+              }
             }
-            output += "<br>";
-            output += '<div id="element-info-body">'
-            output += "<p>"+elementdata.text+"</p>";
-            output += '</div></div>';
-            output += '<div class="element-data">';
-            output += '<table>';
-            for (var key in elementdata.elementdata) {
-              if (!elementdata.elementdata.hasOwnProperty(key)) continue;
-              var obj = elementdata.elementdata[key];
-              output += '<tr><td clas="key">'+key+'</td><td class="value">'+obj+'</td></tr><tr><td colspan="2" class="line"></td></tr>';
-            }
-            output += '</table>';
-            output += '<p><b>Författare:</b> '+elementdata.author+'</p>';
-            output += '<p><b>Senast Ändrad av </b>'+elementdata.lasteditedby+' <b>datum</b> '+elementdata.lasteditedtime+'</p>';
-            output += '<p><b>Alla som har hjälpt till med denna sida: </b><ul>';
-            for (var i = 0; i < elementdata.alleditors.length; i++) {
-              output += '<li>'+elementdata.alleditors[i]+'</li>';
-            }
-            output += '</ul></p>';
-            output += '</div>';
-            $("#overlay").append(output);
             $("body").css({"overflow":"hidden"});
             if (getCookie("gr-settings-easing", "true") == "false") {
               $("#overlay").show();
@@ -116,7 +121,11 @@ $( "#settings" ).dialog({
 function exit() {
   $("title").text(title);
   window.history.pushState("", "", "/");
-  $("#overlay").empty();
+  $("#edit").remove();
+  for (var i = 0; i < elementLoaded.length; i++) {
+    $('[data-elm="'+elementLoaded[i]+'"]').empty();
+  }
+  elementLoaded = [];
   if (getCookie("gr-settings-easing", "true") == "false") {
     $("#overlay").hide();
   } else {

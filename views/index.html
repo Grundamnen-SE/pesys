@@ -46,7 +46,96 @@
       	</div>
       </div>
     </div>
-    <div id="overlay"></div>
+    <div id="overlay">
+      <div onclick="exit();" id="exit"><i class="material-icons">close</i></div>
+      <div class="element-info">
+        <h1 id="element-info-title" data-elm="element"></h1>
+        <br>
+        <div id="element-info-body">
+          <p data-elm="text"></p>
+        </div>
+      </div>
+      <div class="element-data">
+        <table>
+          <tbody>
+            <tr>
+              <td>Period</td>
+              <td data-elm="elementdata.period"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Grupp</td>
+              <td data-elm="elementdata.group"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Atomnummer</td>
+              <td data-elm="elementdata.atomnumber"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Atomvikt</td>
+              <td data-elm="elementdata.atomweight"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Protoner</td>
+              <td data-elm="elementdata.protons"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Elektroner</td>
+              <td data-elm="elementdata.electrons"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Neutroner</td>
+              <td data-elm="elementdata.neutron"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Elektronskal</td>
+              <td data-elm="elementdata.electronshells"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Smältpunkt</td>
+              <td data-elm="elementdata.meltingpoint"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Kokpunkt</td>
+              <td data-elm="elementdata.boilingpoint"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><b>Författare:</b> <span data-elm="author.name"></span></p>
+        <p><b>Senast Ändrad av </b><span data-elm="lasteditedby.name"></span> <b>datum</b> <span data-elm="lasteditedtime"></span></p>
+        <p><b>Alla som har hjälpt till med denna sida: </b></p>
+        <ul data-elm="alleditors.name"></ul>
+      </div>
+    </div>
     <!-- Periodiska Systemet -->
     <div id="rst"></div>
     <table class="tab2 sim_table per-table">
