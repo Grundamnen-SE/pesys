@@ -9,7 +9,6 @@ var express = require('express');
 var session = require("express-session");
 var compression = require('compression');
 var logger = require('morgan');
-var forcedomain = require("forcedomain");
 var helmet = require("helmet");
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
@@ -47,10 +46,6 @@ app.use(helmet.contentSecurityPolicy({
   mediaSrc: [],
   frameSrc: []
 }));
-/*app.use(forcedomain({
-  hostname: "grundämnen.se",
-  protocol: "https"
-}));*/
 app.use(session({
   secret: "MSeTEw6mReerergJjBu1",
   name: "sessID",
