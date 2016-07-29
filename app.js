@@ -81,6 +81,7 @@ db.open(function(e, d){
 
 // Variables
 var elements = ["H", "Dy", "Uuo", "B", "C", "N", "O", "F", "Li", "Be", "He"];
+var settingsPages = ["profile", "approve", "users", "superadmin"];
 var playbtn;
 
 // Express render engine
@@ -143,7 +144,9 @@ app.engine('html', function (fp, options, callback) {
     else rendered = replaceAll(rendered, "%login_url%", '<a href="/login" id="about-link">Login</a>');
 
     if (options.user != null && options.user.logged_in) {
-      rendered = replaceAll(rendered, "%permissions%", options.user.permissions.toString())
+      rendered = replaceAll(rendered, "%permissions%", options.user.permissions.toString());
+      rendered = replaceAll(rendered, "%username%", options.user.username);
+      rendered = replaceAll(rendered, "%name%", options.user.name);
     }
 
     return callback(null, rendered);
@@ -168,6 +171,7 @@ if (process.env.NODE_ENV != "production") {
       db.collection('users').deleteOne({username: "devstudent"});
       db.collection('users').deleteOne({username: "devadmin"});
       db.collection('users').insertMany(require('./USERS_dev.json'));
+      req.session.destroy();
       res.redirect("/");
   });
   app.get('/crpw/:pw', function(req, res){
@@ -192,7 +196,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/login', function(req, res){
-  res.render('login', {"login": true});
+  if (req.session.user != null && req.session.user.logged_in) {
+    res.redirect("/logout");
+  } else {
+    res.render('login', {"login": true});
+  }
 });
 app.get('/logout', function(req, res){
   req.session.destroy(function(err){if(err)console.log(err)});
@@ -212,9 +220,10 @@ app.post('/login', function(req, res){
           console.log(pwsuc, "pwsuc");
           if (pwsuc) {
             req.session.user = {};
+            req.session.user = data;
+            delete req.session.user.password;
             req.session.user.logged_in = true;
-            req.session.user.logged_in_as = username;
-            req.session.user.permissions = data.permissions;
+            console.log(req.session.user);
             res.redirect("/");
           } else {
             res.render('login', {"login": false});
@@ -236,9 +245,59 @@ app.get('/om', function(req, res){
 });*/
 app.get(['/settings','/settings/:page'], function(req, res){
   if (req.session.user != null) {
-    res.render("settings", {user: req.session.user});
+    if (req.params.page != null && isInArray(req.params.page, settingsPages)) {
+      res.render("settings/"+req.params.page, {user: req.session.user});
+    } else {
+      res.redirect("/settings/profile");
+    }
   } else {
     res.redirect("/");
+  }
+});
+app.post('/settings/:page', function(req, res){
+  if (req.session.user != null) {
+    if (isInArray(req.params.page, settingsPages)) {
+      if (req.params.page == "profile") {
+        if (req.body.type == "profile") {
+          if (req.body.data.username != null && req.body.data.name != null) {
+            req.body.data.username = req.body.data.username.toLowerCase();
+            db.collection("users").findOneAndUpdate({username: req.session.user.username, id: req.session.user.id}, {$set:{username: req.body.data.username, name: req.body.data.name}}, {projection: {_id:0, password:0}, returnOriginal: false}, function(err,data){
+              if (err) console.log(err);
+              req.session.user = data.value;
+              req.session.user.logged_in = true;
+              res.send({status: "success"});
+            });
+          } else {
+            res.send({status: "failed", error: "insufficent data"});
+          }
+        } else if (req.body.type == "passwd") {
+          if (req.body.data.password != null) {
+            pwman.cryptPassword(req.body.data.password, function(err, pwc){
+              db.collection("users").findOneAndUpdate({username: req.session.user.username, id: req.session.user.id}, {$set:{password: pwc}}, {projection: {_id:0, password:0}, returnOriginal: false}, function(err,data){
+                if (err) console.log(err);
+                req.session.user = data.value;
+                req.session.user.logged_in = true;
+                res.send({status: "success"});
+              });
+            });
+          } else {
+            res.send({status: "error", error: "insufficent data"});
+          }
+        } else {
+          res.send({status: "error", error: "incorrect type"});
+        }
+      } else if (req.params.page == "approved") {
+
+      } else if (req.params.page == "superadmin") {
+
+      } else if (req.params.page == "users") {
+
+      }
+    } else {
+      res.send({"error": "invalid_url"});
+    }
+  } else {
+    res.send({"error": "not_loggedin"});
   }
 });
 

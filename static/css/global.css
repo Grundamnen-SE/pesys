@@ -28,3 +28,6 @@ a[href] {
 .break {
   clear: both;
 }
+.vishid {
+  visibility: hidden;
+}
