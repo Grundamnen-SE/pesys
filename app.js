@@ -53,11 +53,17 @@ app.use(session({
   saveUninitialized: true,
   unset: "destroy",
   store: new MongoStore({ url: mongopath }),
-  cookie: {httpOnly: true}
+  cookie: {
+    httpOnly: true,
+    expires: new Date(Date.now()+60*60*1000)
+  }
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Some express variables that are important
+app.enable('trust proxy');
+app.disable('x-powered-by');
 
 // Open DB Connection
 var db = new Mongo("pesys", new MongoServer("localhost", 27017, {auto_reconnect: true}), {w: 1});
@@ -70,12 +76,20 @@ db.open(function(e, d){
       if (err) console.log(err);
       playbtn = JSON.stringify(data);
     });
+    db.collection("elements").find({}, {element:1, _id:0}).toArray(function(err, data){
+      if (err) console.log(err);
+      elements=[];for(var i=0;i<data.length;i++){elements.push(data[i].element);}
+    });
     setInterval(function(){
-      db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}, function(err, data){
+      db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}).toArray(function(err, data){
         if (err) console.log(err);
         playbtn = data;
       });
-    }, 1000*60*60);
+      db.collection("elements").find({}, {element:1, _id:0}).toArray(function(err, data){
+        if (err) console.log(err);
+        elements=[];for(var i=0;i<data.length;i++){elements.push(data[i].element);}
+      });
+    }, 1000*60);
   }
 });
 
@@ -86,7 +100,6 @@ var playbtn;
 
 // Express render engine
 app.engine('html', function (fp, options, callback) {
-  //console.log(options, "render options");
   fs.readFile(fp, function (err, content) {
     if (err) return callback(new Error(err));
 
@@ -97,9 +110,7 @@ app.engine('html', function (fp, options, callback) {
     rendered = replaceAll(rendered, "%playbtn%", playbtn);
 
     if (options.element != null) {
-      rendered = replaceAll(rendered, "%element%", options.element);
-    } else {
-      rendered = replaceAll(rendered, "%element%", "");
+      rendered = replaceAll(rendered, "%element%", (options.element || ""));
     }
 
     for (var key in site_data) {
@@ -158,11 +169,9 @@ app.engine('html', function (fp, options, callback) {
 // Set Express variables
 app.set('views', './views');
 app.set('view engine', 'html');
-app.enable('trust proxy');
-app.disable('x-powered-by');
 app.use("/css", express.static(__dirname + "/static/css"));
 app.use("/img", express.static(__dirname + "/static/img"));
-app.use("/js/static", express.static(__dirname + "/static/js/static/"));
+app.use("/js",  express.static(__dirname + "/static/js"));
 app.use(favicon(__dirname + "/static/favicon.ico"));
 
 // START dev urls
@@ -318,40 +327,6 @@ app.get('/:elm', function(req, res, next){
   res.render("index", {element: req.params.elm});
 });
 
-app.get('/js/:js', function(req, res){
-  fileExists = false;
-  allowed = false;
-  fs.access(__dirname + "/static/js/"+req.params.js, fs.F_OK, function(err){
-    if (err) {
-      //console.log(__dirname + "/static/js/"+req.params.js, err);
-    } else {
-      fileExists = true;
-    }
-    switch (req.params.js) {
-      case "login.js":      var req_perm = "LOGIN"; break;
-      case "settings":      var req_perm = "LOGIN"; break;
-      case "edit.js":       var req_perm = "WRITE"; break;
-      case "verify.js":     var req_perm = "VERIFY"; break;
-      case "user.js":       var req_perm = "USER"; break;
-      case "superadmin.js": var req_perm = "SUPERADMIN"; break;
-      default:              var req_perm = ""; break;
-    }
-    if (req_perm != "") {
-      if (req.session.user != null && req.session.user.logged_in) {
-        for (var i = 0; i < req.session.user.permissions.length; i++) {
-          var perm = req.session.user.permissions[i];
-          if (perm == req_perm) { allowed = true; break; }
-        }
-      }
-    } else {
-      allowed = true;
-    }
-    //console.log(fileExists, allowed, req.params.js, "js request");
-    if (fileExists && allowed) res.sendFile(__dirname + "/static/js/"+req.params.js);
-    else res.sendStatus(404);
-  });
-});
-
 // TODO
 // API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.
 // Vi bör lägga till system för att verifiera vem som frågar efter information och kanske lägga till rate-limiting.
@@ -394,10 +369,10 @@ app.get('/api/:elm/json', function(req, res){
 });
 
 app.get('/api/contributors', function(req, res){
-  // Denna funktion ska returnera alla som har hjälpt till att skapa innehåll till sidan, i JSON format. Innehåll som ska returneras behöver diskuteras.
+  // TODO: Denna funktion ska returnera alla som har hjälpt till att skapa innehåll till sidan, i JSON format. Innehåll som ska returneras behöver diskuteras.
   res.send({"error": "incomplete function"});
 });
 
-app.listen(3000, function(){
+app.listen((process.env.PORT || 3000), function(){
   console.log("Express on port 3000");
 });
