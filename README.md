@@ -10,6 +10,9 @@ Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grun
 ## Hjälp till
 Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara att skicka en pull-request till master. Kan du inte git, kan du mejla oss dina ändringar. Mejlen hittar du på grundämnen.se/om.
 
+## System
+Vi har ett annat repository för hur vi driver servrarna, vad vi har för servrar och lite annat som kan vara bra att veta. Kolla in det: [Grundamnen-SE/scripts](https://github.com/Grundamnen-SE/scripts)
+
 ## Data Layout
 ### User object
 ```json
