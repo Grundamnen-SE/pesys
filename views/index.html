@@ -14,13 +14,13 @@
     <meta name="google-site-verification" content="ZQatb-QOSPgfvycKK0gwfbvv9de19wTu_qM5iaI9IAg">
     <title>%title%</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="/css/global.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/wiki.css">
     <link rel="stylesheet" type="text/css" href="/css/table.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div style="display: none;" id="help">
@@ -465,13 +465,20 @@
     <br class="clearfix">
 
     <!-- JS -->
+    <!-- External JS
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+    -->
+    <!-- Internal JS -->
+    <script type="text/javascript" src="/js/static/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/static/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/static/remarkable.min.js"></script>
     <script>
     var playbtn = %playbtn%;
     var title = "%title%";
     var element = false;
+    var startElement = "%element%";
     var md = new Remarkable();
     </script>
     <script src="/js/cookie.js"></script>

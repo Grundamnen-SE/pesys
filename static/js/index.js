@@ -5,18 +5,19 @@ $.expr[":"].containsExact = function (obj, index, meta, stack) {
 
 var loading = false;
 var elementLoaded = [];
-$(document).on("ready", function(e) {
-  $("td").on("click", function(e) {
-  if (!$(this).hasClass("td-extend") &&
-      !$(this).hasClass("td-header") &&
-      !$(this).hasClass("td-none") &&
-      !$(this).hasClass("td-about") &&
-      !$(this).hasClass("td-logo")) {
+
+function loadElement(elm) {
+  var jselm = $('td[data-iselm][data-name="'+elm+'"]');
+  if (!$(jselm).hasClass("td-extend") &&
+      !$(jselm).hasClass("td-header") &&
+      !$(jselm).hasClass("td-none") &&
+      !$(jselm).hasClass("td-about") &&
+      !$(jselm).hasClass("td-logo")) {
       if (!loading) {
 
         loading = true;
-        var atomic_number = $(this).attr("data-number");
-        var atomic_text = $(this).attr("data-name");
+        var atomic_number = $(jselm).attr("data-number");
+        var atomic_text = $(jselm).attr("data-name");
 
         var colors = {
           "pol": "#C2CAFF", "alk": "#FFC2C2", "jor": "#FFE4C2", "ove": "#C2FFCF", "eju": "#DFDFDF", "ovr": "#C2FFF2",
@@ -24,7 +25,7 @@ $(document).on("ready", function(e) {
         }
         for (var prop in colors) {
           if (!colors.hasOwnProperty(prop)) continue;
-          if ($(this).hasClass(prop)) {
+          if ($(jselm).hasClass(prop)) {
             $("#overlay").css({"background-color": colors[prop]});
             break;
           }
@@ -35,6 +36,7 @@ $(document).on("ready", function(e) {
           url: "/api/" + atomic_text + "/json",
           dataType: "html",
           success: function(data) {
+            console.log(data);
             if (typeof data === "string") data = JSON.parse(data);
             var elementdata = data.data;
             if (data.error) {
@@ -96,6 +98,21 @@ $(document).on("ready", function(e) {
           }
         });
       }
+    }
+}
+
+$(document).on('ready', function(e){
+  if (startElement !== "") {
+    loadElement(startElement);
+  } else {
+    alert(startElement + "is invalid");
+  }
+
+  $("td").on("click", function(e) {
+    if ($(this).attr("data-iselm") === "true" && $(this).attr("data-name") !== null && $(this).attr("data-name") !== "") {
+      loadElement($(this).attr("data-name"));
+    } else {
+      alert($(this).attr("data-name") + ": data-name does not exist or td is not element");
     }
   });
 });

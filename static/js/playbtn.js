@@ -10,6 +10,7 @@ $(document).on('ready', function(e){
       var name = $(this).find(".atomic_text").text();
       $(this).attr("data-number", nr);
       $(this).attr("data-name", name);
+      $(this).attr("data-iselm", "true");
     }
   });
   for (var key in playbtn) {

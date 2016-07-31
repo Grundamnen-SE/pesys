@@ -1,10 +1,10 @@
 .element-info {
   padding: 30px;
-  min-height: calc(100% - 22px);
+  /*min-height: calc(100% - 22px);*/
 }
 .element-data {
   padding-top: 30px;
-  min-height: calc(100% - 22px);
+  /*min-height: calc(100% - 22px);*/
 }
 #overlay {
   box-sizing: border-box;
@@ -18,7 +18,7 @@
   color: black;
   font-size: 18px;
 }
-#overlay table {
+#overlay .element-data table {
   width:100%;
   padding:10px;
   padding-top:5px;
@@ -28,18 +28,18 @@
   cursor: default;
   border:1px solid black;
 }
-#overlay table tr td {
+#overlay .element-data table tr td {
   padding-top:7px;
   font-size:20px;
 }
-#overlay table tr:first-of-type td {
+#overlay .element-data table tr:first-of-type td {
   padding-top:3px;
 }
-#overlay table tr:last-of-type td {
+#overlay .element-data table tr:last-of-type td {
   border-bottom:0px;
   padding:0;
 }
-#overlay table tr td.line {
+#overlay .element-data table tr td.line {
   border-bottom:1px solid black;
 }
 #overlay .element-data p {
@@ -61,7 +61,7 @@
   right: 13px;
   cursor: pointer;
 }
-#exit > .material-icons {
+#exit .material-icons {
   font-size:65px;
 }
 #edit {
@@ -70,7 +70,7 @@
   right: 70px;
   cursor: pointer;
 }
-#edit > .material-icons {
+#edit .material-icons {
   font-size:60px;
 }
 @media screen and (max-width: 599px) {
@@ -86,7 +86,7 @@
 }
 @media screen and (min-width: 600px) and (max-width: 1400px) {
   .element-info {
-    width: 76%;
+    width: 60%;
     margin-left: 7%;
     float: left;
   }

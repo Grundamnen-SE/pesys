@@ -98,6 +98,8 @@ app.engine('html', function (fp, options, callback) {
 
     if (options.element != null) {
       rendered = replaceAll(rendered, "%element%", options.element);
+    } else {
+      rendered = replaceAll(rendered, "%element%", "");
     }
 
     for (var key in site_data) {
@@ -160,6 +162,7 @@ app.enable('trust proxy');
 app.disable('x-powered-by');
 app.use("/css", express.static(__dirname + "/static/css"));
 app.use("/img", express.static(__dirname + "/static/img"));
+app.use("/js/static", express.static(__dirname + "/static/js/static/"));
 app.use(favicon(__dirname + "/static/favicon.ico"));
 
 // START dev urls
@@ -302,17 +305,17 @@ app.post('/settings/:page', function(req, res){
 });
 
 app.get('/:elm', function(req, res, next){
-  res.redirect("/");
-  return;
   if (isInArray(req.params.elm, elements)) next();
   else res.render("element/show_element_not_found", {element: req.params.elm});
 }, function(req, res){
   // Check if element is published
+  /*
   db.collection("elements").find({element: req.params.elm}, {fields: {published: 1}}, function(err, data){
     if (err) console.log(err);
     if (data.published) res.render('element/show_element', {element: req.params.elm});
     else res.render('element/show_element_incomplete');
-  });
+  });*/
+  res.render("index", {element: req.params.elm});
 });
 
 app.get('/js/:js', function(req, res){
