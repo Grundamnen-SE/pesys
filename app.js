@@ -26,6 +26,7 @@ var site_data = require("./data.json");
 var pwman = require('./password.js');
 var util = require('util');
 var path = require('path');
+var table =  require("./table-utils.js");
 
 // Misc
 var fs = require('fs');
@@ -104,10 +105,13 @@ app.engine('html', function (fp, options, callback) {
     if (err) return callback(new Error(err));
 
     var rendered = content.toString();
-//  Example variable:
-//  rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
+    // Example variable:
+    // rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
     rendered = replaceAll(rendered, "%text%", "text");
     rendered = replaceAll(rendered, "%playbtn%", playbtn);
+
+    // Insert the table:
+    rendered = replaceAll(rendered, "%table%", table.getTable());
 
     if (options.element != null) {
       rendered = replaceAll(rendered, "%element%", (options.element || ""));
@@ -178,13 +182,13 @@ app.use(favicon(__dirname + "/static/favicon.ico"));
 if (process.env.NODE_ENV != "production") {
   console.log("Not in production, enabling dev urls");
   app.get("/dev_env", function(req, res){
-      db.collection("elements").deleteOne({"element": "H"});
-      db.collection("elements").insertOne(require('./H_dev.json'));
-      db.collection('users').deleteOne({username: "devstudent"});
-      db.collection('users').deleteOne({username: "devadmin"});
-      db.collection('users').insertMany(require('./USERS_dev.json'));
-      req.session.destroy();
-      res.redirect("/");
+    db.collection("elements").deleteOne({"element": "H"});
+    db.collection("elements").insertOne(require('./H_dev.json'));
+    db.collection('users').deleteOne({username: "devstudent"});
+    db.collection('users').deleteOne({username: "devadmin"});
+    db.collection('users').insertMany(require('./USERS_dev.json'));
+    req.session.destroy();
+    res.redirect("/");
   });
   app.get('/crpw/:pw', function(req, res){
     if (req.params.pw != null) {
