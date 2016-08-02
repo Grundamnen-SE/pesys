@@ -2,7 +2,8 @@ function edit() {
   if (element) {
     // Body data
     var body = $("#overlay").find(".element-info").find("#element-info-body");
-    $(body).html('<textarea placeholder="Text..." class="element-editor">'+loadElementData.data.text+'</textarea>');
+    var rawdata = body.attr("data-elm-raw");
+    $(body).html('<textarea placeholder="Text..." class="element-editor" rows="10">'+rawdata+'</textarea>');
     // Element info data
     $("#overlay").find(".element-data").find("table").find("tr").each(function(i,e){
       if (!$(this).find("td").hasClass("line")) {
@@ -28,8 +29,10 @@ function save() {
     // Body data
     var body = $("#overlay").find(".element-info").find("#element-info-body");
     data.text = body.find("textarea").val();
-    data.element = body.find('[data-elm="id"]').text();
-    $(body).html(md.render(body.find("textarea").val()));
+    data.element = $("#overlay").find('[data-elm="element"]').text();
+    data.number = $("#overlay").find('[data-elm="number"]').text();
+    $(body).html(md.render(data.text));
+    $(body).attr("data-elm-raw", data.text);
     // Element info data
     data["elementdata"] = {};
     $("#overlay").find(".element-data").find("table").find("tr").each(function(i,e){
@@ -52,7 +55,7 @@ function save() {
     data["_id"] = $("#overlay").find('[data-elm="_id"]').text();
     // Send data
     console.log(data);
-    $.post("/api/element/"+loadElementData.data.element, data, function(data){
+    $.post("/api/element/"+data.element, data, function(data){
       console.log(data);
     });
     // Toggle edit button

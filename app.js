@@ -107,7 +107,6 @@ app.engine('html', function (fp, options, callback) {
     var rendered = content.toString();
     // Example variable:
     // rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
-    rendered = replaceAll(rendered, "%text%", "text");
     rendered = replaceAll(rendered, "%playbtn%", JSON.stringify(playbtn));
 
     // Insert the table:
@@ -116,7 +115,7 @@ app.engine('html', function (fp, options, callback) {
     if (options.element != null) {
       rendered = replaceAll(rendered, "%element%", options.element);
     } else {
-      rendered = replaceAll(rendered, "%element%", "")
+      rendered = replaceAll(rendered, "%element%", "");
     }
 
     for (var key in site_data) {
@@ -388,13 +387,13 @@ app.post('/api/element/:elm', function(req, res){
           delete data["title"];
         }
         //console.log(data);
-        db.collection("elements").updateOne({id:data.id}, {$set:{text: data.text, elementdata: data.elementdata}}, function(err, data){
+        db.collection("elements").findOneAndUpdate({id:data.id}, {$set:{text: data.text, elementdata: data.elementdata}}, {returnOriginal:0}, function(err, data){
           //console.log(data);
           if (err) {
             console.log(err);
             res.send({"error": "something went wrong when saving"});
           } else {
-            if (data.result.nModified) {
+            if (data.ok) {
               res.send({"error": "ok"});
             } else {
               res.send({"error": "no change"});
