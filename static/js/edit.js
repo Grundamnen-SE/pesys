@@ -57,9 +57,29 @@ function save() {
     console.log(data);
     $.post("/api/element/"+data.element, data, function(data){
       console.log(data);
+      if (data.error) {
+        if (data.error == "ok") {
+          $("#alert").addClass("g");
+          $("#alert p").text("Ämnet har sparats.");
+          $("#alert").fadeIn(1500, alertFadeOut());
+        } else if (data.error == "no change") {
+          $("#alert").addClass("r");
+          $("#alert p").text("Ämnet har inte sparats, något gick fel.");
+          $("#alert").fadeIn(1500, alertFadeOut());
+        }
+      }
     });
     // Toggle edit button
     $("#edit").attr("onclick", "edit();");
     $("#edit .material-icons").text("edit");
   }
+}
+
+function alertFadeOut(){
+  setTimeout(function(){
+    $("#alert").fadeOut(1500, function(){
+      $("#alert").removeClass("r g");
+      $("#alert p").text("");
+    });
+  }, 1000*7);
 }
