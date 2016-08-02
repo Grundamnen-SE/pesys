@@ -55,7 +55,7 @@ app.use(session({
   store: new MongoStore({ url: mongopath }),
   cookie: {
     httpOnly: true,
-    expires: new Date(Date.now()+60*60*1000)
+    expires: new Date(Date.now()+60*60*1000*3)
   }
 }));
 app.use(bodyParser.json());
@@ -74,29 +74,29 @@ db.open(function(e, d){
     console.log("MongoDB: Connected to database pesys");
     db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}).toArray(function(err, data){
       if (err) console.log(err);
-      playbtn = JSON.stringify(data);
-    });
-    db.collection("elements").find({}, {element:1, _id:0}).toArray(function(err, data){
-      if (err) console.log(err);
-      elements=[];for(var i=0;i<data.length;i++){elements.push(data[i].element);}
+      playbtn = data;
     });
     setInterval(function(){
       db.collection("elements").find({playbtn: true}, {element:1, number:1, playbtn:1, _id:0}).toArray(function(err, data){
         if (err) console.log(err);
         playbtn = data;
       });
-      db.collection("elements").find({}, {element:1, _id:0}).toArray(function(err, data){
-        if (err) console.log(err);
-        elements=[];for(var i=0;i<data.length;i++){elements.push(data[i].element);}
-      });
     }, 1000*60);
   }
 });
 
 // Variables
-var elements = ["H", "Dy", "Uuo", "B", "C", "N", "O", "F", "Li", "Be", "He"];
+var elements = ["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si",
+                "P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni",
+                "Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb",
+                "Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe",
+                "Cs","Ba","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb",
+                "Bi","Po","At","Rn","Fr","Ra","Rf","Db","Sg","Bh","Hs","Mt","Ds",
+                "Rg","Cn","Uut","Fl","Uup","Lv","Uus","Uuo","La","Ce","Pr","Nd",
+                "Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Ac","Th",
+                "Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr"];
 var settingsPages = ["profile", "approve", "users", "superadmin"];
-var playbtn;
+var playbtn = [];
 
 // Express render engine
 app.engine('html', function (fp, options, callback) {
@@ -107,10 +107,12 @@ app.engine('html', function (fp, options, callback) {
 //  Example variable:
 //  rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
     rendered = replaceAll(rendered, "%text%", "text");
-    rendered = replaceAll(rendered, "%playbtn%", playbtn);
+    rendered = replaceAll(rendered, "%playbtn%", JSON.stringify(playbtn));
 
     if (options.element != null) {
-      rendered = replaceAll(rendered, "%element%", (options.element || ""));
+      rendered = replaceAll(rendered, "%element%", options.element);
+    } else {
+      rendered = replaceAll(rendered, "%element%", "")
     }
 
     for (var key in site_data) {
@@ -127,6 +129,7 @@ app.engine('html', function (fp, options, callback) {
     var scripts_arr = [];
     if (options.user != null) {
       if (options.user.logged_in) {
+        console.log("logged_in", options.user.permissions);
         if (isInArray("LOGIN", options.user.permissions)){
           scripts_arr.push("/js/login.js");
         }
@@ -324,16 +327,20 @@ app.get('/:elm', function(req, res, next){
     if (data.published) res.render('element/show_element', {element: req.params.elm});
     else res.render('element/show_element_incomplete');
   });*/
-  res.render("index", {element: req.params.elm});
+  if (req.session.user != null) {
+    res.render("index", {element: req.params.elm, user: req.session.user});
+  } else {
+    res.render("index", {element: req.params.elm});
+  }
 });
 
 // TODO
 // API aktiga funktioner: få elementdata i JSON (typ direkt från Mongo), vilka som har hjälpt till, och lite annat smått och gott.
 // Vi bör lägga till system för att verifiera vem som frågar efter information och kanske lägga till rate-limiting.
 // Kolla in https://github.com/Grundamnen-SE/pesys/issues/9
-app.get('/api/:elm/json', function(req, res){
+app.get('/api/element/:elm', function(req, res){
   if (isInArray(req.params.elm, elements)) {
-    db.collection('elements').findOne({element: req.params.elm}, {fields:{_id:0}}, function(err, data){
+    db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
       if (err) console.log(err);
       if (data == null) {
         res.send({"error": "element data not found"});
@@ -367,10 +374,58 @@ app.get('/api/:elm/json', function(req, res){
     res.send({"error": "the value specified as an element is not an element"});
   }
 });
+app.post('/api/element/:elm', function(req, res){
+  if (isInArray(req.params.elm, elements)) {
+    if (req.session.user != null) {
+      if (isInArray("WRITE", req.session.user.permissions)) {
+        var data = req.body;
+        var id = data["_id"];
+        delete data["_id"];
+        if (!isInArray("SUPERADMIN", req.session.user.permissions)) {
+          delete data["title"];
+        }
+        //console.log(data);
+        db.collection("elements").updateOne({id:data.id}, {$set:{text: data.text, elementdata: data.elementdata}}, function(err, data){
+          //console.log(data);
+          if (err) {
+            console.log(err);
+            res.send({"error": "something went wrong when saving"});
+          } else {
+            if (data.result.nModified) {
+              res.send({"error": "ok"});
+            } else {
+              res.send({"error": "no change"});
+            }
+          }
+        });
+      } else {
+        res.send({"error": "not enough permissions"});
+      }
+    } else {
+      res.send({"error": "not authenticated"});
+    }
+  }
+});
 
 app.get('/api/contributors', function(req, res){
   // TODO: Denna funktion ska returnera alla som har hjälpt till att skapa innehåll till sidan, i JSON format. Innehåll som ska returneras behöver diskuteras.
   res.send({"error": "incomplete function"});
+});
+
+app.get(['/api/user/:id', '/api/user'], function(req, res){
+  if (req.session.user != null) {
+    if (req.params.id != null) {
+      var id = req.params.id;
+    } else {
+      var id = req.session.user.id;
+    }
+    db.collection("users").findOne({id: id}, {fields:{_id:0, password:0}}, function(err, data){
+      if (err) console.log(err);
+      res.send(data);
+    });
+  } else {
+    res.send({"error": "you are not authenticated"});
+  }
 });
 
 app.listen((process.env.PORT || 3000), function(){

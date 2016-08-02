@@ -1,4 +1,5 @@
 $(document).on('ready', function(e){
+  var allelms = [];
   $(".tab1 td").each(function(i,o){
   if (!$(this).hasClass("td-extend") &&
       !$(this).hasClass("td-header") &&
@@ -11,6 +12,7 @@ $(document).on('ready', function(e){
       $(this).attr("data-number", nr);
       $(this).attr("data-name", name);
       $(this).attr("data-iselm", "true");
+      allelms.push(name);
     }
   });
   for (var key in playbtn) {

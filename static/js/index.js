@@ -5,6 +5,7 @@ $.expr[":"].containsExact = function (obj, index, meta, stack) {
 
 var loading = false;
 var elementLoaded = [];
+var loadElementData;
 
 function loadElement(elm) {
   var jselm = $('td[data-iselm][data-name="'+elm+'"]');
@@ -33,11 +34,12 @@ function loadElement(elm) {
 
         $.ajax({
           type: "GET",
-          url: "/api/" + atomic_text + "/json",
+          url: "/api/element/"+atomic_text,
           dataType: "html",
           success: function(data) {
-            console.log(data);
             if (typeof data === "string") data = JSON.parse(data);
+            console.log(data);
+            loadElementData = data;
             var elementdata = data.data;
             if (data.error) {
               alert("Error: "+data.error);
@@ -81,9 +83,14 @@ function loadElement(elm) {
                 elementLoaded.push(key);
               } else {
                 if ($('[data-elm="'+key+'"]').attr("data-elm-attr") == "markdown") {
+                  $('[data-elm="'+key+'"]').attr("data-elm-raw", obj.toString());
                   obj = md.render(obj.toString());
+                  $('[data-elm="'+key+'"]').append(obj);
+                } else if ($('[data-elm="'+key+'"]').attr("data-elm-attr") == "attribute") {
+                  $('[data-elm="'+key+'"]').attr("data-elm-raw", obj.toString());
+                } else {
+                  $('[data-elm="'+key+'"]').append(obj);
                 }
-                $('[data-elm="'+key+'"]').append(obj);
                 elementLoaded.push(key);
               }
             }
@@ -104,15 +111,11 @@ function loadElement(elm) {
 $(document).on('ready', function(e){
   if (startElement !== "") {
     loadElement(startElement);
-  } else {
-    alert(startElement + "is invalid");
   }
 
   $("td").on("click", function(e) {
     if ($(this).attr("data-iselm") === "true" && $(this).attr("data-name") !== null && $(this).attr("data-name") !== "") {
       loadElement($(this).attr("data-name"));
-    } else {
-      alert($(this).attr("data-name") + ": data-name does not exist or td is not element");
     }
   });
 });
@@ -142,6 +145,9 @@ function exit() {
   $("#edit").remove();
   for (var i = 0; i < elementLoaded.length; i++) {
     $('[data-elm="'+elementLoaded[i]+'"]').empty();
+    if ($('[data-elm="'+elementLoaded[i]+'"]').attr("data-elm-raw") != false) {
+      $('[data-elm="'+elementLoaded[i]+'"]').removeAttr("data-elm-raw");
+    }
   }
   elementLoaded = [];
   if (getCookie("gr-settings-easing", "true") == "false") {
@@ -152,6 +158,7 @@ function exit() {
   $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
   element = false;
+  loadElementData = {};
 }
 
 // Om man klickar på Esc ska rutan stängas:
