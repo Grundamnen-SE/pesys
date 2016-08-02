@@ -255,10 +255,11 @@ app.post('/login', function(req, res){
 app.get('/om', function(req, res){
   res.render('om');
 });
-// Temp disabled info due to i dont know what to do with it :/
-/*app.get('/info', function(req, res){
+
+app.get('/info', function(req, res){
   res.render('info');
-});*/
+});
+
 app.get(['/settings','/settings/:page'], function(req, res){
   if (req.session.user != null) {
     if (req.params.page != null && isInArray(req.params.page, settingsPages)) {
