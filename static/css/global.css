@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+* {
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+.clearfix {
+  clear: both;
+  height: 1px;
+}
+a[href] {
+  text-decoration: none;
+}
+[data-info] {
+  cursor: help;
+}
+.line {
+  border-bottom: 1px solid gray;
+  height: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.break {
+  clear: both;
+}
+.vishid {
+  visibility: hidden;
+}
+.disnon {
+  display: none;
+}

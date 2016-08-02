@@ -1,0 +1,32 @@
+{
+  "name": "pesys",
+  "version": "1.0.0",
+  "description": "Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grundämnen.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grundamnen-SE/pesys.git"
+  },
+  "author": "Joar C & Gustav E",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grundamnen-SE/pesys/issues"
+  },
+  "homepage": "https://github.com/Grundamnen-SE/pesys#readme",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "connect-mongo": "^1.2.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "fs": "0.0.2",
+    "helmet": "^2.1.1",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "util": "^0.10.3"
+  }
+}
