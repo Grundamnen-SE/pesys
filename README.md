@@ -35,6 +35,7 @@ pesys/
     util/
       password.js
       functions.js    ## Bör splittas i två
+      logging.js      ## Handler för hur loggning ska hanteras samt loggar det som ska loggas
     table-utils.js
     index.js          ## För att ladda alla moduler
   middleware/         ## Express "middleware" för editor
