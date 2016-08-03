@@ -7,11 +7,53 @@ Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grun
 * Public: Den publika sidan, den som man kommer till om man går in på https://grundämnen.se/
 * new-nodejs: Omskrivningen av grundämnen.se, även känd som 2.0.
 
-## Hjälp till
-Du kan bidra till projektet, med texter exempelvis. Om du kan git, är det bara att skicka en pull-request till master. Kan du inte git, kan du mejla oss dina ändringar. Mejlen hittar du på grundämnen.se/om.
+## Funktions layout
+Vi har tre moduler som alla behövs för att grundämnen ska fungera. ``api.js`` är den modul som hanterar all kommunikation med databasen, samt klienter (M i MVC). ``app.js`` är den modul som kör "editor" av grundämnen.se, den som gör att du kan ändra grundämnen.se:s information. Sedan finns mappen ``simple/`` som innehåller allt som "vanliga" användare använder, som är ett enkel sida som bara gör så man lätt kan använda grundämnen.se utan en massa extra funktioner för att hantera/ändra i grundämnen.se.
+### API
+API är den modul som man ska skicka och ta emot data ifrån.
+
+### Editor
+Editor är den modul som man använder för att redigera datan på grundämnen.se.
+
+### Simple
+Simple är den modul som endast ska vara statiska sidor, som ska göra ajax förfrågningar mot API servern för att få data om ämnen. Kanske bör bli en standalone app med electron?
 
 ## System
 Vi har ett annat repository för hur vi driver servrarna, vad vi har för servrar och lite annat som kan vara bra att veta. Kolla in det: [Grundamnen-SE/scripts](https://github.com/Grundamnen-SE/scripts)
+
+## Fil Layout
+Detta är vår fil-layout, för hur vi har de tre modulerna.
+```
+pesys/
+  static/             ## Statiska filer för "Editor"
+  views/
+    index.html
+  modules/
+    util/
+      password.js
+      functions.js    ## Bör splittas i två
+    table-utils.js
+    index.js          ## För att ladda alla moduler
+  middleware/         ## Express "middleware" för editor
+  simple/             ## Enkla delen
+    css/
+    js/
+    img/
+    index.html
+    favicon.ico
+  data/               ## För att spara på utvecklings data samt andra json strukturerad data.
+    dev/
+      H_dev.json
+      USERS_dev.json
+    prod/
+    data.json
+  app.js              ## Editor delen
+  api.js              ## API delen
+  simple.js           ## Enkla delen (temporär webserver för utveckling)
+  package.json
+  .travis.yml
+  .gitignore
+```
 
 ## Data Layout
 ### User object
@@ -31,9 +73,10 @@ Vi har ett annat repository för hur vi driver servrarna, vad vi har för servra
   ],
   "lastlogintime": "time",
   "lastloginip": "ipv4",
-  "teacher": "user->id"
+  "teacher": 1
 }
 ```
+Kolla data/dev/USERS_dev.json för hur datan ska se ut.
 ### Element object
 ```json
 {
@@ -66,3 +109,4 @@ Vi har ett annat repository för hur vi driver servrarna, vad vi har för servra
   "alleditors": [1]
 }
 ```
+Kolla data/dev/H_dev.json för hur datan ska se ut.
