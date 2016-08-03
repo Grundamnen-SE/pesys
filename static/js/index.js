@@ -42,9 +42,13 @@ function loadElement(elm, override) {
             loadElementData = data;
             var elementdata = data.data;
             if (data.error) {
-              alert("Error: "+data.error);
-              loading = false;
-              return;
+              if (data.code === 56) {
+
+              } else {
+                alert("Error: "+data.error);
+                loading = false;
+                return;
+              }
             }
             window.history.pushState("", "", "/"+elementdata.element);
             $("title").text(elementdata.element+" - "+title);

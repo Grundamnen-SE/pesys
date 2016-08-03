@@ -345,7 +345,7 @@ app.get('/api/element/:elm', function(req, res){
     db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
       if (err) console.log(err);
       if (data == null) {
-        res.send({"error": "element data not found"});
+        res.send({"error": "element data not found", "code": 56});
       } else {
         var options = {fields:{password:0, _id: 0}};
         var users = [db.collection('users').findOne({id: data.author}, options), db.collection('users').findOne({id: data.lasteditedby}, options), db.collection('users').findOne({id: data.approvedby}, options)];
