@@ -18,6 +18,9 @@ Editor är den modul som man använder för att redigera datan på grundämnen.s
 ### Simple
 Simple är den modul som endast ska vara statiska sidor, som ska göra ajax förfrågningar mot API servern för att få data om ämnen. Kanske bör bli en standalone app med electron?
 
+## Loggning
+Vi har en "handler" för att kolla ifall man är i en utvecklings- eller produktions-miljö. Baserat på denna variabel så printar den ut loggning till stdout(console.log) eller med hjälp av winston/bunyan (obestämt just nu).
+
 ## System
 Vi har ett annat repository för hur vi driver servrarna, vad vi har för servrar och lite annat som kan vara bra att veta. Kolla in det: [Grundamnen-SE/scripts](https://github.com/Grundamnen-SE/scripts)
 
