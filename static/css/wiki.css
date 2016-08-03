@@ -106,3 +106,34 @@
     float: left;
   }
 }
+input.element-editor {
+  width:80px;
+  border:0;
+  font-size:20px;
+}
+textarea.element-editor {
+  background-color:white;
+  border:0;
+  width:100%;
+  max-width:100%;
+  font-size:18px;
+}
+#alert {
+  position:fixed;
+  top:5%;
+  right:30%;
+  left:30%;
+  background-color:white;
+  border:1px solid black;
+  padding:10px;
+}
+#alert.g {
+  border-color:green;
+}
+#alert.r {
+  border-color:red;
+}
+#alert p {
+  font-size:20px;
+  color:black;
+}

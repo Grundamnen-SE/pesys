@@ -31,3 +31,6 @@ a[href] {
 .vishid {
   visibility: hidden;
 }
+.disnon {
+  display: none;
+}

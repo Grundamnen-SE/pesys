@@ -107,7 +107,6 @@ app.engine('html', function (fp, options, callback) {
     var rendered = content.toString();
     // Example variable:
     // rendered = replaceAll(rendered, "%var%", "data to replace with, variable or string");
-    rendered = replaceAll(rendered, "%text%", "text");
     rendered = replaceAll(rendered, "%playbtn%", JSON.stringify(playbtn));
 
     // Insert the table:
@@ -116,7 +115,7 @@ app.engine('html', function (fp, options, callback) {
     if (options.element != null) {
       rendered = replaceAll(rendered, "%element%", options.element);
     } else {
-      rendered = replaceAll(rendered, "%element%", "")
+      rendered = replaceAll(rendered, "%element%", "");
     }
 
     for (var key in site_data) {
@@ -202,7 +201,6 @@ if (process.env.NODE_ENV != "production") {
       res.send("no pw");
     }
   });
-
 }
 // END dev urls
 
@@ -348,7 +346,7 @@ app.get('/api/element/:elm', function(req, res){
     db.collection('elements').findOne({element: req.params.elm}, {}, function(err, data){
       if (err) console.log(err);
       if (data == null) {
-        res.send({"error": "element data not found"});
+        res.send({"error": "element data not found", "code": 56});
       } else {
         var options = {fields:{password:0, _id: 0}};
         var users = [db.collection('users').findOne({id: data.author}, options), db.collection('users').findOne({id: data.lasteditedby}, options), db.collection('users').findOne({id: data.approvedby}, options)];
@@ -390,13 +388,13 @@ app.post('/api/element/:elm', function(req, res){
           delete data["title"];
         }
         //console.log(data);
-        db.collection("elements").updateOne({id:data.id}, {$set:{text: data.text, elementdata: data.elementdata}}, function(err, data){
+        db.collection("elements").findOneAndUpdate({id:data.id}, {$set:{text: data.text, elementdata: data.elementdata}}, {returnOriginal:0}, function(err, data){
           //console.log(data);
           if (err) {
             console.log(err);
             res.send({"error": "something went wrong when saving"});
           } else {
-            if (data.result.nModified) {
+            if (data.ok) {
               res.send({"error": "ok"});
             } else {
               res.send({"error": "no change"});

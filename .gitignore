@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+views/generated_table.html
 
 # Runtime data
 pids

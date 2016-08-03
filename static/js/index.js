@@ -7,7 +7,7 @@ var loading = false;
 var elementLoaded = [];
 var loadElementData;
 
-function loadElement(elm) {
+function loadElement(elm, override) {
   var jselm = $('td[data-iselm][data-name="'+elm+'"]');
   if (!$(jselm).hasClass("td-extend") &&
       !$(jselm).hasClass("td-header") &&
@@ -42,9 +42,13 @@ function loadElement(elm) {
             loadElementData = data;
             var elementdata = data.data;
             if (data.error) {
-              alert("Error: "+data.error);
-              loading = false;
-              return;
+              if (data.code === 56) {
+
+              } else {
+                alert("Error: "+data.error);
+                loading = false;
+                return;
+              }
             }
             window.history.pushState("", "", "/"+elementdata.element);
             $("title").text(elementdata.element+" - "+title);
@@ -95,7 +99,7 @@ function loadElement(elm) {
               }
             }
             $("body").css({"overflow":"hidden"});
-            if (getCookie("gr-settings-easing", "true") == "false") {
+            if (getCookie("gr-settings-easing", "true") == "false" || override) {
               $("#overlay").show();
             } else {
               $("#overlay").show("scale", 300);
@@ -139,7 +143,7 @@ $( "#settings-button" ).click(function() {
 });
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
-function exit() {
+function exit(override) {
   $("title").text(title);
   window.history.pushState("", "", "/");
   $("#edit").remove();
@@ -150,7 +154,7 @@ function exit() {
     }
   }
   elementLoaded = [];
-  if (getCookie("gr-settings-easing", "true") == "false") {
+  if (getCookie("gr-settings-easing", "true") == "false" || override) {
     $("#overlay").hide();
   } else {
     $("#overlay").hide("scale", 200);
