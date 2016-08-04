@@ -4,7 +4,7 @@
   "description": "Detta är versionshanteringen för Grundämnen.se. Pesys är kodnamnet för Grundämnen.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "node app.js && node api.js && node simple.js"
   },
   "repository": {
     "type": "git",

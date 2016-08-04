@@ -46,10 +46,8 @@ pesys/
     index.html
     favicon.ico
   data/               ## För att spara på utvecklings data samt andra json strukturerad data.
-    dev/
-      H_dev.json
-      USERS_dev.json
-    prod/
+    H_dev.json
+    USERS_dev.json
     data.json
   app.js              ## Editor delen
   api.js              ## API delen
@@ -65,7 +63,7 @@ pesys/
 {
   "username": "joarc",
   "id": 1,
-  "password": "encrypted password",
+  "password": "encrypted_password",
   "name": "Joar Classon",
   "permissions":[
     "SUPERADMIN",
