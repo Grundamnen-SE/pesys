@@ -21,22 +21,30 @@ var helmet = require("helmet");
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 
-api.app.listen((process.env.PORT || 3000), function(){
-  console.log("Api on port 3000");
-});
-
-
-editor.app.listen((process.env.PORT || 3001), function(){
-  console.log("Editor on port 3001");
-});
-
 if (process.env.NODE_ENV != "production") {
+  // Gör så alla ligger på samma port:
+
+  var simple = express();
+  simple.use(express.static("../simple/public/"));
 
   var app = express();
-  app.use(express.static("../simple/public/"));
+  app.use(editor.app);
+  app.use(api.app);
+  app.use(simple);
 
-  app.listen((process.env.PORT || 3002), function(){
-    console.log("Simple on port 3002 (Dev)");
+  app.listen((3000), function() {
+    console.log("Simple, api and editor on port 3000 (Dev)");
+  });
+
+} else {
+  // Gör så de ligger på varsin port. Simple-delen hanterar nginx själv:
+
+  api.app.listen((3000), function() {
+    console.log("Api on port 3000");
+  });
+
+  editor.app.listen((3001), function() {
+    console.log("Editor on port 3001");
   });
 
 }
