@@ -1,0 +1,30 @@
+{
+  "name": "pesys",
+  "version": "1.0.0",
+  "description": "Grundämnen.se",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grundamnen-SE/pesys.git"
+  },
+  "author": "Joar Classon och Gustav Ekner",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Grundamnen-SE/pesys/issues"
+  },
+  "homepage": "https://github.com/Grundamnen-SE/pesys#readme",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "fs": "0.0.2",
+    "helmet": "^2.1.2",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "util": "^0.10.3"
+  }
+}
