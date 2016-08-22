@@ -1,0 +1,6 @@
+{
+  "host": "db1.pesys.xzy.se",
+  "port": 27017,
+  "db": "pesys",
+  "path": "mongodb://"+host+":"+port+"/"+db
+}
