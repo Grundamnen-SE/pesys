@@ -10,8 +10,8 @@
 */
 
 
-var editor = require("../editor/app.js");
-var api = require("../editor/app.js");
+var editor = require("./editor/app.js");
+var api = require("./api/api.js");
 
 // Vet ej om vi behöver allt detta:
 var express = require('express');
@@ -21,7 +21,7 @@ var helmet = require("helmet");
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 
-if (process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV !== "production") {
   // Gör så alla ligger på samma port:
 
   var simple = express();
