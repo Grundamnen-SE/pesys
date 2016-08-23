@@ -2,25 +2,15 @@
   Filstruktur:
 
   pesys/
-    pesys/
-      main.js # <-- Denna fil
+    main.js # <-- Denna fil
     editor/
     simple/
     api/
 */
 
-
 var editor = require("./editor/app.js");
 var api = require("./api/api.js");
-
-// Vet ej om vi behöver allt detta:
 var express = require('express');
-var session = require("express-session");
-var logger = require('morgan');
-var helmet = require("helmet");
-var bodyParser = require('body-parser');
-var favicon = require('serve-favicon');
-
 if (process.env.NODE_ENV !== "production") {
   // Gör så alla ligger på samma port:
 
