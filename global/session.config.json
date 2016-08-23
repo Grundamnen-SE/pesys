@@ -1,0 +1,10 @@
+{
+  "secret": "MSeTEw6mReerergJjBu1",
+  "name": "sessID",
+  "resave": true,
+  "saveUninitialized": true,
+  "unset": "destroy",
+  "cookie": {
+    "httpOnly": true
+  }
+}

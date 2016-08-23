@@ -10,27 +10,25 @@
 
 var editor = require("./editor/app.js");
 var api = require("./api/api.js");
-var express = require('express');
+
 if (process.env.NODE_ENV !== "production") {
   // Gör så alla ligger på samma port:
 
-  var simple = express();
-  simple.use(express.static("../simple/public/"));
-
+  var express = require('express');
   var app = express();
   app.use(editor.app);
-  app.use(api.app);
-  app.use(simple);
+  app.use("/api", api.app.router);
+  app.use(express.static("../simple/public/"));
 
   app.listen((3000), function() {
     console.log("Simple, api and editor on port 3000 (Dev)");
   });
 
 } else {
-  // Gör så de ligger på varsin port. Simple-delen hanterar nginx själv:
+  // Gör så api samt editor ligger på port 3000/3001
 
-  api.app.listen((3000), function() {
-    console.log("Api on port 3000");
+  api.app.listen((3000), function(){
+    console.log("API on port 3000");
   });
 
   editor.app.listen((3001), function() {

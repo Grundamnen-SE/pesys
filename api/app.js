@@ -208,4 +208,4 @@ app.get(['/api/user/:id', '/api/user'], function(req, res){
   }
 });
 
-module.exports.app = app;
+//module.exports.app = app;
