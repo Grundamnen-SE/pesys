@@ -1,0 +1,11 @@
+{
+  "defaultSrc": ["'self'"],
+  "scriptSrc": ["'*.google-analytics.com'"],
+  "styleSrc": ["'unsafe-inline'"],
+  "imgSrc": ["'*.google-analytics.com'"],
+  "connectSrc": ["'none'"],
+  "fontSrc": [],
+  "objectSrc": [],
+  "mediaSrc": [],
+  "frameSrc": []
+}

@@ -1,0 +1,121 @@
+body, html {
+  margin: 0;
+  background-color:#363636;
+}
+a {
+  color:#0089f4;
+}
+
+/* Panel */
+.panel {
+  box-shadow: 0 0 1px 10px rgb(230, 230, 230);
+  background: rgb(230, 230, 230);
+  margin-left:1%;
+  margin-right:1%;
+  margin-top:5%;
+  padding:20px;
+}
+.panel.center {
+  position:absolute;
+  left:20%;
+  right:20%;
+}
+.panel #content {
+}
+
+/* Header */
+.header {
+  padding-left:3%;
+  border-bottom:1px solid black;
+}
+.header .right {
+  float:right;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Navbar */
+table.nav {
+  width:100%;
+}
+table.nav > tbody > tr {
+  cursor:pointer;
+}
+table.nav > tbody > tr > td {
+  width:25%;
+  text-align:center;
+  border:1px solid black;
+  border-radius:3px;
+  padding:12px;
+}
+table.nav > tbody > tr > td > a, .disabled {
+  text-decoration: line-through;
+  cursor:not-allowed;
+}
+table.nav > tbody > tr > td > a[href] {
+  text-decoration: none;
+  cursor:pointer;
+}
+
+/* Input */
+input {
+  border: 1px solid gray;
+  outline: 0;
+  padding:6px 8px 6px 10px;
+  font-size:20px;
+  width:90%;
+}
+input:hover {
+  border-color:lightgray;
+}
+input:focus {
+  border-color:black;
+}
+.input-error {
+  border:2px dashed red;
+}
+label {
+  font-size:20px;
+}
+button {
+  border:1px solid gray;
+  background-color:lightgray;
+  outline:0;
+  font-size:20px;
+}
+button:hover {
+  border:1px solid black;
+}
+
+/* #alert */
+#alert {
+  position:fixed;
+  top:5%;
+  right:30%;
+  left:30%;
+  background-color:white;
+  border:1px solid black;
+  padding:10px;
+}
+#alert.g {
+  border-color:green;
+}
+#alert.r {
+  border-color:red;
+}
+#alert p {
+  font-size:20px;
+  color:black;
+}
+
+/* Profile Page */
+#profile-table {
+  width:100%;
+}
+#profile-table td {
+  width:25%;
+}
+#passwd_e {
+  font-size:23px;
+  font-weight: bolder;
+}

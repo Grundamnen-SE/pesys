@@ -1,0 +1,30 @@
+[{
+  "username": "devadmin",
+  "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
+  "id": 1,
+  "name": "Dev Admin",
+  "permissions": [
+    "SUPERADMIN",
+    "USER",
+    "VERIFY",
+    "READ",
+    "WRITE",
+    "LOGIN"
+  ],
+  "lastlogintime": "",
+  "lastloginip": "",
+  "teacher": 0
+}, {
+  "username": "devstudent",
+  "password": "$2a$10$om1rdJ26d/blfjPcqX9sA.F/tk5WKCcowUiUGzFx9lehQFDWDrjvK",
+  "id": 2,
+  "name": "Dev Student",
+  "permissions": [
+    "READ",
+    "WRITE",
+    "LOGIN"
+  ],
+  "lastlogintime": "",
+  "lastloginip": "",
+  "teacher": 1
+}]

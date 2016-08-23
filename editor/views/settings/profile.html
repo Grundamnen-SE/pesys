@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="%meta_author%">
+    <meta name="description" content="%meta_description%">
+    <meta name="keywords" content="%meta_keywords%">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@grundamnen">
+    <meta name="twitter:title" content="Grundämnen.se">
+    <meta name="twitter:description" content="%twitter_description%">
+    <meta name="twitter:url" content="https://grundämnen.se/">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Profile - %title%</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/settings.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="panel center">
+      <h1 class="header">Settings <a href="/" class="right">&larr; Tillbaka</a></h1>
+      <br class="clearfix">
+      <table class="nav">
+        <tr>
+          <td class="nav-link"><a href="/settings/profile" data-perm="LOGIN">Profil</a></td>
+          <td class="nav-link"><a href="/settings/approve" data-perm="VERIFY">Godkänn Ändringar</a></td>
+          <td class="nav-link"><a href="/settings/users" data-perm="USER">Användare</a></td>
+          <td class="nav-link"><a href="/settings/superadmin" data-perm="SUPERADMIN">SuperAdmin</a></td>
+        </tr>
+      </table>
+      <br>
+      <div id="alert">
+        <p></p>
+      </div>
+      <div id="content">
+        <form>
+          <table id="profile-table">
+            <tr>
+              <td><label for="username">Användarnamn: </label></td>
+              <td><input type="text" name="username" id="username" placeholder="Användarnamn" value="%username%"></td>
+              <td><label for="name">Namn: </label></td>
+              <td><input type="text" name="name" id="name" placeholder="Namn" value="%name%"></td>
+            </tr>
+            <tr><td colspan="3"></td><td><button id="save_profile">Spara</button></td></tr>
+            <tr><td colspan="4"><hr></td></tr>
+            <tr><td colspan="4"><h2>Ändra Lösenord</h2></td></tr>
+            <tr>
+              <td><label for="passwd">Lösenord: </label></td>
+              <td><input type="password" name="passwd" id="passwd" placeholder="Lösenord"></td>
+              <td><label for="passwd_c">Upprepa Lösenord: </label></td>
+              <td><input type="password" name="passwd_c" id="passwd_c" placeholder="Upprepa Lösenord"></td>
+            </tr>
+            <tr><td id="passwd_e" class="vishid" colspan="2"></td><td></td><td><button id="save_password">Ändra Lösenord</button></td></tr>
+          </table>
+        </form>
+        <br class="clearfix">
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    var permissions = "%permissions%".split(",");
+    </script>
+    <script src="/js/settings.js"></script>
+  </body>
+</html>
