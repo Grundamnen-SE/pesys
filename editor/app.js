@@ -30,12 +30,8 @@ var util = require('util');
 var path = require('path');
 
 // Express data
-var db_info = {};
-if (process.env.NODE_ENV !== "production") {
-  db_info = globvars.mongodb.development;
-} else {
-  db_info = globvars.mongodb.production;
-}
+var db_info = globvars.mongodb.development;
+if (process.env.NODE_ENV === "production") db_info = globvars.mongodb.production;
 var mongopath = "mongodb://"+db_info['hostname']+":"+db_info['port']+"/"+db_info['db'];
 var sessionconfig = require("../global/session.config.json");
 sessionconfig.expires = new Date(Date.now()+60*60*1000*3);
@@ -76,7 +72,7 @@ app.engine('html', function (fp, options, callback) {
 // Set Express variables
 app.set('views', './views');
 app.set('view engine', 'html');
-if (process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV !== "production") {
   app.use("/css", express.static(__dirname + "/static/css"));
   app.use("/img", express.static(__dirname + "/static/img"));
   app.use("/js",  express.static(__dirname + "/static/js"));
