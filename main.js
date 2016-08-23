@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== "production") {
 
   var express = require('express');
   var app = express();
-  app.use(editor.app);
-  app.use("/api", api.app.router);
+  app.use("/editor", editor.app);
+  app.use("/api", api.router);
   app.use(express.static("../simple/public/"));
 
   app.listen((3000), function() {

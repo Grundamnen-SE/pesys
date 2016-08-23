@@ -25,16 +25,12 @@ var globvars = require('../global/vars.json');
 // DB
 var db_info = {};
 if (process.env.NODE_ENV !== "production") {
-  db_info["host"] = "localhost";
-  db_info["port"] = 27017;
-  db_info["name"] = "pesys";
+  db_info = globvars.mongodb.development;
 } else {
-  db_info["host"] = "db.pesys.xzy.se";
-  db_info["port"] = 27017;
-  db_info["name"] = "pesys";
+  db_info = globvars.mongodb.production;
 }
-var mongopath = "mongodb://"+db_info['host']+":"+db_info['port']+"/"+db_info['name'];
-var db = new Mongo(db_info['name'], new MongoServer(db_info['host'], db_info['port'], {auto_reconnect: true}), {w: 1});
+var mongopath = "mongodb://"+db_info['hostname']+":"+db_info['port']+"/"+db_info['db'];
+var db = new Mongo(db_info['db'], new MongoServer(db_info['hostname'], db_info['port'], {auto_reconnect: true}), {w: 1});
 db.open(function(e, d){
   if (e) {
     console.log(e);

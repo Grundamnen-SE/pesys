@@ -7,5 +7,17 @@
                   "Bi","Po","At","Rn","Fr","Ra","Rf","Db","Sg","Bh","Hs","Mt","Ds",
                   "Rg","Cn","Uut","Fl","Uup","Lv","Uus","Uuo","La","Ce","Pr","Nd",
                   "Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Ac","Th",
-                  "Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr"]
+                  "Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr"],
+  "mongodb": {
+    "production": {
+      "hostname": "db.pesys.xzy.se",
+      "port": 27017,
+      "db": "pesys"
+    },
+    "development": {
+      "hostname": "localhost",
+      "port": 27017,
+      "db": "pesys"
+    }
+  }
 }
