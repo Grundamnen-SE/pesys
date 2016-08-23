@@ -16,9 +16,9 @@ if (process.env.NODE_ENV !== "production") {
 
   var express = require('express');
   var app = express();
-  app.use("/editor", editor.app);
-  app.use("/api", api.router);
-  app.use(express.static("../simple/public/"));
+  app.use(editor.app);
+  app.use(api.app); // Denna läggs under /api i api.js, när routern inkluderas
+  app.use(express.static("./simple/public/"));
 
   app.listen((3000), function() {
     console.log("Simple, api and editor on port 3000 (Dev)");

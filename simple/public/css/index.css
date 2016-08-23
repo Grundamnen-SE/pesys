@@ -1,0 +1,71 @@
+body, html {
+  margin: 0;
+  background-color:#363636;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+}
+input[type=checkbox], button {
+  outline:none;
+}
+.webbstj {
+  position: absolute;
+  left: 2vw;
+  top: 0.75vw;
+}
+.webbstj img {
+  width: 15vw;
+  height: 1.8vw;
+}
+.license {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+}
+.license img {
+  width: 5vw;
+  height: 1.7vw;
+}
+.td-logo {
+  visibility: visible;
+  cursor: auto;
+  height: 3vw;
+  padding: 5px;
+  box-shadow: none;
+}
+.td-logo div {
+  height: 3vw;
+}
+#help {}
+#help p {
+  margin-left: 45px;
+}
+#help > div {
+  height: 45px;
+  margin-top: 10px;
+}
+#help > div > div {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border: 2px solid black;
+  float: left;
+  margin-right: 10px;
+}
+#help > div > p {
+  padding-top: 12px;
+}
+#help > div:nth-of-type(1) > div { background-color: #7D89E8; }
+#help > div:nth-of-type(2) > div { background-color: #E87D7D; }
+#help > div:nth-of-type(3) > div { background-color: #E8B87D; }
+#help > div:nth-of-type(4) > div { background-color: #7DE894; }
+#help > div:nth-of-type(5) > div { background-color: #7DC6E8; }
+#help > div:nth-of-type(6) > div { background-color: #7DE8CF; }
+#help > div:nth-of-type(7) > div { background-color: #AB7DE8; }
+#help > div:nth-of-type(8) > div { background-color: #E67DE8; }
+#help > div:nth-of-type(9) > div { background-color: #DFDFDF; }
+#help > div:nth-of-type(10) > div { background-color: #DDE87D; }
+#help > div:nth-of-type(11) > div { background-color: #A2E87D; }
+.ui-dialog {
+  box-shadow: 0 0 10px 5px gray;
+}

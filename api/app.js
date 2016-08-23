@@ -52,7 +52,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.enable('trust proxy');
 app.disable('x-powered-by');
 
-// dev urls:
+// dev urls: // Jag har flyttat denna till api.js //Gustav
 if (process.env.NODE_ENV != "production") {
   console.log("Not in production, enabling dev urls");
   app.get("/dev_env", function(req, res){

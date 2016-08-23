@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="%meta_author%">
+    <meta name="description" content="%meta_description%">
+    <meta name="keywords" content="%meta_keywords%">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@grundamnen">
+    <meta name="twitter:title" content="Grundämnen.se">
+    <meta name="twitter:description" content="%twitter_description%">
+    <meta name="twitter:url" content="https://grundämnen.se/">
+    <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="ZQatb-QOSPgfvycKK0gwfbvv9de19wTu_qM5iaI9IAg">
+    <title>Grundämnen.se</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/wiki.css">
+    <link rel="stylesheet" type="text/css" href="/css/table.css">
+  </head>
+  <body>
+    <div style="display: none;" id="help">
+      <div><div></div><p>Polyatomiska icke-metaller</p></div>
+      <div><div></div><p>Alkalimetaller</p></div>
+      <div><div></div><p>Alkaliska jordartsmetaller</p></div>
+      <div><div></div><p>Övergångsmetaller</p></div>
+      <div><div></div><p>Halvmetaller</p></div>
+      <div><div></div><p>Övriga metaller</p></div>
+      <div><div></div><p>Diatomiska icke-metaller</p></div>
+      <div><div></div><p>Ädelgaser</p></div>
+      <div><div></div><p>Okända egenskaper</p></div>
+      <div><div></div><p>Lantanoider</p></div>
+      <div><div></div><p>Aktinoider</p></div>
+    </div>
+    <div id="settings" style="display: none;">
+      <label for="settings-easing">Stäng av animationer: </label><input type="checkbox" id="settings-easing"></input>
+      <br>
+      <div class="ui-widget">
+      	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+      		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+      		<p>Dessa inställningar kommer att sparas i form av en <a style="color: blue" href="https://sv.wikipedia.org/wiki/Webbkaka">cookie</a> på din dator.</p>
+      	</div>
+      </div>
+    </div>
+    <div id="overlay">
+      <span class="vishid" data-elm="_id"></span>
+      <span class="vishid" data-elm="number"></span>
+      <div class="disnon" id="alert">
+        <p></p>
+      </div>
+      <div onclick="exit();" id="exit"><i class="material-icons">close</i></div>
+      <div class="element-info">
+        <h1 id="element-info-title" data-elm="element"></h1>
+        <br>
+        <div id="element-info-body" data-elm="text" data-elm-attr="markdown"></div>
+      </div>
+      <div class="element-data">
+        <table>
+          <tbody>
+            <tr>
+              <td>Period</td>
+              <td data-elm="elementdata.period"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Grupp</td>
+              <td data-elm="elementdata.group"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Atomnummer</td>
+              <td data-elm="elementdata.atomnumber"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Atomvikt</td>
+              <td data-elm="elementdata.atomweight"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Protoner</td>
+              <td data-elm="elementdata.protons"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Elektroner</td>
+              <td data-elm="elementdata.electrons"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Neutroner</td>
+              <td data-elm="elementdata.neutron"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Elektronskal</td>
+              <td data-elm="elementdata.electronshells"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Smältpunkt</td>
+              <td data-elm="elementdata.meltingpoint"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+            <tr>
+              <td>Kokpunkt</td>
+              <td data-elm="elementdata.boilingpoint"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="line"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><b>Författare:</b> <span data-elm="author.name"></span></p>
+        <p><b>Senast Ändrad av </b><span data-elm="lasteditedby.name"></span> <b>datum</b> <span data-elm="lasteditedtime"></span></p>
+        <p><b>Alla som har hjälpt till med denna sida: </b></p>
+        <ul data-elm="alleditors.name"></ul>
+      </div>
+    </div>
+
+    %table%
+
+    <br class="clearfix">
+
+    <!-- Internal JS -->
+    <script type="text/javascript" src="/js/static/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/static/jquery-ui.min.js"></script>
+    <script src="/js/cookie.js"></script>
+    <script src="/js/index.js"></script>
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59839592-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

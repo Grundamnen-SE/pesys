@@ -175,15 +175,41 @@ router.get('/user/:id', function(req, res){
   }
 });
 
+// dev urls:
+if (process.env.NODE_ENV != "production") {
+  console.log("Not in production, enabling dev urls");
+  router.get("/dev_env", function(req, res){
+    db.collection("elements").deleteOne({"element": "H"});
+    db.collection("elements").insertOne(require('./data/H_dev.json'));
+    db.collection('users').deleteOne({username: "devstudent"});
+    db.collection('users').deleteOne({username: "devadmin"});
+    db.collection('users').insertMany(require('./data/USERS_dev.json'));
+    req.session.destroy();
+    res.send("Satte in data. Kolla konsolen om eventuella fel uppstod.");
+  });
+  router.get('/crpw/:pw', function(req, res){
+    if (req.params.pw !== null) {
+      pwman.cryptPassword(req.params.pw, function(err, pwc){
+        res.send({"error": err, "pwc": pwc});
+      });
+    } else {
+      res.send("no pw");
+    }
+  });
+}
+
+// Denna måste vara nederst:
 router.get('*', function(req, res){
   res.send({"error": null});
 });
 
 app.use('/api', router);
 
-module.exports.router = router;
+module.exports.router = router; // Varför exporterar vi routern? //Gustav
 module.exports.app = app;
 
+/* Varför lyssnar vi här? Det gör ju main.js. Om main.js inkludar denna kommer de krocka, för båda försöker lyssna på port 3000. //Gustav
 app.listen(3000, function(){
   console.log("API on 3000");
 })
+*/

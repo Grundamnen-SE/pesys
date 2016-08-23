@@ -13,6 +13,7 @@ var session = require("express-session");
 var logger = require('morgan');
 var helmet = require("helmet");
 var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
 
 // MongoDB
 var MongoStore = require('connect-mongo')(session);
@@ -134,7 +135,7 @@ router.get('/:elm', function(req, res, next){
   res.render("index");
 });
 
-app.use(router);
+app.use("edit", router);
 
 module.exports.router = router;
 module.exports.app = app;
