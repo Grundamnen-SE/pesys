@@ -1,6 +1,7 @@
 <?php
   if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grundämnen.se/');
 ?>
+<!-- test 123 -->
 <!DOCTYPE html>
 <html>
   <head>
