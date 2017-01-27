@@ -1,4 +1,22 @@
- // Gör så att när man klickar på ett grundämne öppnas rutan:
+/* Cookie-hantering: */
+
+function getCookie(cname, defaultVal) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return defaultVal;
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
 
 
 // Add :containsExact
@@ -6,7 +24,6 @@
    return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
  };
 
- // Updaterad!
 var loading = false;
 $("td").on("click", function() {
   var td = this;
@@ -20,15 +37,15 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       last = string.substr(position1 + 13, 3);
     }
-    if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
+    if      ($(td).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
     else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
     else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
     else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
-    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#FFC2DC"}); }
+    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#DFDFDF"}); }
     else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
     else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
     else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
-    else if ($(td).hasClass("hao")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
+    else if ($(td).hasClass("dia")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
     else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
     else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
     else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }
@@ -42,7 +59,11 @@ $("td").on("click", function() {
         success: function(data) {
           $("#newHTML").append(data);
           $("body").css({"overflow":"hidden"});
-          $("#newHTML").show("scale", 300, function () {});
+          if (getCookie("gr-settings-easing", "true") == "false") {
+            $("#newHTML").show();
+          } else {
+            $("#newHTML").show("scale", 300);
+          }
           loading = false;
         },
         dataType: "html"
@@ -52,48 +73,56 @@ $("td").on("click", function() {
 });
 
 //Info/Help-rutan (färgförklaring)
-$(".help").on("click", function() {
-  var move = $("#help").width()/2;
-  var width = $(window).width();
-  $("#help").css("left",width / 2 - move);
-  $("#help").toggle("slide", {direction:"up"});
+$( "#help" ).dialog({
+  autoOpen: false,
+  title: "Färgförklaring"
 });
+$( ".help" ).click(function() {
+  $( "#help" ).dialog( "open" );
+});
+
+// Settings-rutan:
+$( "#settings" ).dialog({
+  autoOpen: false,
+  title: "Inställningar"
+});
+$( "#settings-button" ).click(function() {
+  $( "#settings" ).dialog( "open" );
+});
+
+function settingsGet() {
+  if (getCookie("gr-settings-easing") == "false") {
+    $("#settings-easing").prop("checked", true);
+  }
+}
+
+$("#settings-easing").click(function() {
+  if( $(this).is(":checked") ) {
+    setCookie("gr-settings-easing", "false", "30");
+  } else {
+    setCookie("gr-settings-easing", "true", "30");
+  }
+
+  settingsGet();
+});
+
+settingsGet();
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
   $("#newHTML").empty();
-  $("#newHTML").hide("scale", 200);
+  if (getCookie("gr-settings-easing", "true") == "false") {
+    $("#newHTML").hide();
+  } else {
+    $("#newHTML").hide("scale", 200);
+  }
   $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
 }
 
+// Om man klickar på Esc ska rutan stängas:
 $(document).keyup(function(e) {
   if (e.keyCode == 27) {
-      exit();
+    exit();
   }
 });
-
-// Byter till avancerat/enkelt läge beroende på om #advmode är 1 eller inte:
-/*if (location.hash == "#advmode=1") {
-  $("#advmode").attr('checked',true);
-  $('#sim_table').hide();
-  $('#adv_table').show();
-} else {
-  $('#sim_table').show();
-  $('#adv_table').hide();
-}
-
-// Byter till avancerat/enkelt läge beroende på om checkrutan är ifylld eller inte:
-$("#advmode").on('change', function() {
-  if ($("#advmode").prop('checked') === false) {
-    location.hash = "";
-    $('#sim_table').show();
-    $('#adv_table').hide();
-  } else {
-    location.hash = "#advmode=1";
-    $('#sim_table').hide();
-    $('#adv_table').show();
-  }
-}); */
-
-// Kanske har någon betydelse...

@@ -12,19 +12,27 @@
     <meta name="twitter:url" content="http://grundämnen.se/" />
     <title>Grundämnen - Info</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet/less" type="text/css" href="/css/info.less" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/info.css" />
   </head>
   <body>
     <div id="nav">
-      <a href="/"><p>Tillbaks</p></a>
-      <h2>Grundämnen.se</h2>
+      <a href="/"><p id="nav-back">Tillbaka</p></a>
+      <h2>Grundämnen Info</h2>
     </div>
-    <div id="main">
-      <h1 class="header">Välkommen!</h1>
-      <h3>Här kan du lära dig om periodiska systemet, grundämnen, och annan kemi och fysik</h3>
-      <br>
-      <a href="https://www.youtube.com/watch?v=JossJow5TbM&list=PLLE2a7MKdbv9Jz-63t8AMiiv47lEAHVl5"><p>Video 1 - Vad är atomer?</p></a>
+
+    <div id="container">
+      <div id="main" class="segment">
+        <h3>Välkommen!</h3>
+        <h3 class="intro">Här kan du lära dig om periodiska systemet, grundämnen, och annan kemi och fysik.</strong> Det finns både text- och videomaterial i olika former.</h3>
+        <h3 class="intro">Nytt innehåll kommer att publiceras löpande, så håll utkik!</h3>
+      </div>
+      <div class="segment" id="text">
+        <p><a href="#">Det periodiska systemet</a> ― Här får du grundläggande information om vad det periodiska systemet är, hur man avläser det och vad alla tecken betyder.</p>
+      </div>
+      <div class="segment" id="video">
+        <h3>Videor</h3>
+        <a href="https://www.youtube.com/watch?v=JossJow5TbM&list=PLLE2a7MKdbv9Jz-63t8AMiiv47lEAHVl5"><p>Video 1 - Vad är atomer?</p></a>
+      </div>
     </div>
   </body>
 </html>
