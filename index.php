@@ -39,6 +39,7 @@
     </div>
     <div id="settings" style="display: none;">
       <label for="settings-easing">Stäng av animationer: </label><input type="checkbox" id="settings-easing"></input>
+      <label for="settings-adv">Avancerad tabell: </label><input type="checkbox" id="settings-adv"></input>
       <br>
       <div class="ui-widget">
       	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
@@ -48,7 +49,7 @@
       </div>
     </div>
     <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
-    <?php include ("includes/sim_table.php"); ?>
+    <?php include ("includes/adv_table.php"); ?>
     <br class="clearfix">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

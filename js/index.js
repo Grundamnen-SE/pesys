@@ -1,28 +1,37 @@
 /* Cookie-hantering: */
 
 function getCookie(cname, defaultVal) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return defaultVal;
+  var name = cname + "=";
+  var ca = document.cookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") c = c.substring(1);
+    if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+  }
+  return defaultVal;
 }
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+function setCookie(cname, cvalue) {
+  var exdays = 30;
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
+// shadow:
+$(".td-group").hover(function() {
+  var i = $(this).index();
+  $("td.g" + i + " div").addClass("td-hover");
+}, function() {
+  var i = $(this).index();
+  $("td.g" + i + " div").removeClass("td-hover");
+});
 
 // Add :containsExact
- $.expr[":"].containsExact = function (obj, index, meta, stack) {
-   return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
- };
+$.expr[":"].containsExact = function (obj, index, meta, stack) {
+  return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
+};
 
 var loading = false;
 $("td").on("click", function() {
@@ -81,32 +90,65 @@ $( ".help" ).click(function() {
   $( "#help" ).dialog( "open" );
 });
 
-// Settings-rutan:
-$( "#settings" ).dialog({
+/* Settings-rutan: */
+
+$("#settings").dialog({
   autoOpen: false,
   title: "Inställningar"
 });
-$( "#settings-button" ).click(function() {
-  $( "#settings" ).dialog( "open" );
+
+$("#settings-button").click(function() {
+  $("#settings").dialog("open");
 });
+
+function displaySimple() {
+  $(".tr-group").css("display", "none");
+  $(".td-period").css("display", "none");
+  $(".yt").css("display", "block");
+}
+
+function displayAdvanced() {
+  $(".tr-group").css("display", "table-row");
+  $(".td-period").css("display", "table-cell");
+  $(".yt").css("display", "none");
+}
+
+/* Alla cookie-settings på grundämnen.se börjar med 'gr-settings' som namn */
 
 function settingsGet() {
   if (getCookie("gr-settings-easing") == "false") {
     $("#settings-easing").prop("checked", true);
   }
+
+  if (getCookie("gr-settings-adv") == "true") {
+    $("#settings-adv").prop("checked", true);
+    displayAdvanced();
+  } else {
+    displaySimple();
+  }
 }
 
 $("#settings-easing").click(function() {
   if( $(this).is(":checked") ) {
-    setCookie("gr-settings-easing", "false", "30");
+    setCookie("gr-settings-easing", "false");
   } else {
-    setCookie("gr-settings-easing", "true", "30");
+    setCookie("gr-settings-easing", "true");
   }
+  settingsGet();
+});
 
+$("#settings-adv").click(function() {
+  if( $(this).is(":checked") ) {
+    setCookie("gr-settings-adv", "true");
+  } else {
+    setCookie("gr-settings-adv", "false");
+  }
   settingsGet();
 });
 
 settingsGet();
+
+/* --slut-- Settings-rutan */
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
 function exit() {
