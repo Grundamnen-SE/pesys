@@ -1,8 +1,10 @@
 <div onclick="exit();" id="exit">X</div>
 
 <?php
+  $invalid = strpos($_POST['file'], '..') !== FALSE;
   $file = "pages/" . $_POST['file'] . ".html";
-  if (file_exists($file)) {
+
+  if (file_exists($file) && !$invalid) {
 ?>
 <div class="info">
   <?php include ($file); ?>

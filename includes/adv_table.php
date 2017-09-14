@@ -1,5 +1,7 @@
 <div id="rst"></div>
 
+<!-- Table 2 - används endast för skuggor. Måste stå först. -->
+
 <table class="tab2 sim_table">
 <tr class="tr-group">
   <td></td>
@@ -187,10 +189,9 @@
   </tr>
 </table>
 
+<!--  -->
 
-
-
-
+<!-- Table 1 - huvudtabellen. Används för allt innehåll. -->
 
 <table class="tab1 sim_table">
   <tr class="tr-group">
@@ -234,40 +235,40 @@
     <td class="td-sol pol g14"><div class="box"><span class="atomic_number">6</span><img class="yt" src="/img/play.svg"><span class="atomic_text">C</span><span class="atomic_mass">10,81</span></div></td>
     <td class="td-gas dia g15"><div class="box"><span class="atomic_number">7</span><span class="atomic_text">N</span></div><span class="atomic_mass">14,01</span></td>
     <td class="td-gas dia g16"><div class="box"><span class="atomic_number">8</span><img class="yt" src="/img/play.svg"><span class="atomic_text">O</span><span class="atomic_mass">15,00</span></div></td>
-    <td class="td-gas dia g17"><div class="box"><span class="atomic_number">9</span><img class="yt" src="/img/play.svg"><span class="atomic_text">F</span></div></td>
-    <td class="td-gas gas g18"><div class="box"><span class="atomic_number">10</span><span class="atomic_text">Ne</span></div></td>
+    <td class="td-gas dia g17"><div class="box"><span class="atomic_number">9</span><img class="yt" src="/img/play.svg"><span class="atomic_text">F</span><span class="atomic_mass">19,00</span></div></td>
+    <td class="td-gas gas g18"><div class="box"><span class="atomic_number">10</span><span class="atomic_text">Ne</span><span class="atomic_mass">20,18</span></div></td>
   </tr>
   <tr>
     <td class="td-period"><div class="box"><span>3</span></div></td>
-    <td class="td-sol alk g1"><div class="box"><span class="atomic_number">11</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Na</span></div></td>
-    <td class="td-sol jor g2"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Mg</span></div></td>
-    <td class="td-sol ovr g13"><div class="box"><span class="atomic_number">13</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Al</span></div></td>
-    <td class="td-sol hme g14"><div class="box"><span class="atomic_number">14</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Si</span></div></td>
-    <td class="td-sol pol g15"><div class="box"><span class="atomic_number ">15</span><span class="atomic_text">P</span></div></td>
-    <td class="td-sol pol g16"><div class="box"><span class="atomic_number ">16</span><span class="atomic_text">S</span></div></td>
-    <td class="td-gas dia g17"><div class="box"><span class="atomic_number ">17</span><span class="atomic_text">Cl</span></div></td>
-    <td class="td-gas gas g18"><div class="box"><span class="atomic_number ">18</span><span class="atomic_text">Ar</span></div></td>
+    <td class="td-sol alk g1"><div class="box"><span class="atomic_number">11</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Na</span><span class="atomic_mass">22,99</span></div></td>
+    <td class="td-sol jor g2"><div class="box"><span class="atomic_number">12</span><span class="atomic_text">Mg</span><span class="atomic_mass">24,31</span></div></td>
+    <td class="td-sol ovr g13"><div class="box"><span class="atomic_number">13</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Al</span><span class="atomic_mass">26,98</span></div></td>
+    <td class="td-sol hme g14"><div class="box"><span class="atomic_number">14</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Si</span><span class="atomic_mass">28,09</span></div></td>
+    <td class="td-sol pol g15"><div class="box"><span class="atomic_number ">15</span><span class="atomic_text">P</span><span class="atomic_mass">30,97</span></div></td>
+    <td class="td-sol pol g16"><div class="box"><span class="atomic_number ">16</span><span class="atomic_text">S</span><span class="atomic_mass">32,06</span></div></td>
+    <td class="td-gas dia g17"><div class="box"><span class="atomic_number ">17</span><span class="atomic_text">Cl</span><span class="atomic_mass">35,45</span></div></td>
+    <td class="td-gas gas g18"><div class="box"><span class="atomic_number ">18</span><span class="atomic_text">Ar</span><span class="atomic_mass">39,95</span></div></td>
   </tr>
   <tr>
     <td class="td-period"><div class="box"><span>4</span></div></td>
-    <td class="td-sol alk g1"><div class="box"><span class="atomic_number ">19</span><span class="atomic_text">K</span></div></td>
-    <td class="td-sol jor g2"><div class="box"><span class="atomic_number ">20</span><span class="atomic_text">Ca</span></div></td>
-    <td class="td-sol ove g3"><div class="box"><span class="atomic_number ">21</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Sc</span></div></td>
-    <td class="td-sol ove g4"><div class="box"><span class="atomic_number ">22</span><span class="atomic_text">Ti</span></div></td>
-    <td class="td-sol ove g5"><div class="box"><span class="atomic_number ">23</span><span class="atomic_text">V</span></div></td>
-    <td class="td-sol ove g6"><div class="box"><span class="atomic_number ">24</span><span class="atomic_text">Cr</span></div></td>
-    <td class="td-sol ove g7"><div class="box"><span class="atomic_number ">25</span><span class="atomic_text">Mn</span></div></td>
-    <td class="td-sol ove g8"><div class="box"><span class="atomic_number ">26</span><span class="atomic_text">Fe</span></div></td>
-    <td class="td-sol ove g9"><div class="box"><span class="atomic_number ">27</span><span class="atomic_text">Co</span></div></td>
-    <td class="td-sol ove g10"><div class="box"><span class="atomic_number ">28</span><span class="atomic_text">Ni</span></div></td>
-    <td class="td-sol ove g11"><div class="box"><span class="atomic_number ">29</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Cu</span></div></td>
-    <td class="td-sol ove g12"><div class="box"><span class="atomic_number ">30</span><span class="atomic_text">Zn</span></div></td>
-    <td class="td-sol ovr g13"><div class="box"><span class="atomic_number ">31</span><span class="atomic_text">Ga</span></div></td>
-    <td class="td-sol hme g14"><div class="box"><span class="atomic_number ">32</span><span class="atomic_text">Ge</span></div></td>
-    <td class="td-sol hme g15"><div class="box"><span class="atomic_number ">33</span><span class="atomic_text">As</span></div></td>
-    <td class="td-sol pol g16"><div class="box"><span class="atomic_number ">34</span><span class="atomic_text">Se</span></div></td>
-    <td class="td-liq dia g17"><div class="box"><span class="atomic_number ">35</span><span class="atomic_text">Br</span></div></td>
-    <td class="td-gas gas g18"><div class="box"><span class="atomic_number ">36</span><span class="atomic_text">Kr</span></div></td>
+    <td class="td-sol alk g1"><div class="box"><span class="atomic_number ">19</span><span class="atomic_text">K</span><span class="atomic_mass">39,10</span></div></td>
+    <td class="td-sol jor g2"><div class="box"><span class="atomic_number ">20</span><span class="atomic_text">Ca</span><span class="atomic_mass">40,08</span></div></td>
+    <td class="td-sol ove g3"><div class="box"><span class="atomic_number ">21</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Sc</span><span class="atomic_mass">44,96</span></div></td>
+    <td class="td-sol ove g4"><div class="box"><span class="atomic_number ">22</span><span class="atomic_text">Ti</span><span class="atomic_mass">47,87</span></div></td>
+    <td class="td-sol ove g5"><div class="box"><span class="atomic_number ">23</span><span class="atomic_text">V</span><span class="atomic_mass">50,94</span></div></td>
+    <td class="td-sol ove g6"><div class="box"><span class="atomic_number ">24</span><span class="atomic_text">Cr</span><span class="atomic_mass">52,00</span></div></td>
+    <td class="td-sol ove g7"><div class="box"><span class="atomic_number ">25</span><span class="atomic_text">Mn</span><span class="atomic_mass">54,94</span></div></td>
+    <td class="td-sol ove g8"><div class="box"><span class="atomic_number ">26</span><span class="atomic_text">Fe</span><span class="atomic_mass">55,85</span></div></td>
+    <td class="td-sol ove g9"><div class="box"><span class="atomic_number ">27</span><span class="atomic_text">Co</span><span class="atomic_mass">58,93</span></div></td>
+    <td class="td-sol ove g10"><div class="box"><span class="atomic_number ">28</span><span class="atomic_text">Ni</span><span class="atomic_mass">58,69</span></div></td>
+    <td class="td-sol ove g11"><div class="box"><span class="atomic_number ">29</span><img class="yt" src="/img/play.svg"><span class="atomic_text">Cu</span><span class="atomic_mass">63,55</span></div></td>
+    <td class="td-sol ove g12"><div class="box"><span class="atomic_number ">30</span><span class="atomic_text">Zn</span><span class="atomic_mass">65,41</span></div></td>
+    <td class="td-sol ovr g13"><div class="box"><span class="atomic_number ">31</span><span class="atomic_text">Ga</span><span class="atomic_mass">69,72</span></div></td>
+    <td class="td-sol hme g14"><div class="box"><span class="atomic_number ">32</span><span class="atomic_text">Ge</span><span class="atomic_mass">72.63</span></div></td>
+    <td class="td-sol hme g15"><div class="box"><span class="atomic_number ">33</span><span class="atomic_text">As</span><span class="atomic_mass">74,92</span></div></td>
+    <td class="td-sol pol g16"><div class="box"><span class="atomic_number ">34</span><span class="atomic_text">Se</span><span class="atomic_mass">78,96</span></div></td>
+    <td class="td-liq dia g17"><div class="box"><span class="atomic_number ">35</span><span class="atomic_text">Br</span><span class="atomic_mass">79,90</span></div></td>
+    <td class="td-gas gas g18"><div class="box"><span class="atomic_number ">36</span><span class="atomic_text">Kr</span><span class="atomic_mass">83,80</span></div></td>
   </tr>
   <tr>
     <td class="td-period"><div class="box"><span>5</span></div></td>

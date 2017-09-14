@@ -1,3 +1,12 @@
+/* Globala variabler: */
+
+var loading = false;
+
+// Add :containsExact
+$.expr[":"].containsExact = function (obj, index, meta, stack) {
+  return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
+};
+
 /* Cookie-hantering: */
 
 function getCookie(cname, defaultVal) {
@@ -19,7 +28,8 @@ function setCookie(cname, cvalue) {
   document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-// shadow:
+// Highlight för grupper och perioder:
+
 $(".td-group").hover(function() {
   var i = $(this).index();
   $("td.g" + i + " div").addClass("td-hover");
@@ -28,58 +38,77 @@ $(".td-group").hover(function() {
   $("td.g" + i + " div").removeClass("td-hover");
 });
 
-// Add :containsExact
-$.expr[":"].containsExact = function (obj, index, meta, stack) {
-  return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
-};
+$(".td-period").hover(function(){
+  var i = $(this).parent().index() + 1;
+  if (i > 8)
+    return;
+  $("tr:nth-child(" + i + ") td:not(.td-header, .td-about, .td-logo, .td-none, .td-extend) div").addClass("td-hover");
+}, function() {
+  var i = $(this).parent().index() + 1;
+  $("tr:nth-child(" + i + ") td:not(.td-header, .td-about, .td-logo, .td-none, .td-extend) div").removeClass("td-hover");
+});
 
-var loading = false;
 $("td").on("click", function() {
   var td = this;
+
   if (!$(this).hasClass("td-extend") && !$(this).hasClass("td-header") && !$(this).hasClass("td-none") && !$(this).hasClass("td-about") && !$(this).hasClass("td-logo")) {
-    string = $(this).html();
+    var string = $(this).html();
+    var notation;
     var position1 = string.search(/atomic_text">/);
+
     if (string.substr(position1 + 14, 1) == "<") {
-      last = string.substr(position1 + 13, 1);
+      notation = string.substr(position1 + 13, 1);
     } else if (string.substr(position1 + 15, 1) == "<") {
-      last = string.substr(position1 + 13, 2);
+      notation = string.substr(position1 + 13, 2);
     } else if (string.substr(position1 + 16, 1) == "<") {
-      last = string.substr(position1 + 13, 3);
+      notation = string.substr(position1 + 13, 3);
     }
-    if      ($(td).hasClass("pol")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
-    else if ($(td).hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
-    else if ($(td).hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
-    else if ($(td).hasClass("ove")) { $("#newHTML").css({"background-color":"#C2FFCF"}); }
-    else if ($(td).hasClass("eju")) { $("#newHTML").css({"background-color":"#DFDFDF"}); }
-    else if ($(td).hasClass("ovr")) { $("#newHTML").css({"background-color":"#C2FFF2"}); }
-    else if ($(td).hasClass("hme")) { $("#newHTML").css({"background-color":"#C2ECFF"}); }
-    else if ($(td).hasClass("ick")) { $("#newHTML").css({"background-color":"#C2C7FF"}); }
-    else if ($(td).hasClass("dia")) { $("#newHTML").css({"background-color":"#DCC2FF"}); }
-    else if ($(td).hasClass("gas")) { $("#newHTML").css({"background-color":"#FFC2FF"}); }
-    else if ($(td).hasClass("lan")) { $("#newHTML").css({"background-color":"#FAFFC2"}); }
-    else if ($(td).hasClass("akt")) { $("#newHTML").css({"background-color":"#D7FFC2"}); }
-    else {alert("Du har hittat en bugg! Kontakta oss och berätta att du fick detta meddelande, och hur. Mail finns på om-sidan.")}
-    if (!loading) {
-      loading = true;
-      $.ajax({
-        type: "POST",
-        url: "/wiki/template.php",
-        data: {"file": last},
-        success: function(data) {
-          $("#newHTML").append(data);
-          $("body").css({"overflow":"hidden"});
-          if (getCookie("gr-settings-easing", "true") == "false") {
-            $("#newHTML").show();
-          } else {
-            $("#newHTML").show("scale", 300);
-          }
-          loading = false;
-        },
-        dataType: "html"
-      });
-    }
+    
+    openWikiPage(notation);
   }
 });
+
+function openWikiPage(wikiName)
+{
+  // Först kollar vi om wikiName är ett element, isf letar vi upp den td:n för att ta reda på bakgrundsfärg:
+  var tdElem = $("span.atomic_text:containsExact(" + wikiName + ")").first().parent("div").parent("td");
+  if (tdElem.length > 0) {
+    if      (tdElem.hasClass("pol")) $("#newHTML").css({"background-color":"#C2CAFF"});
+    else if (tdElem.hasClass("alk")) $("#newHTML").css({"background-color":"#FFC2C2"});
+    else if (tdElem.hasClass("jor")) $("#newHTML").css({"background-color":"#FFE4C2"});
+    else if (tdElem.hasClass("ove")) $("#newHTML").css({"background-color":"#C2FFCF"});
+    else if (tdElem.hasClass("eju")) $("#newHTML").css({"background-color":"#DFDFDF"});
+    else if (tdElem.hasClass("ovr")) $("#newHTML").css({"background-color":"#C2FFF2"});
+    else if (tdElem.hasClass("hme")) $("#newHTML").css({"background-color":"#C2ECFF"});
+    else if (tdElem.hasClass("ick")) $("#newHTML").css({"background-color":"#C2C7FF"});
+    else if (tdElem.hasClass("dia")) $("#newHTML").css({"background-color":"#DCC2FF"});
+    else if (tdElem.hasClass("gas")) $("#newHTML").css({"background-color":"#FFC2FF"});
+    else if (tdElem.hasClass("lan")) $("#newHTML").css({"background-color":"#FAFFC2"});
+    else if (tdElem.hasClass("akt")) $("#newHTML").css({"background-color":"#D7FFC2"});
+  } else {
+    $("#newHTML").css({"background-color":"white"});
+  }
+  
+  if (!loading) {
+    loading = true;
+    $.ajax({
+      type: "POST",
+      url: "/wiki/template.php",
+      data: {"file": wikiName},
+      success: function(data) {
+        $("#newHTML").append(data);
+        $("body").css({"overflow":"hidden"});
+        if (getCookie("gr-settings-easing", "true") == "false") {
+          $("#newHTML").show();
+        } else {
+          $("#newHTML").show("scale", 300);
+        }
+        loading = false;
+      },
+      dataType: "html"
+    });
+  }
+}
 
 //Info/Help-rutan (färgförklaring)
 $( "#help" ).dialog({
@@ -89,6 +118,20 @@ $( "#help" ).dialog({
 $( ".help" ).click(function() {
   $( "#help" ).dialog( "open" );
 });
+
+function displaySimple() {
+  $(".tr-group").css("display", "none");
+  $(".td-period").css("display", "none");
+  $(".yt").css("display", "block");
+  $(".atomic_mass").css("display", "none");
+}
+
+function displayAdvanced() {
+  $(".tr-group").css("display", "table-row");
+  $(".td-period").css("display", "table-cell");
+  $(".yt").css("display", "none");
+  $(".atomic_mass").css("display", "block");
+}
 
 /* Settings-rutan: */
 
@@ -101,19 +144,7 @@ $("#settings-button").click(function() {
   $("#settings").dialog("open");
 });
 
-function displaySimple() {
-  $(".tr-group").css("display", "none");
-  $(".td-period").css("display", "none");
-  $(".yt").css("display", "block");
-}
-
-function displayAdvanced() {
-  $(".tr-group").css("display", "table-row");
-  $(".td-period").css("display", "table-cell");
-  $(".yt").css("display", "none");
-}
-
-/* Alla cookie-settings på grundämnen.se börjar med 'gr-settings' som namn */
+// INFO: Alla cookie-settings på grundämnen.se börjar med 'gr-settings' som namn
 
 function settingsGet() {
   if (getCookie("gr-settings-easing") == "false") {
@@ -146,11 +177,8 @@ $("#settings-adv").click(function() {
   settingsGet();
 });
 
-settingsGet();
-
-/* --slut-- Settings-rutan */
-
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
+
 function exit() {
   $("#newHTML").empty();
   if (getCookie("gr-settings-easing", "true") == "false") {
@@ -168,3 +196,20 @@ $(document).keyup(function(e) {
     exit();
   }
 });
+
+function loadWikiPageFromHash()
+{
+  console.log("dsfsdf");
+
+  if(window.location.hash) {
+    openWikiPage(window.location.hash.substr(1));
+    history.pushState("", document.title, window.location.pathname);
+  }
+}
+
+addEventListener("hashchange", loadWikiPageFromHash);
+
+/* Kod som ska köras direkt vid sidladdning: */
+
+settingsGet();
+loadWikiPageFromHash();
