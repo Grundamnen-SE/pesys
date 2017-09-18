@@ -100,6 +100,7 @@ function openWikiPage(wikiName, disableEasing)
       data: {"file": wikiName},
       success: function(data) {
         $("#newHTML").html(data);
+        window.location.hash = wikiName;
         $("body").css({"overflow":"hidden"});
         if (getCookie("gr-settings-easing", "true") == "false" || disableEasing) {
           $("#newHTML").show();

@@ -47,9 +47,9 @@ input[type=checkbox], button {
 }
 table.mainTab
 {
-  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 table.mainTab td {
   margin: 0;
@@ -91,7 +91,7 @@ a[href] {
   box-shadow: none !important;
   visibility: visible !important;
 }
-.td-header:hover, .td-about:hover {
+.td-header:hover div, .td-about:hover div, .td-none:hover div {
   background-color: transparent !important;
   cursor:default;
 }
@@ -143,11 +143,13 @@ a[href] {
   background: white !important;
 }
 .td-extend {
-  background-color: rgba(177,236,255, 0.3);
   color: black !important;
   text-align: center;
   visibility: visible !important;
-  cursor: default;
+  cursor: default !important;
+}
+.td-extend:hover div {
+  background: none !important;
 }
 .extend-text {
   position: relative;
@@ -188,8 +190,8 @@ a[href] {
   top: 0px;
   position: absolute;
 }
-.tab1 td:hover {
-  background-color:#c9c9c9;
+.tab1 td:hover div {
+  background-color: #c9c9c9;
 }
 
 .help {
@@ -272,47 +274,58 @@ a[href] {
   background-color: #DFDFDF !important;
 }
 
-.tab2 .alk {
+.tab2 .alk div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .jor {
+.tab2 .jor div {
+  position: relative;
   z-index: 4;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .lan {
+.tab2 .lan div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .akt {
+.tab2 .akt div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .ove {
+.tab2 .ove div {
+  position: relative;
   z-index: 12;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .ovr {
+.tab2 .ovr div {
+  position: relative;
   z-index: 10;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .hme {
+.tab2 .hme div {
+  position: relative;
   z-index: 8;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .pol {
+.tab2 .pol div {
+  position: relative;
   z-index: 6;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .dia {
+.tab2 .dia div {
+  position: relative;
   z-index: 4;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .gas {
+.tab2 .gas div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .eju {
+.tab2 .eju div {
+  position: relative;
   z-index: 0;
   box-shadow: 0px 0px 12px 4.5px black;
 }

@@ -26,119 +26,119 @@
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-gas dia"></td>
+    <td class="td-gas dia"><div class="box"></div></td>
     <td></td>
     <td rowspan="3" colspan="10" class="td-header"><div class="box">
     </div></td>
     <td colspan="5" class="td-about"><div class="box">
     </div></td>
-    <td class="td-gas gas"></td>
+    <td class="td-gas gas"><div class="box"></div></td>
+  </tr>
+  <tr>
+    <td class="td-period"><div class="box"></div></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-sol pol"><div class="box"></div></td>
+    <td class="td-gas dia"><div class="box"></div></td>
+    <td class="td-gas dia"><div class="box"></div></td>
+    <td class="td-gas dia"><div class="box"></div></td>
+    <td class="td-gas gas"><div class="box"></div></td>
+  </tr>
+  <tr>
+    <td class="td-period"><div class="box"></div></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-sol pol"><div class="box"></div></td>
+    <td class="td-sol pol"><div class="box"></div></td>
+    <td class="td-gas dia"><div class="box"></div></td>
+    <td class="td-gas gas"><div class="box"></div></td>
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-sol pol"></td>
-    <td class="td-gas dia"></td>
-    <td class="td-gas dia"></td>
-    <td class="td-gas dia"></td>
-    <td class="td-gas gas"></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-sol pol"><div class="box"></div></td>
+    <td class="td-liq dia"><div class="box"></div></td>
+    <td class="td-gas gas"><div class="box"></div></td>
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-sol pol"></td>
-    <td class="td-sol pol"></td>
-    <td class="td-gas dia"></td>
-    <td class="td-gas gas"></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-gas dia"><div class="box"></div></td>
+    <td class="td-gas gas"><div class="box"></div></td>
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-sol pol"></td>
-    <td class="td-liq dia"></td>
-    <td class="td-gas gas"></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-extend"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-liq ove"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol hme"><div class="box"></div></td>
+    <td class="td-gas gas"><div class="box"></div></td>
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-gas dia"></td>
-    <td class="td-gas gas"></td>
-  </tr>
-  <tr>
-    <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-extend"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-liq ove"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol hme"></td>
-    <td class="td-gas gas"></td>
-  </tr>
-  <tr>
-    <td class="td-period"></td>
-    <td class="td-sol alk"></td>
-    <td class="td-sol jor"></td>
-    <td class="td-extend"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol eju"></td>
-    <td class="td-sol eju"></td>
-    <td class="td-sol eju"></td>
-    <td class="td-sol ove"></td>
-    <td class="td-sol eju tril"></td>
-    <td class="td-sol ovr"></td>
-    <td class="td-sol eju tril"></td>
-    <td class="td-sol eju"></td>
-    <td class="td-sol eju tril"></td>
-    <td class="td-gas eju tril"></td>
+    <td class="td-sol alk"><div class="box"></div></td>
+    <td class="td-sol jor"><div class="box"></div></td>
+    <td class="td-extend"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol eju"><div class="box"></div></td>
+    <td class="td-sol eju"><div class="box"></div></td>
+    <td class="td-sol eju"><div class="box"></div></td>
+    <td class="td-sol ove"><div class="box"></div></td>
+    <td class="td-sol eju tril"><div class="box"></div></td>
+    <td class="td-sol ovr"><div class="box"></div></td>
+    <td class="td-sol eju tril"><div class="box"></div></td>
+    <td class="td-sol eju"><div class="box"></div></td>
+    <td class="td-sol eju tril"><div class="box"></div></td>
+    <td class="td-gas eju tril"><div class="box"></div></td>
   </tr>
   <tr class="tr-space">
     <td class="td-period"></td>
@@ -147,43 +147,43 @@
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-extend"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
-    <td class="td-sol lan"></td>
+    <td class="td-extend"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
+    <td class="td-sol lan"><div class="box"></div></td>
     <td class="td-none"></td>
     <td class="td-none"></td>
   </tr>
   <tr>
     <td class="td-period"></td>
-    <td class="td-extend"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
-    <td class="td-sol akt"></td>
+    <td class="td-extend"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
+    <td class="td-sol akt"><div class="box"></div></td>
     <td class="td-none"></td>
     <td class="td-none"></td>
   </tr>
@@ -334,7 +334,7 @@
     <td class="td-un eju tril g18"><div class="box"><span class="atomic_number ">118</span><span class="atomic_text">Og</span><span class="atomic_mass">294</span></div></td>
   </tr>
   <tr class="tr-space">
-    <td class="td-period"><div class="box"></div></td>
+    <td></td>
     <td colspan="15" class="td-logo">
       <div class="box">
         <!-- Här var webbsjtärnan-loggan. Sparar utrymmet om vi ska ha något annat här. -->
@@ -347,7 +347,7 @@
     </td>
   </tr>
   <tr>
-    <td class="td-period"><div class="box"></div></td>
+    <td></td>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;</span></div></td>
     <td class="td-sol lan g3"><div class="box"><span class="atomic_number ">57</span><span class="atomic_text">La</span><span class="atomic_mass">138,9</span></div></td>
     <td class="td-sol lan"><div class="box"><span class="atomic_number ">58</span><span class="atomic_text">Ce</span><span class="atomic_mass">140,1</span></div></td>
@@ -368,7 +368,7 @@
     <td class="td-none"><div class="box"><img class="help" src="/img/question.png"></img></div></td>
   </tr>
   <tr>
-    <td class="td-period"><div class="box"></div></td>
+    <td></td>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;&gt;</span></div></td>
     <td class="td-sol akt g3"><div class="box"><span class="atomic_number ">89</span><span class="atomic_text">Ac</span><span class="atomic_mass">227</span></div></td>
     <td class="td-sol akt"><div class="box"><span class="atomic_number ">90</span><span class="atomic_text">Th</span><span class="atomic_mass">232,0</span></div></td>
