@@ -63,15 +63,18 @@ $("td").on("click", function() {
     } else if (string.substr(position1 + 16, 1) == "<") {
       notation = string.substr(position1 + 13, 3);
     }
-    
+
     openWikiPage(notation);
   }
 });
 
-function openWikiPage(wikiName)
+function openWikiPage(wikiName, disableEasing)
 {
+  disableEasing = typeof disableEasing === "undefined" ? false : true;
+
   // Först kollar vi om wikiName är ett element, isf letar vi upp den td:n för att ta reda på bakgrundsfärg:
   var tdElem = $("span.atomic_text:containsExact(" + wikiName + ")").first().parent("div").parent("td");
+
   if (tdElem.length > 0) {
     if      (tdElem.hasClass("pol")) $("#newHTML").css({"background-color":"#C2CAFF"});
     else if (tdElem.hasClass("alk")) $("#newHTML").css({"background-color":"#FFC2C2"});
@@ -88,7 +91,7 @@ function openWikiPage(wikiName)
   } else {
     $("#newHTML").css({"background-color":"white"});
   }
-  
+
   if (!loading) {
     loading = true;
     $.ajax({
@@ -96,9 +99,9 @@ function openWikiPage(wikiName)
       url: "/wiki/template.php",
       data: {"file": wikiName},
       success: function(data) {
-        $("#newHTML").append(data);
+        $("#newHTML").html(data);
         $("body").css({"overflow":"hidden"});
-        if (getCookie("gr-settings-easing", "true") == "false") {
+        if (getCookie("gr-settings-easing", "true") == "false" || disableEasing) {
           $("#newHTML").show();
         } else {
           $("#newHTML").show("scale", 300);
@@ -110,13 +113,8 @@ function openWikiPage(wikiName)
   }
 }
 
-//Info/Help-rutan (färgförklaring)
-$( "#help" ).dialog({
-  autoOpen: false,
-  title: "Färgförklaring"
-});
-$( ".help" ).click(function() {
-  $( "#help" ).dialog( "open" );
+$(".help").click(function() {
+  openWikiPage("förklaring");
 });
 
 function displaySimple() {
@@ -199,11 +197,9 @@ $(document).keyup(function(e) {
 
 function loadWikiPageFromHash()
 {
-  console.log("dsfsdf");
-
-  if(window.location.hash) {
-    openWikiPage(window.location.hash.substr(1));
-    history.pushState("", document.title, window.location.pathname);
+  if (window.location.hash) {
+    openWikiPage(window.location.hash.substr(1), true);
+    //history.pushState("", document.title, window.location.pathname); // Ta bort hashen från url:en
   }
 }
 
