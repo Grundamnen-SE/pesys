@@ -74,13 +74,13 @@
     margin-left: 1%;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1400px) {
+@media screen and (min-width: 600px) and (max-width: 1700px) {
   .info {
     width: 90%;
     margin-left: 5%;
   }
 }
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 1701px) {
   .info {
     width: 70%;
     margin-left: 15%;
@@ -189,34 +189,30 @@ h1.wiki-header {
   border: 1px solid gray;
   box-shadow: 0 0 10px 1px gray;
   padding: 0 20px;
+  vertical-align: baseline;
+}
+
+.wiki-table td.center {
+  vertical-align: middle;
 }
 
 .wiki-about {
-  position: relative;
-  background-color: #363636;
-  background-image: url(/wiki/page-images/blur.png);
+  border: none !important;
   color: white;
-  box-shadow: 0 0 10px 2px #363636 !important;
-  padding: 15px !important;
+  box-shadow: none !important;
+  padding: 0px !important;
 }
 
 .wiki-about > div {
-  border-collapse: collapse;
-  border-spacing: 0 0;
+  padding: 20px;
+  border-spacing: 0px 4px;
   font-size: 16px;
   font-weight: 100;
+  background-color: #363636;
+  background-image: url(/wiki/page-images/blur.png);
+  box-shadow: 0 0 10px 2px #363636;
+  border: 1px solid gray;
 }
-/*
-.wiki-about::after {
-  content: "";
-  background: rgba(54, 54, 54, 1);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}*/
 
 /* Förklarings-sidan: */
 
