@@ -141,12 +141,12 @@
     <td class="td-gas eju tril"><div class="box"></div></td>
   </tr>
   <tr class="tr-space">
-    <td class="td-period"></td>
+    <td class="td-period-empty"></td>
     <td colspan="15" class="td-logo"><div class="box"></div></td>
     <td colspan="3" class="td-logo e"><div class="box"></div></td>
   </tr>
   <tr>
-    <td class="td-period"></td>
+    <td class="td-period-empty"></td>
     <td class="td-extend"><div class="box"></div></td>
     <td class="td-sol lan"><div class="box"></div></td>
     <td class="td-sol lan"><div class="box"></div></td>
@@ -167,7 +167,7 @@
     <td class="td-none"></td>
   </tr>
   <tr>
-    <td class="td-period"></td>
+    <td class="td-period-empty"></td>
     <td class="td-extend"><div class="box"></div></td>
     <td class="td-sol akt"><div class="box"></div></td>
     <td class="td-sol akt"><div class="box"></div></td>
@@ -334,7 +334,7 @@
     <td class="td-un eju tril g18"><div class="box"><span class="atomic_number ">118</span><span class="atomic_text">Og</span><span class="atomic_mass">294</span></div></td>
   </tr>
   <tr class="tr-space">
-    <td></td>
+    <td class="td-period-empty"></td>
     <td colspan="15" class="td-logo">
       <div class="box">
         <!-- Här var webbsjtärnan-loggan. Sparar utrymmet om vi ska ha något annat här. -->
@@ -347,7 +347,7 @@
     </td>
   </tr>
   <tr>
-    <td></td>
+    <td class="td-period-empty"></td>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;</span></div></td>
     <td class="td-sol lan g3"><div class="box"><span class="atomic_number ">57</span><span class="atomic_text">La</span><span class="atomic_mass">138,9</span></div></td>
     <td class="td-sol lan"><div class="box"><span class="atomic_number ">58</span><span class="atomic_text">Ce</span><span class="atomic_mass">140,1</span></div></td>
@@ -368,7 +368,7 @@
     <td class="td-none"><div class="box"><img class="help" src="/img/question.png"></img></div></td>
   </tr>
   <tr>
-    <td></td>
+    <td class="td-period-empty"></td>
     <td class="td-extend"><div class="box"><span class="extend-text">&gt;&gt;</span></div></td>
     <td class="td-sol akt g3"><div class="box"><span class="atomic_number ">89</span><span class="atomic_text">Ac</span><span class="atomic_mass">227</span></div></td>
     <td class="td-sol akt"><div class="box"><span class="atomic_number ">90</span><span class="atomic_text">Th</span><span class="atomic_mass">232,0</span></div></td>

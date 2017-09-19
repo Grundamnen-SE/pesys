@@ -120,14 +120,14 @@ $(".help").click(function() {
 
 function displaySimple() {
   $(".tr-group").css("display", "none");
-  $(".td-period").css("display", "none");
+  $(".td-period, .td-period-empty").css("display", "none");
   $(".yt").css("display", "block");
   $(".atomic_mass").css("display", "none");
 }
 
 function displayAdvanced() {
   $(".tr-group").css("display", "table-row");
-  $(".td-period").css("display", "table-cell");
+  $(".td-period, .td-period-empty").css("display", "table-cell");
   $(".yt").css("display", "none");
   $(".atomic_mass").css("display", "block");
 }
