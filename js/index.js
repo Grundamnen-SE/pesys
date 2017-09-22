@@ -3,7 +3,7 @@
 var loading = false;
 
 // Add :containsExact
-$.expr[":"].containsExact = function (obj, index, meta, stack) {
+$.expr[":"].containsExact = function(obj, index, meta, stack) {
   return (obj.textContent || obj.innerText || $(obj).text() || "") == meta[3];
 };
 
@@ -143,14 +143,14 @@ $("#settings-button").click(function() {
   $("#settings").dialog("open");
 });
 
-// INFO: Alla cookie-settings på grundämnen.se börjar med 'gr-settings' som namn
+// Alla cookie-settings på grundämnen.se börjar med 'gr-settings' som namn
 
-function settingsGet() {
-  if (getCookie("gr-settings-easing") == "false") {
+function loadSettings() {
+  if (getCookie("gr-settings-easing") === "false") {
     $("#settings-easing").prop("checked", true);
   }
 
-  if (getCookie("gr-settings-adv") == "true") {
+  if (getCookie("gr-settings-adv") === "true") {
     $("#settings-adv").prop("checked", true);
     displayAdvanced();
   } else {
@@ -164,7 +164,7 @@ $("#settings-easing").click(function() {
   } else {
     setCookie("gr-settings-easing", "true");
   }
-  settingsGet();
+  loadSettings();
 });
 
 $("#settings-adv").click(function() {
@@ -173,7 +173,7 @@ $("#settings-adv").click(function() {
   } else {
     setCookie("gr-settings-adv", "false");
   }
-  settingsGet();
+  loadSettings();
 });
 
 //Gör så att rutan stängs när man klickar på x. Funktionen anropas via onclick
@@ -187,6 +187,7 @@ function exit() {
   }
   $("#rst").css({"overflow":"hidden", "display":"none"});
   $("body").css({"overflow":"initial"});
+  removeHash();
 }
 
 // Om man klickar på Esc ska rutan stängas:
@@ -196,17 +197,19 @@ $(document).keyup(function(e) {
   }
 });
 
-function loadWikiPageFromHash()
-{
+function loadWikiPageFromHash() {
   if (window.location.hash) {
     openWikiPage(window.location.hash.substr(1), true);
-    //history.pushState("", document.title, window.location.pathname); // Ta bort hashen från url:en
   }
+}
+
+function removeHash() {
+  history.pushState("", document.title, window.location.pathname);
 }
 
 addEventListener("hashchange", loadWikiPageFromHash);
 
 /* Kod som ska köras direkt vid sidladdning: */
 
-settingsGet();
+loadSettings();
 loadWikiPageFromHash();

@@ -95,6 +95,9 @@ a[href] {
   background-color: transparent !important;
   cursor:default;
 }
+.td-header:hover {
+  cursor: default;
+}
 .td-header div {
   overflow: visible;
 }
@@ -163,6 +166,7 @@ a[href] {
   font-size: 0.8vw;
   top: 7%;
   left: 10%;
+  color: black;
 }
 .atomic_text {
   position: relative;

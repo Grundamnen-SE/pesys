@@ -17,7 +17,7 @@
         $viewFile = true;
     }
   }
-  
+
   if ($viewFile) {
 ?>
     <div class="info">
