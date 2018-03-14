@@ -231,10 +231,10 @@
     <td class="td-period"><div class="box"><span>2</span></div></td>
     <td class="td-sol alk g1"><div class="box"><span class="atomic_number">3</span><span class="atomic_text">Li</span><span class="atomic_mass">6,938</span></div></td>
     <td class="td-sol jor g2"><div class="box"><span class="atomic_number">4</span><span class="atomic_text">Be</span><span class="atomic_mass">9,012</span></div></td>
-    <td class="td-sol hme g13"><div class="box"><span class="atomic_number">5</span><span class="atomic_text">B</span><span class="atomic_mass">1,008</span></div></td>
-    <td class="td-sol pol g14"><div class="box"><span class="atomic_number">6</span><img class="yt" src="/img/play.svg"><span class="atomic_text">C</span><span class="atomic_mass">10,81</span></div></td>
+    <td class="td-sol hme g13"><div class="box"><span class="atomic_number">5</span><span class="atomic_text">B</span><span class="atomic_mass">10,81</span></div></td>
+    <td class="td-sol pol g14"><div class="box"><span class="atomic_number">6</span><img class="yt" src="/img/play.svg"><span class="atomic_text">C</span><span class="atomic_mass">12,01</span></div></td>
     <td class="td-gas dia g15"><div class="box"><span class="atomic_number">7</span><span class="atomic_text">N</span></div><span class="atomic_mass">14,01</span></td>
-    <td class="td-gas dia g16"><div class="box"><span class="atomic_number">8</span><img class="yt" src="/img/play.svg"><span class="atomic_text">O</span><span class="atomic_mass">15,00</span></div></td>
+    <td class="td-gas dia g16"><div class="box"><span class="atomic_number">8</span><img class="yt" src="/img/play.svg"><span class="atomic_text">O</span><span class="atomic_mass">16,00</span></div></td>
     <td class="td-gas dia g17"><div class="box"><span class="atomic_number">9</span><img class="yt" src="/img/play.svg"><span class="atomic_text">F</span><span class="atomic_mass">19,00</span></div></td>
     <td class="td-gas gas g18"><div class="box"><span class="atomic_number">10</span><span class="atomic_text">Ne</span><span class="atomic_mass">20,18</span></div></td>
   </tr>
