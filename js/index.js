@@ -115,7 +115,7 @@ function openWikiPage(wikiName, disableEasing)
 }
 
 $(".help").click(function() {
-  openWikiPage("förklaring");
+  openWikiPage("beskrivning");
 });
 
 function displaySimple() {
