@@ -45,23 +45,22 @@ input[type=checkbox], button {
 .td-logo div {
   height: 3vw;
 }
-table
+table.mainTab
 {
-  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
-/*  margin-bottom:30px;*/
+  table-layout: fixed;
 }
-td {
+table.mainTab td {
   margin: 0;
   padding: 0;
   position: relative;
   text-align: center;
-  background-color:transparent;
+  background-color: transparent;
   visibility: hidden;
   height: 4.5vw;
-  border:0;
-  cursor:pointer;
+  border: 0;
+  cursor: pointer;
   box-shadow: 0px 0px 1px 2px black;
   position: relative;
   font-size: 1.7vw;
@@ -92,9 +91,12 @@ a[href] {
   box-shadow: none !important;
   visibility: visible !important;
 }
-.td-header:hover, .td-about:hover {
-  background-color:transparent !important;
+.td-header:hover div, .td-about:hover div, .td-none:hover div {
+  background-color: transparent !important;
   cursor:default;
+}
+.td-header:hover {
+  cursor: default;
 }
 .td-header div {
   overflow: visible;
@@ -106,31 +108,51 @@ a[href] {
   z-index: 0 !important;
   background-color: #363636 !important;
   visibility: visible !important;
-  cursor:default;
+  cursor: default;
   box-shadow: none !important;
 }
-.td-gas {
-  /* color:red !important; */
-  visibility: visible;
+
+.td-gas {  /* gas */
+  color: #960000 !important;
+  visibility: visible !important;
 }
-.td-flow {
-  /* color:green !important; */
-  visibility: visible;
+.td-liq { /* liquid */
+  color: green !important;
+  visibility: visible !important;
 }
-.tr-fast td{
-  /* color:black; */
-  visibility: visible;
+.td-sol {  /* solid */
+  color: blue !important;
+  visibility: visible !important;
 }
-.td-fast {
-  /* color:blue; */
-  visibility: visible;
+.td-un {  /* unknown */
+  color: black !important;
+  visibility: visible !important;
+}
+
+.td-group, .td-period  {
+  color: rgb(150, 150, 150);
+  visibility: visible !important;
+  box-shadow: none !important;
+}
+.td-group div:hover, .td-period div:hover {
+  background: gray;
+  color: black;
+}
+.td-group span, .td-period span {
+  position: relative;
+  top: 30%;
+}
+.td-hover {
+  background: white !important;
 }
 .td-extend {
-  background-color: rgba(177,236,255, 0.3);
   color: black !important;
   text-align: center;
-  visibility: visible;
-  cursor: default;
+  visibility: visible !important;
+  cursor: default !important;
+}
+.td-extend:hover div {
+  background: none !important;
 }
 .extend-text {
   position: relative;
@@ -142,13 +164,20 @@ a[href] {
 .atomic_number {
   position: absolute;
   font-size: 0.8vw;
-  top: 5%;
-  left: 8%;
+  top: 7%;
+  left: 10%;
+  color: black;
 }
 .atomic_text {
   position: relative;
   top: 30%;
-
+}
+.atomic_mass {
+  position: absolute;
+  font-size: 0.8vw;
+  top: 7%;
+  right: 10%;
+  color: black;
 }
 .yt {
   position: absolute;
@@ -165,8 +194,8 @@ a[href] {
   top: 0px;
   position: absolute;
 }
-.tab1 td:hover {
-  background-color:#c9c9c9;
+.tab1 td:hover div {
+  background-color: #c9c9c9;
 }
 
 .help {
@@ -176,46 +205,17 @@ a[href] {
   left: -10%;
   cursor: pointer;
 }
-#settings-button  {
+
+#settings-button {
   width: 30%;
   position: absolute;
   top: 20%;
   left: 7.5%;
   cursor: pointer;
 }
-
-#help p {
-  margin-left: 45px;
+#settings input {
+  margin-bottom: 10px;
 }
-#help {
-
-}
-#help > div {
-  height: 45px;
-  margin-top: 10px;
-}
-#help > div > div {
-  width: 40px;
-  height: 40px;
-  margin: 0;
-  border: 2px solid black;
-  float: left;
-  margin-right: 10px;
-}
-#help > div > p {
-  padding-top: 12px;
-}
-#help > div:nth-of-type(1) > div { background-color: #7D89E8; }
-#help > div:nth-of-type(2) > div { background-color: #E87D7D; }
-#help > div:nth-of-type(3) > div { background-color: #E8B87D; }
-#help > div:nth-of-type(4) > div { background-color: #7DE894; }
-#help > div:nth-of-type(5) > div { background-color: #7DC6E8; }
-#help > div:nth-of-type(6) > div { background-color: #7DE8CF; }
-#help > div:nth-of-type(7) > div { background-color: #AB7DE8; }
-#help > div:nth-of-type(8) > div { background-color: #E67DE8; }
-#help > div:nth-of-type(9) > div { background-color: #DFDFDF; }
-#help > div:nth-of-type(10) > div { background-color: #DDE87D; }
-#help > div:nth-of-type(11) > div { background-color: #A2E87D; }
 
 .ui-dialog {
   box-shadow: 0 0 10px 5px gray;
@@ -224,114 +224,112 @@ a[href] {
 /* Alkalimetaller */
 .tab1 .alk {
   z-index: 3;
-  background-color: hsl(0, 70%, 70%);
+  background-color: hsl(0, 70%, 70%) !important;
 }
 /* Alkaliska jordartsmetaller */
 .tab1 .jor {
   z-index: 5;
-  background-color: hsl(33, 70%, 70%);
+  background-color: hsl(33, 70%, 70%) !important;
 }
 /* Lantanoider */
 .tab1 .lan {
   z-index: 3;
-  background-color: hsl(66, 70%, 70%);
+  background-color: hsl(66, 70%, 70%) !important;
 }
 /* Aktinoider */
 .tab1 .akt {
   z-index: 4;
-  background-color: hsl(99, 70%, 70%);
+  background-color: hsl(99, 70%, 70%) !important;
 }
 /* Övergångsmetall */
 .tab1 .ove {
   z-index: 13;
-  background-color: hsl(133, 70%, 70%);
+  background-color: hsl(133, 70%, 70%) !important;
 }
 /* Övriga metaller */
 .tab1 .ovr {
   z-index: 11;
-  background-color: hsl(166, 70%, 70%);
+  background-color: hsl(166, 70%, 70%) !important;
 }
 /* Halvmetaller */
 .tab1 .hme {
   z-index: 9;
-  background-color: hsl(199, 70%, 70%);
+  background-color: hsl(199, 70%, 70%) !important;
 }
 /* Polyatomisk icke-metall */
 .tab1 .pol {
   z-index: 7;
-  background-color: hsl(233, 70%, 70%);
+  background-color: hsl(233, 70%, 70%) !important;
 }
 /* Diatomisk icke-metall */
 .tab1 .dia {
   z-index: 5;
-  background-color: hsl(266, 70%, 70%);
+  background-color: hsl(266, 70%, 70%) !important;
 }
 /* Ädelgaser */
 .tab1 .gas {
   z-index: 3;
-  background-color: hsl(299, 70%, 70%);
+  background-color: hsl(299, 70%, 70%) !important;
 }
 /* Okända egenskaper */
 .tab1 .eju {
   z-index: 1;
   /* background-color: hsl(333, 70%, 70%); */
-  background-color: #DFDFDF;
+  background-color: #DFDFDF !important;
 }
 
-.tab1 .metal {
-  color:gray;
-}
-.tab1 .halfmetal {
-  color:yellow;
-}
-.tab1 .nonmetal {
-  color:white;
-}
-.tab1 .unkmetal {
-  color:orange;
-}
-
-.tab2 .alk {
+.tab2 .alk div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .jor {
+.tab2 .jor div {
+  position: relative;
   z-index: 4;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .lan {
+.tab2 .lan div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .akt {
+.tab2 .akt div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .ove {
+.tab2 .ove div {
+  position: relative;
   z-index: 12;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .ovr {
+.tab2 .ovr div {
+  position: relative;
   z-index: 10;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .hme {
+.tab2 .hme div {
+  position: relative;
   z-index: 8;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .pol {
+.tab2 .pol div {
+  position: relative;
   z-index: 6;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .dia {
+.tab2 .dia div {
+  position: relative;
   z-index: 4;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .gas {
+.tab2 .gas div {
+  position: relative;
   z-index: 2;
   box-shadow: 0px 0px 12px 4.5px black;
 }
-.tab2 .eju {
+.tab2 .eju div {
+  position: relative;
   z-index: 0;
   box-shadow: 0px 0px 12px 4.5px black;
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .not-exist {
   padding: 20px;
 }
@@ -14,8 +15,11 @@
   position: absolute;
   z-index: 1000;
   overflow-y: scroll;
-  color: black;
+  color: black !important;
   font-size: 18px;
+}
+#newHTML p {
+  font-family: 'Open Sans', sans-serif !important;
 }
 #rst {
   position: absolute;
@@ -70,13 +74,13 @@
     margin-left: 1%;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1400px) {
+@media screen and (min-width: 600px) and (max-width: 1700px) {
   .info {
     width: 90%;
     margin-left: 5%;
   }
 }
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 1701px) {
   .info {
     width: 70%;
     margin-left: 15%;
@@ -151,7 +155,7 @@ h1.wiki-header {
   margin-right: 20px;
   margin-bottom: 30px;
   float: right;
-  width: 200px;
+  width: 250px;
   display: table;
 }
 .wiki-tr {
@@ -171,3 +175,73 @@ h1.wiki-header {
 .break {
   clear: both;
 }
+
+/* New-gen wiki layout: */
+
+.wiki-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 55px 55px;
+}
+
+.wiki-table td {
+  border: 1px solid gray;
+  box-shadow: 0 0 10px 1px gray;
+  padding: 0 20px;
+  vertical-align: baseline;
+}
+
+.wiki-table td.center {
+  vertical-align: middle;
+}
+
+.wiki-about {
+  border: none !important;
+  color: white;
+  box-shadow: none !important;
+  padding: 0px !important;
+}
+
+.wiki-about > div {
+  padding: 20px;
+  border-spacing: 0px 4px;
+  font-size: 16px;
+  font-weight: 100;
+  background-color: #363636;
+  background-image: url(/wiki/page-images/blur.png);
+  box-shadow: 0 0 10px 2px #363636;
+  border: 1px solid gray;
+}
+
+/* Förklarings-sidan: */
+
+#help p {
+  margin-left: 45px;
+}
+#help > div {
+  height: 25px;
+  margin-top: 10px;
+}
+#help > div > div {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  border: 2px solid black;
+  float: left;
+  margin-right: 10px;
+}
+#help > div > p {
+  padding-top: 4px;
+}
+#help > div:nth-of-type(1) > div { background-color: #7D89E8; }
+#help > div:nth-of-type(2) > div { background-color: #E87D7D; }
+#help > div:nth-of-type(3) > div { background-color: #E8B87D; }
+#help > div:nth-of-type(4) > div { background-color: #7DE894; }
+#help > div:nth-of-type(5) > div { background-color: #7DC6E8; }
+#help > div:nth-of-type(6) > div { background-color: #7DE8CF; }
+#help > div:nth-of-type(7) > div { background-color: #AB7DE8; }
+#help > div:nth-of-type(8) > div { background-color: #E67DE8; }
+#help > div:nth-of-type(9) > div { background-color: #DFDFDF; }
+#help > div:nth-of-type(10) > div { background-color: #DDE87D; }
+#help > div:nth-of-type(11) > div { background-color: #A2E87D; }

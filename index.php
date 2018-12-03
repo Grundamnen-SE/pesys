@@ -1,6 +1,7 @@
 <?php
   if ($_SERVER['SERVER_NAME'] == "pesys.joarc.se") header('Location: http://grundämnen.se/');
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,21 +24,9 @@
     <link rel="stylesheet" type="text/css" href="/css/wiki.css">
   </head>
   <body>
-    <div style="display: none;" id="help">
-      <div><div></div><p>Polyatomiska icke-metaller</p></div>
-      <div><div></div><p>Alkalimetaller</p></div>
-      <div><div></div><p>Alkaliska jordartsmetaller</p></div>
-      <div><div></div><p>Övergångsmetaller</p></div>
-      <div><div></div><p>Halvmetaller</p></div>
-      <div><div></div><p>Övriga metaller</p></div>
-      <div><div></div><p>Diatomiska icke-metaller</p></div>
-      <div><div></div><p>Ädelgaser</p></div>
-      <div><div></div><p>Okända egenskaper</p></div>
-      <div><div></div><p>Lantanoider</p></div>
-      <div><div></div><p>Aktinoider</p></div>
-    </div>
     <div id="settings" style="display: none;">
       <label for="settings-easing">Stäng av animationer: </label><input type="checkbox" id="settings-easing"></input>
+      <label for="settings-adv">Avancerad tabell: </label><input type="checkbox" id="settings-adv"></input>
       <br>
       <div class="ui-widget">
       	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
@@ -47,7 +36,7 @@
       </div>
     </div>
     <div id="newHTML"></div><!-- I denna div visas HTML som laddas via AJAX är man klickar på ett ämne -->
-    <?php include ("includes/sim_table.php"); ?>
+    <?php include ("includes/table.php"); ?>
     <br class="clearfix">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

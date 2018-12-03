@@ -17,8 +17,6 @@
 ?>
 <script>
 
-  //  console.log($("span.atomic_text:contains('<?= $link_r[0] ?>')").parent("div").parent("td").hasClass("hme"));
-  //  console.log($(".atomic_text").parent("div").parent("td").hasClass("ick"));
   if      ($("span.atomic_text:containsExact('<?= $link_r[0] ?>')").first().parent("div").parent("td").hasClass("ick")) { $("#newHTML").css({"background-color":"#C2CAFF"}); }
   else if ($("span.atomic_text:containsExact('<?= $link_r[0] ?>')").first().parent("div").parent("td").hasClass("alk")) { $("#newHTML").css({"background-color":"#FFC2C2"}); }
   else if ($("span.atomic_text:containsExact('<?= $link_r[0] ?>')").first().parent("div").parent("td").hasClass("jor")) { $("#newHTML").css({"background-color":"#FFE4C2"}); }
